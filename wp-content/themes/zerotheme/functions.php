@@ -34,15 +34,6 @@ function enqueue_scripts() {
 add_action( 'wp_enqueue_scripts', 'enqueue_styles' );
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
 
-// GET FEATURED IMAGE
-function ST4_get_featured_image($post_ID) {
-    $post_thumbnail_id = get_post_thumbnail_id($post_ID);
-    if ($post_thumbnail_id) {
-        $post_thumbnail_img = wp_get_attachment_image_src($post_thumbnail_id, 'featured_preview');
-        return $post_thumbnail_img[0];
-    }
-}
-
 // ADD NEW COLUMN
 function ST4_columns_head($defaults) {
     $screen = get_current_screen();
@@ -57,7 +48,7 @@ function ST4_columns_head($defaults) {
     
 }
  
-// SHOW THE FEATURED IMAGE
+// SHOW THE COLUMN DATA
 function ST4_columns_content($column_name, $post_ID) {
 
     if (in_array($column_name, array(
