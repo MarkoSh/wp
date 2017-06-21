@@ -49,7 +49,6 @@ function ST4_columns_head($defaults) {
             case 'cart':
                 $defaults['id_order'] = 'Идентификатор заказа';
                 break;
-
         }
         $defaults['id_customer'] = 'Идентификатор покупателя';
     }
