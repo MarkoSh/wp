@@ -37,11 +37,20 @@ add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
 // ADD NEW COLUMN
 function ST4_columns_head($defaults) {
     $screen = get_current_screen();
-    if ( in_array($screen->post_type, array(
+    $post_type = $screen->post_type;
+    if ( in_array($post_type, array(
         'order_',
         'cart'
     )) ) {
-        $defaults['id_cart'] = 'Идентификатор корзины';
+        switch ($post_type) {
+            case 'order_':
+                $defaults['id_cart'] = 'Идентификатор корзины';
+                break;
+            case 'cart':
+                $defaults['id_order'] = 'Идентификатор заказа';
+                break;
+
+        }
         $defaults['id_customer'] = 'Идентификатор покупателя';
     }
     return $defaults;
@@ -53,6 +62,7 @@ function ST4_columns_content($column_name, $post_ID) {
 
     if (in_array($column_name, array(
         'id_cart',
+        'id_order',
         'id_customer'
     ))) {
         $id = types_get_field_meta_value( $column_name, $post_ID );
