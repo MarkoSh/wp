@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<types>
+    <settings>
+        <add_resized_images_to_library>0</add_resized_images_to_library>
+        <register_translations_on_import>1</register_translations_on_import>
+        <images_remote>0</images_remote>
+        <images_remote_cache_time>36</images_remote_cache_time>
+        <help_box>by_types</help_box>
+        <hide_standard_custom_fields_metabox>show</hide_standard_custom_fields_metabox>
+        <postmeta_unfiltered_html>on</postmeta_unfiltered_html>
+        <usermeta_unfiltered_html>on</usermeta_unfiltered_html>
+    </settings>
+    <groups>
+        <group>
+            <ID>55</ID>
+            <post_content></post_content>
+            <post_title>Группа полей для Товары</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_fields>,brand,</_wp_types_group_fields>
+                <_wp_types_group_post_types>,,product,</_wp_types_group_post_types>
+                <_wp_types_group_templates>,,</_wp_types_group_templates>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
+            </meta>
+            <hash>8f384a2d9d64d19ce464187679c11d72</hash>
+            <checksum>8f384a2d9d64d19ce464187679c11d72</checksum>
+            <__types_id>%d0%b3%d1%80%d1%83%d0%bf%d0%bf%d0%b0-%d0%bf%d0%be%d0%bb%d0%b5%d0%b9-%d0%b4%d0%bb%d1%8f-%d1%82%d0%be%d0%b2%d0%b0%d1%80%d1%8b</__types_id>
+            <__types_title>Группа полей для Товары</__types_title>
+        </group>
+        <group>
+            <ID>52</ID>
+            <post_content></post_content>
+            <post_title>Группа полей для Бренды</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_post_types>,,brand,</_wp_types_group_post_types>
+                <_wp_types_group_templates>,,</_wp_types_group_templates>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
+                <_wp_types_group_fields>,d0b8d0b4d0b5d0bdd182d0b8d184d0b8d0bad0b0d182d0bed180-d0b1d180d0b5d0bdd0b4d0b0d180d183d0b1d180d0b8d0bad0b8,</_wp_types_group_fields>
+            </meta>
+            <hash>74041dd499bc35d30ed17e0e393bf75c</hash>
+            <checksum>74041dd499bc35d30ed17e0e393bf75c</checksum>
+            <__types_id>%d0%b3%d1%80%d1%83%d0%bf%d0%bf%d0%b0-%d0%bf%d0%be%d0%bb%d0%b5%d0%b9-%d0%b4%d0%bb%d1%8f-%d0%b1%d1%80%d0%b5%d0%bd%d0%b4%d1%8b</__types_id>
+            <__types_title>Группа полей для Бренды</__types_title>
+        </group>
+        <group>
+            <ID>40</ID>
+            <post_content></post_content>
+            <post_title>Группа полей для Заказы</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_post_types>,,order_,</_wp_types_group_post_types>
+                <_wp_types_group_templates>,,</_wp_types_group_templates>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
+                <_wp_types_group_fields>,id_customer,id_cart,</_wp_types_group_fields>
+            </meta>
+            <hash>994681c86be2d7c78a0b99a5fae99c0f</hash>
+            <checksum>994681c86be2d7c78a0b99a5fae99c0f</checksum>
+            <__types_id>%d0%b3%d1%80%d1%83%d0%bf%d0%bf%d0%b0-%d0%bf%d0%be%d0%bb%d0%b5%d0%b9-%d0%b4%d0%bb%d1%8f-%d0%b7%d0%b0%d0%ba%d0%b0%d0%b7%d1%8b</__types_id>
+            <__types_title>Группа полей для Заказы</__types_title>
+        </group>
+        <group>
+            <ID>38</ID>
+            <post_content></post_content>
+            <post_title>Группа полей для Корзины</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_post_types>,,cart,</_wp_types_group_post_types>
+                <_wp_types_group_templates>,,</_wp_types_group_templates>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
+                <_wp_types_group_fields>,id_customer,id_product,</_wp_types_group_fields>
+            </meta>
+            <hash>557c193c09db0c9fa9d7ca8e497d027e</hash>
+            <checksum>557c193c09db0c9fa9d7ca8e497d027e</checksum>
+            <__types_id>%d0%b3%d1%80%d1%83%d0%bf%d0%bf%d0%b0-%d0%bf%d0%be%d0%bb%d0%b5%d0%b9-%d0%b4%d0%bb%d1%8f-%d0%ba%d0%be%d1%80%d0%b7%d0%b8%d0%bd%d1%8b</__types_id>
+            <__types_title>Группа полей для Корзины</__types_title>
+        </group>
+        <group>
+            <ID>33</ID>
+            <post_content></post_content>
+            <post_title>Группа полей для Покупатель</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_fields>,d0b8d0b4d0b5d0bdd182d0b8d184d0b8d0bad182d0bed180-d0bfd0bed0bbd18cd0b7d0bed0b2d0b0d182d0b5d0bbd18f,name,phone,email,address,</_wp_types_group_fields>
+                <_wp_types_group_post_types>,,customer,</_wp_types_group_post_types>
+                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
+                <_wp_types_group_templates>,,</_wp_types_group_templates>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+            </meta>
+            <hash>565694e23f248d68f29a53e64f3df313</hash>
+            <checksum>565694e23f248d68f29a53e64f3df313</checksum>
+            <__types_id>%d0%b3%d1%80%d1%83%d0%bf%d0%bf%d0%b0-%d0%bf%d0%be%d0%bb%d0%b5%d0%b9-%d0%b4%d0%bb%d1%8f-%d0%bf%d0%be%d0%ba%d1%83%d0%bf%d0%b0%d1%82%d0%b5%d0%bb%d1%8c</__types_id>
+            <__types_title>Группа полей для Покупатель</__types_title>
+        </group>
+    </groups>
+    <fields>
+        <field>
+            <id>name</id>
+            <slug>name</slug>
+            <type>textfield</type>
+            <name>Имя</name>
+            <description></description>
+            <data>
+                <slug-pre-save>name</slug-pre-save>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <custom_use></custom_use>
+                <submit-key>name</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-name</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>name</__types_id>
+            <__types_title>Имя</__types_title>
+            <hash>997d989937bbb698845147686bf2141d</hash>
+            <checksum>997d989937bbb698845147686bf2141d</checksum>
+        </field>
+        <field>
+            <id>phone</id>
+            <slug>phone</slug>
+            <type>phone</type>
+            <name>Телефон</name>
+            <description></description>
+            <data>
+                <slug-pre-save>phone</slug-pre-save>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <custom_use></custom_use>
+                <submit-key>phone</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-phone</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>phone</__types_id>
+            <__types_title>Телефон</__types_title>
+            <hash>513501bc93bd977e920d88a13394cc8f</hash>
+            <checksum>513501bc93bd977e920d88a13394cc8f</checksum>
+        </field>
+        <field>
+            <id>email</id>
+            <slug>email</slug>
+            <type>email</type>
+            <name>Почта</name>
+            <description></description>
+            <data>
+                <slug-pre-save>email</slug-pre-save>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <custom_use></custom_use>
+                <submit-key>email</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-email</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>email</__types_id>
+            <__types_title>Почта</__types_title>
+            <hash>ada6fe8cde5f8bfa53fde1eec136549c</hash>
+            <checksum>ada6fe8cde5f8bfa53fde1eec136549c</checksum>
+        </field>
+        <field>
+            <id>address</id>
+            <slug>address</slug>
+            <type>textarea</type>
+            <name>Адрес</name>
+            <description></description>
+            <data>
+                <slug-pre-save>address</slug-pre-save>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <custom_use></custom_use>
+                <submit-key>address</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-address</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>address</__types_id>
+            <__types_title>Адрес</__types_title>
+            <hash>035418e380a29d1b2c9fc56f76ee78fa</hash>
+            <checksum>035418e380a29d1b2c9fc56f76ee78fa</checksum>
+        </field>
+        <field>
+            <id>id_product</id>
+            <slug>id_product</slug>
+            <type>numeric</type>
+            <name>Идентификатор товара</name>
+            <description></description>
+            <data>
+                <slug-pre-save>id_product</slug-pre-save>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>1</repetitive>
+                <validate>
+                    <number>
+                        <active>1</active>
+                        <message>Введите числовые данные.</message>
+                    </number>
+                </validate>
+                <custom_use></custom_use>
+                <submit-key>id_product</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-id_product</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>id_product</__types_id>
+            <__types_title>Идентификатор товара</__types_title>
+            <hash>adcfe408457a909f68c6042cbc1d3114</hash>
+            <checksum>adcfe408457a909f68c6042cbc1d3114</checksum>
+        </field>
+        <field>
+            <id>id_cart</id>
+            <slug>id_cart</slug>
+            <type>numeric</type>
+            <name>Идентификатор корзины</name>
+            <description></description>
+            <data>
+                <slug-pre-save>id_cart</slug-pre-save>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <validate>
+                    <number>
+                        <active>1</active>
+                        <message>Введите числовые данные.</message>
+                    </number>
+                </validate>
+                <custom_use></custom_use>
+                <submit-key>id_cart</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-id_cart</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>id_cart</__types_id>
+            <__types_title>Идентификатор корзины</__types_title>
+            <hash>89fdff9aee89e683578bea56a04d8d38</hash>
+            <checksum>89fdff9aee89e683578bea56a04d8d38</checksum>
+        </field>
+        <field>
+            <id>id_customer</id>
+            <slug>id_customer</slug>
+            <type>numeric</type>
+            <name>Идентификатор покупателя</name>
+            <description></description>
+            <data>
+                <slug-pre-save>id_customer</slug-pre-save>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <validate>
+                    <number>
+                        <active>1</active>
+                        <message>Введите числовые данные.</message>
+                    </number>
+                </validate>
+                <custom_use></custom_use>
+                <submit-key>id_customer</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-id_customer</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>id_customer</__types_id>
+            <__types_title>Идентификатор покупателя</__types_title>
+            <hash>b9f16ad974e742c8627d3b053e4c175d</hash>
+            <checksum>b9f16ad974e742c8627d3b053e4c175d</checksum>
+        </field>
+        <field>
+            <id>d0b8d0b4d0b5d0bdd182d0b8d184d0b8d0bad0b0d182d0bed180-d0b1d180d0b5d0bdd0b4d0b0d180d183d0b1d180d0b8d0bad0b8</id>
+            <slug>d0b8d0b4d0b5d0bdd182d0b8d184d0b8d0bad0b0d182d0bed180-d0b1d180d0b5d0bdd0b4d0b0d180d183d0b1d180d0b8d0bad0b8</slug>
+            <type>numeric</type>
+            <name>Идентификатор бренда(рубрики)</name>
+            <description></description>
+            <data>
+                <slug-pre-save>d0b8d0b4d0b5d0bdd182d0b8d184d0b8d0bad0b0d182d0bed180-d0b1d180d0b5d0bdd0b4d0b0d180d183d0b1d180d0b8d0bad0b8</slug-pre-save>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <validate>
+                    <number>
+                        <active>1</active>
+                        <message>Введите числовые данные.</message>
+                    </number>
+                </validate>
+                <custom_use></custom_use>
+                <submit-key>d0b8d0b4d0b5d0bdd182d0b8d184d0b8d0bad0b0d182d0bed180-d0b1d180d0b5d0bdd0b4d0b0d180d183d0b1d180d0b8d0bad0b8</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-d0b8d0b4d0b5d0bdd182d0b8d184d0b8d0bad0b0d182d0bed180-d0b1d180d0b5d0bdd0b4d0b0d180d183d0b1d180d0b8d0bad0b8</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>d0b8d0b4d0b5d0bdd182d0b8d184d0b8d0bad0b0d182d0bed180-d0b1d180d0b5d0bdd0b4d0b0d180d183d0b1d180d0b8d0bad0b8</__types_id>
+            <__types_title>Идентификатор бренда(рубрики)</__types_title>
+            <hash>1a9c9678f5b1a947d27aae2ec977256f</hash>
+            <checksum>1a9c9678f5b1a947d27aae2ec977256f</checksum>
+        </field>
+        <field>
+            <id>brand</id>
+            <slug>brand</slug>
+            <type>select</type>
+            <name>Бренд</name>
+            <description></description>
+            <data>
+                <slug-pre-save>brand</slug-pre-save>
+                <options>
+                    <default>no-default</default>
+                </options>
+                <custom_use></custom_use>
+                <submit-key>brand</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-brand</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>brand</__types_id>
+            <__types_title>Бренд</__types_title>
+            <hash>5e5348c17cfd8c9c57cb688ec7550af4</hash>
+            <checksum>5e5348c17cfd8c9c57cb688ec7550af4</checksum>
+        </field>
+        <field>
+            <id>d0b8d0b4d0b5d0bdd182d0b8d184d0b8d0bad182d0bed180-d0bfd0bed0bbd18cd0b7d0bed0b2d0b0d182d0b5d0bbd18f</id>
+            <slug>d0b8d0b4d0b5d0bdd182d0b8d184d0b8d0bad182d0bed180-d0bfd0bed0bbd18cd0b7d0bed0b2d0b0d182d0b5d0bbd18f</slug>
+            <type>numeric</type>
+            <name>Идентификтор пользователя</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <validate>
+                    <number>
+                        <active>1</active>
+                        <message>Введите числовые данные.</message>
+                    </number>
+                </validate>
+                <submit-key>numeric-1958788468</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-d0b8d0b4d0b5d0bdd182d0b8d184d0b8d0bad182d0bed180-d0bfd0bed0bbd18cd0b7d0bed0b2d0b0d182d0b5d0bbd18f</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>d0b8d0b4d0b5d0bdd182d0b8d184d0b8d0bad182d0bed180-d0bfd0bed0bbd18cd0b7d0bed0b2d0b0d182d0b5d0bbd18f</__types_id>
+            <__types_title>Идентификтор пользователя</__types_title>
+            <hash>e70a0185493f752a560502d3fabd7848</hash>
+            <checksum>e70a0185493f752a560502d3fabd7848</checksum>
+        </field>
+    </fields>
+    <taxonomies>
+        <taxonomy>
+            <labels>
+                <name>Рубрики</name>
+                <singular_name>Рубрика</singular_name>
+                <search_items>Поиск рубрик</search_items>
+                <popular_items></popular_items>
+                <all_items>Все рубрики</all_items>
+                <parent_item>Родительская рубрика</parent_item>
+                <parent_item_colon>Родительская рубрика:</parent_item_colon>
+                <edit_item>Изменить рубрику</edit_item>
+                <view_item>Просмотреть рубрику</view_item>
+                <update_item>Обновить рубрику</update_item>
+                <add_new_item>Добавить новую рубрику</add_new_item>
+                <new_item_name>Название новой рубрики</new_item_name>
+                <separate_items_with_commas></separate_items_with_commas>
+                <add_or_remove_items></add_or_remove_items>
+                <choose_from_most_used></choose_from_most_used>
+                <not_found>Рубрик не найдено.</not_found>
+                <no_terms>Рубрик нет</no_terms>
+                <items_list_navigation>Навигация по списку рубрик</items_list_navigation>
+                <items_list>Список рубрик</items_list>
+                <menu_name>Рубрики</menu_name>
+                <name_admin_bar>category</name_admin_bar>
+            </labels>
+            <slug>category</slug>
+            <description></description>
+            <public>public</public>
+            <supports>
+                <__types_cpt_supports_post>1</__types_cpt_supports_post>
+            </supports>
+            <_builtin>1</_builtin>
+            <_toolset_edit_last>1498065023</_toolset_edit_last>
+            <_wpcf_author_id>1</_wpcf_author_id>
+            <name></name>
+            <id>category</id>
+            <__types_id>category</__types_id>
+            <__types_title>Рубрики</__types_title>
+            <checksum>133595b0c2f0d4c8750a41fdf2e198d6</checksum>
+        </taxonomy>
+        <taxonomy>
+            <name>post_tag</name>
+            <label>Метки</label>
+            <labels>
+                <name>Метки</name>
+                <singular_name>Метка</singular_name>
+                <search_items>Поиск меток</search_items>
+                <popular_items>Популярные метки</popular_items>
+                <all_items>Все метки</all_items>
+                <parent_item></parent_item>
+                <parent_item_colon></parent_item_colon>
+                <edit_item>Изменить метку</edit_item>
+                <view_item>Просмотреть метку</view_item>
+                <update_item>Обновить метку</update_item>
+                <add_new_item>Добавить новую метку</add_new_item>
+                <new_item_name>Название новой метки</new_item_name>
+                <separate_items_with_commas>Метки разделяются запятыми</separate_items_with_commas>
+                <add_or_remove_items>Добавить или удалить метки</add_or_remove_items>
+                <choose_from_most_used>Выбрать из часто используемых меток</choose_from_most_used>
+                <not_found>Меток не найдено.</not_found>
+                <no_terms>Меток нет</no_terms>
+                <items_list_navigation>Навигация по списку меток</items_list_navigation>
+                <items_list>Список меток</items_list>
+                <menu_name>Метки</menu_name>
+                <name_admin_bar>post_tag</name_admin_bar>
+            </labels>
+            <description></description>
+            <public>1</public>
+            <publicly_queryable>1</publicly_queryable>
+            <hierarchical></hierarchical>
+            <show_ui>1</show_ui>
+            <show_in_menu>1</show_in_menu>
+            <show_in_nav_menus>1</show_in_nav_menus>
+            <show_tagcloud>1</show_tagcloud>
+            <show_in_quick_edit>1</show_in_quick_edit>
+            <show_admin_column>1</show_admin_column>
+            <meta_box_cb>post_tags_meta_box</meta_box_cb>
+            <cap>
+                <manage_terms>manage_post_tags</manage_terms>
+                <edit_terms>edit_post_tags</edit_terms>
+                <delete_terms>delete_post_tags</delete_terms>
+                <assign_terms>assign_post_tags</assign_terms>
+            </cap>
+            <rewrite>
+                <with_front></with_front>
+                <hierarchical></hierarchical>
+                <ep_mask>1024</ep_mask>
+                <slug>.</slug>
+            </rewrite>
+            <query_var>tag</query_var>
+            <update_count_callback></update_count_callback>
+            <show_in_rest>1</show_in_rest>
+            <rest_base>tags</rest_base>
+            <rest_controller_class>WP_REST_Terms_Controller</rest_controller_class>
+            <_builtin>1</_builtin>
+            <slug>post_tag</slug>
+            <supports>
+                <__types_cpt_supports_post>1</__types_cpt_supports_post>
+            </supports>
+            <id>post_tag</id>
+            <__types_id>post_tag</__types_id>
+            <__types_title>Метки</__types_title>
+            <checksum>72635bb6d2dceee9d4acc99f2edefd95</checksum>
+        </taxonomy>
+    </taxonomies>
+</types>
