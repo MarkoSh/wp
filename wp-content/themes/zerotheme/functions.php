@@ -42,6 +42,7 @@ function ST4_columns_head($defaults) {
         'order_',
         'cart'
     )) ) {
+        $defaults['id_customer'] = 'Идентификатор покупателя';
         switch ($post_type) {
             case 'order_':
                 $defaults['id_cart'] = 'Идентификатор корзины';
@@ -50,7 +51,6 @@ function ST4_columns_head($defaults) {
                 $defaults['id_order'] = 'Идентификатор заказа';
                 break;
         }
-        $defaults['id_customer'] = 'Идентификатор покупателя';
     }
     return $defaults;
     
