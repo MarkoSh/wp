@@ -1,0 +1,12 @@
+# BEGIN LSCACHE
+## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
+
+<IfModule LiteSpeed>
+
+RewriteEngine on
+CacheLookup Public on
+
+</IfModule>
+
+## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
+# END LSCACHE

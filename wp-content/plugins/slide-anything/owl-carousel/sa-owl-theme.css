@@ -1,0 +1,183 @@
+/*
+##############################################################
+### OWL CAROUSEL THEME (CSS) FOR THE SLIDE ANYTHING PLUGIN ###
+##############################################################
+*/
+
+.owl-carousel .owl-stage-outer {
+	width:100% !important;
+}
+/* ### ERROR MESSAGES ### */
+#sa_invalid_postid {
+	width:100% !important;
+	padding:20px 0px !important;
+	font-size:16px !important;
+	line-height:22px !important;
+	color:crimson !important;
+}
+/* ### PAGINATION BUTTONS ### */
+.sa_owl_theme .owl-dots {
+	position:absolute;
+	width:100%;
+	padding:10px 0px 0px !important;
+	bottom:-22px !important;
+	text-align:center !important;
+	font-size:12px !important;
+	line-height:12px !important;
+}
+.sa_owl_theme .owl-dots .owl-dot {
+	display: inline-block !important;
+}
+.sa_owl_theme .owl-dots .owl-dot span {
+	display:inline-block !important;
+	border-style:none !important;
+	background-color:rgba(0,0,0,0.2) !important;
+	width:10px !important;
+	height:10px !important;
+	border-radius:50% !important;
+	margin:0px 3px !important;
+	transition:all .3s ease-in-out !important;
+	-webkit-transition:all .3s ease-in-out !important;
+	-moz-transition:all .3s ease-in-out !important;
+	-o-transition:all .3s ease-in-out !important;
+}
+.sa_owl_theme .owl-dots .active span {
+	background-color:rgba(0,0,0,0.5) !important;
+}
+.sa_owl_theme .owl-dots .owl-dot span:hover {
+	background-color:rgba(0,0,0,0.5) !important;
+}
+.owl-pagination-true {
+	margin-bottom:22px !important;
+}
+
+/* ### PREVIOUS AND NEXT ARROW BUTTONS ### */
+.sa_owl_theme .owl-nav {
+	display:block !important;
+}
+.autohide-arrows .owl-nav {
+	display:none !important;
+}
+.autohide-arrows:hover .owl-nav {
+	display:block !important;
+}
+.sa_owl_theme .owl-nav div {
+	position:absolute;
+	top:50%;
+	padding:2px 0px !important;
+	display:inline-block;
+	margin-top:-20px !important;
+	line-height:30px !important;
+	height:40px !important;
+	width:30px !important;
+	transition:all .3s ease-in-out !important;
+	-webkit-transition:all .3s ease-in-out !important;
+	-moz-transition:all .3s ease-in-out !important;
+	-o-transition:all .3s ease-in-out !important;
+}
+.sa_owl_theme .owl-nav .owl-prev {
+	left:10px;
+}
+.sa_owl_theme .owl-nav .owl-next {
+	right:10px;
+}
+.sa_owl_theme .disabled .owl-prev,
+.sa_owl_theme .disabled .owl-next {
+	display:none !important;
+}
+/* WHITE COLOR SCHEME */
+.white .sa_owl_theme .owl-nav .owl-prev {
+	background:rgba(0,0,0,0.3) url('../images/icon_prev.png') no-repeat center center !important;
+}
+.white .sa_owl_theme .owl-nav .owl-next {
+	background:rgba(0,0,0,0.3) url('../images/icon_next.png') no-repeat center center !important;
+}
+.white .sa_owl_theme .owl-nav .owl-prev:hover,
+.white .sa_owl_theme .owl-nav .owl-next:hover {
+	background-color:rgba(0,0,0,0.8) !important;
+}
+/* BLACK COLOR SCHEME */
+.black .sa_owl_theme .owl-nav .owl-prev {
+	background:rgba(255,255,255,0.3) url('../images/black_icon_prev.png') no-repeat center center !important;
+}
+.black .sa_owl_theme .owl-nav .owl-next {
+	background:rgba(255,255,255,0.3) url('../images/black_icon_next.png') no-repeat center center !important;
+}
+.black .sa_owl_theme .owl-nav .owl-prev:hover,
+.black .sa_owl_theme .owl-nav .owl-next:hover {
+	background-color:rgba(255,255,255,0.8) !important;
+}
+
+/* ### LINK, ZOOM AND VIDEO POPUP ICONS ### */
+.sa_owl_theme .owl-item .sa_hover_container .sa_hover_buttons {
+	width:auto;
+	height:auto;
+	position:absolute;
+	border-radius:0px !important;
+	z-index:2;
+	cursor:pointer;
+	background:transparent !important;
+}
+.sa_owl_theme .owl-item .sa_hover_container .always_visible .sa_slide_link_icon,
+.sa_owl_theme .owl-item .sa_hover_container .always_visible .sa_popup_zoom_icon,
+.sa_owl_theme .owl-item .sa_hover_container .always_visible .sa_popup_video_icon,
+.sa_owl_theme .owl-item .sa_hover_container:hover .sa_hover_buttons .sa_slide_link_icon,
+.sa_owl_theme .owl-item .sa_hover_container:hover .sa_hover_buttons .sa_popup_zoom_icon,
+.sa_owl_theme .owl-item .sa_hover_container:hover .sa_hover_buttons .sa_popup_video_icon {
+	display:block;
+	float:left;
+	width:40px;
+	height:40px;
+}
+.sa_owl_theme .owl-item .sa_hover_container:hover .sa_hover_buttons .sa_slide_link_icon:hover,
+.sa_owl_theme .owl-item .sa_hover_container:hover .sa_hover_buttons .sa_popup_zoom_icon:hover,
+.sa_owl_theme .owl-item .sa_hover_container:hover .sa_hover_buttons .sa_popup_video_icon:hover {
+	transition:background-color .3s ease-in-out, background-image .3s ease-in-out !important;
+	-webkit-transition:background-color .3s ease-in-out, background-image .3s ease-in-out !important;
+	-moz-transition:background-color .3s ease-in-out, background-image .3s ease-in-out !important;
+	-o-transition:background-color .3s ease-in-out, background-image .3s ease-in-out !important;
+}
+/* WHITE COLOR SCHEME */
+.white .sa_owl_theme .owl-item .sa_hover_container .always_visible .sa_slide_link_icon,
+.white .sa_owl_theme .owl-item .sa_hover_container:hover .sa_hover_buttons .sa_slide_link_icon {
+	background:rgba(0,0,0,0.3) url('../images/slide_link.png') no-repeat center center !important;
+}
+.white .sa_owl_theme .owl-item .sa_hover_container .always_visible .sa_popup_zoom_icon,
+.white .sa_owl_theme .owl-item .sa_hover_container:hover .sa_hover_buttons .sa_popup_zoom_icon {
+	background:rgba(0,0,0,0.3) url('../images/lightbox_zoom.png') no-repeat center center !important;
+}
+.white .sa_owl_theme .owl-item .sa_hover_container .always_visible .sa_popup_video_icon,
+.white .sa_owl_theme .owl-item .sa_hover_container:hover .sa_hover_buttons .sa_popup_video_icon {
+	background:rgba(0,0,0,0.3) url('../images/lightbox_video.png') no-repeat center center !important;
+}
+.white .sa_owl_theme .owl-item .sa_hover_container:hover .sa_hover_buttons .sa_slide_link_icon:hover,
+.white .sa_owl_theme .owl-item .sa_hover_container:hover .sa_hover_buttons .sa_popup_zoom_icon:hover,
+.white .sa_owl_theme .owl-item .sa_hover_container:hover .sa_hover_buttons .sa_popup_video_icon:hover {
+	background-color:rgba(0,0,0,0.8) !important;
+}
+/* BLACK COLOR SCHEME */
+.black .sa_owl_theme .owl-item .sa_hover_container .always_visible .sa_slide_link_icon,
+.black .sa_owl_theme .owl-item .sa_hover_container:hover .sa_hover_buttons .sa_slide_link_icon {
+	background:rgba(255,255,255,0.3) url('../images/black_slide_link.png') no-repeat center center !important;
+}
+.black .sa_owl_theme .owl-item .sa_hover_container .always_visible .sa_popup_zoom_icon,
+.black .sa_owl_theme .owl-item .sa_hover_container:hover .sa_hover_buttons .sa_popup_zoom_icon {
+	background:rgba(255,255,255,0.3) url('../images/black_lightbox_zoom.png') no-repeat center center !important;
+}
+.black .sa_owl_theme .owl-item .sa_hover_container .always_visible .sa_popup_video_icon,
+.black .sa_owl_theme .owl-item .sa_hover_container:hover .sa_hover_buttons .sa_popup_video_icon {
+	background:rgba(255,255,255,0.3) url('../images/black_lightbox_video.png') no-repeat center center !important;
+}
+.black .sa_owl_theme .owl-item .sa_hover_container:hover .sa_hover_buttons .sa_slide_link_icon:hover,
+.black .sa_owl_theme .owl-item .sa_hover_container:hover .sa_hover_buttons .sa_popup_zoom_icon:hover,
+.black .sa_owl_theme .owl-item .sa_hover_container:hover .sa_hover_buttons .sa_popup_video_icon:hover {
+	background-color:rgba(255,255,255,0.8) !important;
+}
+
+
+.sa_custom_popup {
+	position:relative;
+	padding:20px;
+	width:auto;
+	margin:20px auto;
+}

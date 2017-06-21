@@ -1,0 +1,106 @@
+[
+    {
+        "name": "websharks/sharkicons",
+        "version": "160221",
+        "version_normalized": "160221",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/websharks/sharkicons.git",
+            "reference": "2e6d6663c050f343fe944b424dea1759aa67cd05"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/websharks/sharkicons/zipball/2e6d6663c050f343fe944b424dea1759aa67cd05",
+            "reference": "2e6d6663c050f343fe944b424dea1759aa67cd05",
+            "shasum": ""
+        },
+        "require-dev": {
+            "package/bourbon": "4.2.3"
+        },
+        "time": "2016-02-21 15:16:12",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": []
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-3.0+"
+        ],
+        "authors": [
+            {
+                "name": "websharks",
+                "homepage": "http://websharks-inc.com/",
+                "role": "company"
+            },
+            {
+                "name": "jaswsinc",
+                "homepage": "http://jaswsinc.com/",
+                "role": "developer"
+            },
+            {
+                "name": "raamdev",
+                "homepage": "http://raam.org/",
+                "role": "developer"
+            }
+        ],
+        "description": "Font containing WebSharks logos/icons.",
+        "homepage": "https://github.com/websharks/sharkicons",
+        "keywords": [
+            "php",
+            "websharks",
+            "wordpress"
+        ]
+    },
+    {
+        "name": "websharks/wp-php-rv",
+        "version": "160824.6416",
+        "version_normalized": "160824.6416",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/websharks/wp-php-rv.git",
+            "reference": "d889d4ac090d674153a8de1ec2ae927527d66d35"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/websharks/wp-php-rv/zipball/d889d4ac090d674153a8de1ec2ae927527d66d35",
+            "reference": "d889d4ac090d674153a8de1ec2ae927527d66d35",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.2"
+        },
+        "time": "2016-08-24 01:47:28",
+        "type": "library",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-3.0+"
+        ],
+        "authors": [
+            {
+                "name": "jaswsinc",
+                "homepage": "https://jaswsinc.com",
+                "role": "developer"
+            },
+            {
+                "name": "raamdev",
+                "homepage": "http://raam.org",
+                "role": "developer"
+            },
+            {
+                "name": "wpsharks",
+                "homepage": "https://wpsharks.com",
+                "role": "company"
+            }
+        ],
+        "description": "Stub for WordPress themes/plugins that require PHP vX.x+.",
+        "homepage": "https://github.com/websharks/wp-php-rv",
+        "keywords": [
+            "php",
+            "websharks",
+            "wordpress",
+            "wpsharks"
+        ]
+    }
+]

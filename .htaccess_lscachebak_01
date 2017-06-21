@@ -1,0 +1,20 @@
+# BEGIN LSCACHE
+## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
+
+<IfModule LiteSpeed>
+
+RewriteEngine on
+CacheLookup Public on
+
+### marker CACHE RESOURCE start ###
+RewriteRule wp-content/.*/[^/]*(loader|fonts|\.css|\.js)\.php - [E=cache-control:max-age=3600]
+### marker CACHE RESOURCE end ###
+
+### marker FAVICON start ###
+RewriteRule favicon\.ico$ - [E=cache-control:max-age=86400]
+### marker FAVICON end ###
+
+</IfModule>
+
+## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
+# END LSCACHE

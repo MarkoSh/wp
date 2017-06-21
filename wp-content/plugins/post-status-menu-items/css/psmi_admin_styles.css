@@ -1,0 +1,104 @@
+/*-----------------------------------------------------------
+ * WordPress 3.8+ Styles
+ *-----------------------------------------------------------*/
+
+/* "At a Glance" Widget */
+#dashboard_right_now h4 {
+	margin: 0.6em 0;
+}
+
+/* Setup Posts admin icon usage
+ * Styles stolen from "Site Content" Dashboard widget CSS
+ */
+.edit-php .subsubsub {
+	margin: 2px 0 15px;
+}
+.edit-php .subsubsub a:before {
+	content: '\f159';
+	font: 400 16px/1.625 dashicons;
+	speak: none;
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	text-indent: 0;
+	text-align: center;
+	position: relative;
+	-webkit-font-smoothing: antialiased;
+	text-decoration: none!important
+}
+
+/* Use a different dashicon for each core post status in
+ * 1) "At a Glance"
+ * 2) Posts admin pages
+ */
+/* Published */
+#dashboard_right_now .publish-status-post-count a:before,
+.edit-php .subsubsub .publish a:before {
+	content: '\f109';
+}
+/* Sticky */
+.edit-php .subsubsub .sticky a:before {
+	content: '\f155';
+}
+/* Scheduled */
+#dashboard_right_now .future-status-post-count a:before,
+.edit-php .subsubsub .future a:before {
+	content: '\f321';
+}
+/* Draft */
+#dashboard_right_now .draft-status-post-count a:before,
+.edit-php .subsubsub .draft a:before {
+	content: '\f327';
+}
+/* Pending */
+#dashboard_right_now .pending-status-post-count a:before,
+.edit-php .subsubsub .pending a:before {
+	content: '\f125';
+}
+/* Private */
+#dashboard_right_now .private-status-post-count a:before,
+.edit-php .subsubsub .private a:before {
+	content: '\f160';
+}
+/* Trash */
+#dashboard_right_now .trash-status-post-count a:before,
+.edit-php .subsubsub .trash a:before {
+	content: "\f182";
+}
+
+/* All */
+.edit-php .subsubsub .all a:before {
+	content: "\f180";
+}
+/* Mine */
+.edit-php .subsubsub .mine a:before {
+	content: "\f110";
+}
+
+/* Common Custom Statuses or Plugin statuses*/
+/* Archived Post Status */
+/* Support for plugins that add "archive" or "archived" status */
+#dashboard_right_now .archive-status-post-count a:before,
+.edit-php .subsubsub .archive a:before,
+#dashboard_right_now .archived-status-post-count a:before,
+.edit-php .subsubsub .archived a:before {
+	content: "\f480";
+}
+
+/* Advanced Custom Fields Sync */
+.edit-php .subsubsub .json a:before {
+	content: "\f463";
+}
+
+/* Page Reordering (Simple Page Reordering and maybe others) */
+.edit-php .subsubsub .byorder a:before,
+.edit-php .subsubsub .order a:before,
+.edit-php .subsubsub .reorder a:before {
+	content: "\f156";
+}
+
+/* Yoast SEO Cornerstone Content */
+.edit-php .subsubsub .yoast_cornerstone a:before {
+	content: "\f184";
+}

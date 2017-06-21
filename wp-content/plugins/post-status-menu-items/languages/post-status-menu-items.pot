@@ -1,0 +1,53 @@
+# Copyright (C) 2015 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version:  \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/post-status-menu-items\n"
+"POT-Creation-Date: 2015-01-21 17:20:15+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: cms_post_status_menu.php:211 cms_post_status_menu.php:252
+#: cms_post_status_menu.php:333
+msgctxt "the Posts core post type"
+msgid "Posts"
+msgstr ""
+
+#: cms_post_status_menu.php:212
+msgctxt "the Pages core post type"
+msgid "Pages"
+msgstr ""
+
+#: cms_post_status_menu.php:362
+msgctxt "plugin settings heading, wrapped in span with ID for settings link"
+msgid "%1$sPost Status Menu Items Plugin Settings%2$s"
+msgstr ""
+
+#: cms_post_status_menu.php:375
+msgid "Show statuses in menu for these post types"
+msgstr ""
+
+#: cms_post_status_menu.php:384
+msgid "Hide these statuses for post type menus "
+msgstr ""
+
+#: cms_post_status_menu.php:393
+msgid "Hide Statuses in \"Right Now\" / \"At a Glance\" Dashboard Widget"
+msgstr ""
+
+#: cms_post_status_menu.php:418
+msgid "Show statuses in the <strong>%3$s</strong> menu."
+msgstr ""
+
+#: cms_post_status_menu.php:442
+msgid "Hide <strong>%3$s</strong> status in admin menus."
+msgstr ""
+
+#: cms_post_status_menu.php:458
+msgid "Hide Posts Statuses list on the Dashboard."
+msgstr ""

@@ -1,0 +1,10 @@
+body {
+    opacity: 1;
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+    &.admin-bar {
+        margin-top: -32px;
+        padding-top: 32px;
+    }
+}

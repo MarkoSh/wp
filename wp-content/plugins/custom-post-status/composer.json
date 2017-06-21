@@ -1,0 +1,20 @@
+{
+    "name": "octopus-digital-strategy/custom-post-status",
+    "description": "Register Cust Post Status.",
+    "type": "Plugin",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Page Carbajal",
+            "email": "awesome@pagecarbajal.com"
+        }
+    ],
+    "require": {
+        "page-carbajal/wpexpress": "^1.2"
+    },
+    "autoload": {
+        "psr-4":{
+            "CustomPostStatus\\": "source/"
+        }
+    }
+}
