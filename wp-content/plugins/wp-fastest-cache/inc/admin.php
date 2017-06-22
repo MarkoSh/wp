@@ -334,8 +334,8 @@
 				return array("You have to set <strong><u><a href='".admin_url()."options-permalink.php"."'>permalinks</a></u></strong>", "error");
 			}else if($res = $this->checkSuperCache($path, $htaccess)){
 				return $res;
-			// }else if($this->isPluginActive('wp-hide-security-enhancer/wp-hide.php')){
-			// 	return array("WP Hide & Security Enhancer needs to be deactived<br>", "error");
+			}else if($this->isPluginActive('sg-cachepress/sg-cachepress.php')){
+				return array("SG Optimizer needs to be deactive", "error");
 			}else if($this->isPluginActive('adrotate/adrotate.php') || $this->isPluginActive('adrotate-pro/adrotate.php')){
 				return $this->warningIncompatible("AdRotate");
 			}else if($this->isPluginActive('mobilepress/mobilepress.php')){
@@ -394,12 +394,20 @@
 			}
 							
 			if($webp){
+				if(ABSPATH == "//"){
+					$RewriteCond = "RewriteCond %{DOCUMENT_ROOT}/$1.webp -f"."\n";
+				}else{
+					$RewriteCond = "RewriteCond %{DOCUMENT_ROOT}/$1.webp -f [or]"."\n";
+					$RewriteCond = $RewriteCond."RewriteCond ".ABSPATH."$1.webp -f"."\n";
+				}
+
+
 				$data = "# BEGIN WEBPWpFastestCache"."\n".
 						"<IfModule mod_rewrite.c>"."\n".
 						"RewriteEngine On"."\n".
 						"RewriteCond %{HTTP_ACCEPT} image/webp"."\n".
-						"RewriteCond %{REQUEST_URI} jpg|png"."\n".
-						"RewriteCond %{DOCUMENT_ROOT}/$1.webp -f"."\n".
+						"RewriteCond %{REQUEST_URI} \.(jpe?g|png)"."\n".
+						$RewriteCond.
 						"RewriteRule ^(.*) \"/$1.webp\" [L]"."\n".
 						"</IfModule>"."\n".
 						"<IfModule mod_headers.c>"."\n".
@@ -600,6 +608,7 @@
 			if(ABSPATH == "//"){
 				$data = $data."RewriteCond %{DOCUMENT_ROOT}/".WPFC_WP_CONTENT_BASENAME."/cache/all/$1/index.html -f"."\n";
 			}else{
+				//WARNING: If you change the following lines, you need to update webp as well
 				$data = $data."RewriteCond %{DOCUMENT_ROOT}/".WPFC_WP_CONTENT_BASENAME."/cache/all/$1/index.html -f [or]"."\n";
 				// to escape spaces
 				$tmp_WPFC_WP_CONTENT_DIR = str_replace(" ", "\ ", WPFC_WP_CONTENT_DIR);
@@ -801,6 +810,8 @@
 			$wpFastestCachePreload_post = isset($this->options->wpFastestCachePreload_post) ? 'checked="checked"' : "";
 			$wpFastestCachePreload_category = isset($this->options->wpFastestCachePreload_category) ? 'checked="checked"' : "";
 			$wpFastestCachePreload_page = isset($this->options->wpFastestCachePreload_page) ? 'checked="checked"' : "";
+			$wpFastestCachePreload_tag = isset($this->options->wpFastestCachePreload_tag) ? 'checked="checked"' : "";
+			$wpFastestCachePreload_attachment = isset($this->options->wpFastestCachePreload_attachment) ? 'checked="checked"' : "";
 			$wpFastestCachePreload_number = isset($this->options->wpFastestCachePreload_number) ? $this->options->wpFastestCachePreload_number : 4;
 
 
@@ -1176,7 +1187,9 @@
 											"topclassprinting.com",
 											"camilazivit.com.br",
 											"spycoupon.in",
-											"groovypost.com"
+											"groovypost.com",
+											"parkviewhomes.info",
+											"myparkviewhomes.com"
 											);
 														
 							if(in_array(get_bloginfo('language'), $tester_arr) || in_array(str_replace("www.", "", $_SERVER["HTTP_HOST"]), $tester_arr)){ ?>
@@ -1654,6 +1667,10 @@
 								<select name="wpfc-exclude-rule-prefix">
 										<option selected="" value=""></option>
 										<option value="homepage">Home Page</option>
+										<option value="category">Categories</option>
+										<option value="tag">Tags</option>
+										<option value="post">Posts</option>
+										<option value="page">Pages</option>
 										<option value="startwith">Start With</option>
 										<option value="contain">Contain</option>
 										<option value="exact">Exact</option>

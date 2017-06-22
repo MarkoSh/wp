@@ -44,10 +44,14 @@
 					<label class="mc-input-label" style="margin-right: 5px;"><input type="checkbox" <?php echo $wpFastestCachePreload_page; ?> id="wpFastestCachePreload_page" name="wpFastestCachePreload_page"></label>
 					<label for="wpFastestCachePreload_page">Pages</label>
 				</div>
-<!-- 				<div class="wiz-input-cont" style="margin-right: 5px;">
-					<label class="mc-input-label" style="margin-right: 5px;"><input type="checkbox"></label>
-					<label>Tags</label>
-				</div> -->
+				<div class="wiz-input-cont" style="margin-right: 5px;">
+					<label class="mc-input-label" style="margin-right: 5px;"><input type="checkbox" <?php echo $wpFastestCachePreload_tag; ?> id="wpFastestCachePreload_tag" name="wpFastestCachePreload_tag"></label>
+					<label for="wpFastestCachePreload_tag">Tages</label>
+				</div>
+				<div class="wiz-input-cont">
+					<label class="mc-input-label" style="margin-right: 5px;"><input type="checkbox" <?php echo $wpFastestCachePreload_attachment; ?> id="wpFastestCachePreload_attachment" name="wpFastestCachePreload_attachment"></label>
+					<label for="wpFastestCachePreload_attachment">Attachments</label>
+				</div>
 
 				<div class="wiz-input-cont" style="width: 91% !important;margin-bottom: 0px !important;">
 					<label class="mc-input-label" style="float:left;">

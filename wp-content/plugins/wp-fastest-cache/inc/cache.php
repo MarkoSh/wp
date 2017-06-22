@@ -23,6 +23,28 @@
 			$this->set_content_url();
 		}
 
+		public function detect_current_page_type(){
+			if(preg_match("/\?/", $_SERVER["REQUEST_URI"])){
+				return true;
+			}
+			
+			if(preg_match("/^\/wp-json/", $_SERVER["REQUEST_URI"])){
+				return true;
+			}
+
+			if(is_home()){
+				echo "<!--WPFC_PAGE_TYPE_homepage-->";
+			}else if(is_category()){
+				echo "<!--WPFC_PAGE_TYPE_category-->";
+			}else if(is_tag()){
+				echo "<!--WPFC_PAGE_TYPE_tag-->";
+			}else if(is_singular('post')){
+				echo "<!--WPFC_PAGE_TYPE_post-->";
+			}else if(is_page()){
+				echo "<!--WPFC_PAGE_TYPE_page-->";
+			}
+		}
+
 		public function set_content_url(){
 			$content_url = content_url();
 
@@ -218,14 +240,11 @@
 					return 0;
 				}
 
-				if($this->exclude_page()){
-					//echo "<!-- Wp Fastest Cache: Exclude Page -->"."\n";
-					return 0;
-				}
-
 				if(preg_match("/Empty\sUser\sAgent/i", $_SERVER['HTTP_USER_AGENT'])){ // not to show the cache for command line
 					return 0;
 				}
+
+				add_action('wp', array($this, "detect_current_page_type"));
 
 				//to show cache version via php if htaccess rewrite rule does not work
 				if($this->cacheFilePath && @file_exists($this->cacheFilePath."index.html")){
@@ -325,7 +344,7 @@
 			return false;
 		}
 
-		public function exclude_page(){
+		public function exclude_page($buffer){
 			$preg_match_rule = "";
 			$request_url = trim($_SERVER["REQUEST_URI"], "/");
 
@@ -338,8 +357,8 @@
 						$value->content = trim($value->content);
 						$value->content = trim($value->content, "/");
 
-						if($value->prefix == "homepage"){
-							if($request_url == "/" || $request_url == ""){
+						if(preg_match("/^(homepage|category|tag|post|page)$/", $value->prefix)){
+							if(preg_match('/<\!--WPFC_PAGE_TYPE_'.$value->prefix.'-->/i', $buffer)){
 								return true;
 							} 
 						}else if($value->prefix == "exact"){
@@ -411,6 +430,13 @@
 				}
 			}
 
+			if($this->exclude_page($buffer)){
+				$buffer = preg_replace('/<\!--WPFC_PAGE_TYPE_[a-z]+-->/i', '', $buffer);	
+				return $buffer;
+			}
+
+			$buffer = preg_replace('/<\!--WPFC_PAGE_TYPE_[a-z]+-->/i', '', $buffer);
+
 			if(preg_match("/Mediapartners-Google|Google\sWireless\sTranscoder/i", $_SERVER['HTTP_USER_AGENT'])){
 				return $buffer;
 			}else if($this->is_xml($buffer)){
@@ -441,7 +467,7 @@
 				return $buffer;
 			}else if(!$this->cacheFilePath){
 				return $buffer."<!-- permalink_structure ends with slash (/) but REQUEST_URI does not end with slash (/) -->";
-			}else{				
+			}else{
 				$content = $buffer;
 
 				if(isset($this->options->wpFastestCacheRenderBlocking) && method_exists("WpFastestCachePowerfulHtml", "render_blocking")){
@@ -572,9 +598,9 @@
 
 		public function cdn_rewrite($content){
 			if($this->cdn){
-				$content = preg_replace_callback("/(srcset|src|href|data-lazyload|data-source-url|data-srcsmall|data-srclarge|data-srcfull|data-slide-img|data-lazy-original)\s{0,2}\=[\'\"]([^\'\"]+)[\'\"]/i", array($this, 'cdn_replace_urls'), $content);
+				$content = preg_replace_callback("/(srcset|src|href|data-bg-url|data-lazyload|data-source-url|data-srcsmall|data-srclarge|data-srcfull|data-slide-img|data-lazy-original)\s{0,2}\=[\'\"]([^\'\"]+)[\'\"]/i", array($this, 'cdn_replace_urls'), $content);
 				//url()
-				$content = preg_replace_callback("/(url)\(([^\)]+)\)/i", array($this, 'cdn_replace_urls'), $content);
+				$content = preg_replace_callback("/(url)\(([^\)\>]+)\)/i", array($this, 'cdn_replace_urls'), $content);
 				//{"concatemoji":"http:\/\/your_url.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7"}
 				$content = preg_replace_callback("/\{\"concatemoji\"\:\"[^\"]+\"\}/i", array($this, 'cdn_replace_urls'), $content);
 				//<script>var loaderRandomImages=["https:\/\/www.site.com\/wp-content\/uploads\/2016\/12\/image.jpg"];</script>
@@ -729,7 +755,7 @@
 		public function is_amp($content){
 			$request_uri = trim($_SERVER["REQUEST_URI"], "/");
 
-			if(preg_match("/amp$/", $request_uri)){
+			if(preg_match("/^amp/", $request_uri) || preg_match("/amp$/", $request_uri)){
 				if(preg_match("/<html[^\>]+amp[^\>]*>/i", $content)){
 					return true;
 				}

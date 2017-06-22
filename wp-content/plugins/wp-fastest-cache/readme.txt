@@ -3,8 +3,8 @@ Contributors: emrevona
 Donate link: http://profiles.wordpress.org/emrevona/
 Tags: cache, performance, wp-cache, total cache, super cache
 Requires at least: 3.3
-Tested up to: 4.7.5
-Stable tag: 0.8.6.9
+Tested up to: 4.8
+Stable tag: 0.8.7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -100,6 +100,17 @@ Wpfc does not support Wordpress Multisite yet.
 18. Database Cleanup
 
 == Changelog ==
+
+= 0.8.7.0 =
+* to avoid removing www prefix from photon cdn-url
+* to prevent to empty origin-url on cdn wizard
+* <strong>[FEATURE]</strong> to clear cache of post via post list
+* preload for woocommorce product category
+* to clear cache of tag and cat after product update
+* to check that SG Optimizer is active or not
+* <strong>[FEATURE]</strong> Preload for tags
+* <strong>[FEATURE]</strong> Preload for attachments
+* <strong>[FEATURE]</strong> exclude categories, tags, posts and pages
 
 = 0.8.6.9 =
 * <strong>[FEATURE]</strong> to clear cache of the post tags and the post categories after new post

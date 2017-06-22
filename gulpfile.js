@@ -24,7 +24,7 @@ gulp.task('scripts', function() {
         '!wp-content/themes/' + currentTheme + '/js/**/*.min.js'
     ])
 	.pipe(concat('script.min.js'))
-	.pipe(uglify())
+	.pipe(uglify().on("error", notify.onError()))
 	.pipe(gulp.dest('wp-content/themes/' + currentTheme + '/js'));
 });
 

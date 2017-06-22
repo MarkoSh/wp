@@ -209,6 +209,27 @@ var WpfcCDN = {
 		var self = this;
 		var modal = jQuery("#wpfc-modal-" + self.id);
 		var cdn_url = modal.find("#cdn-url").val();
+		var origin_url = modal.find("#origin-url").val();
+
+		if(!cdn_url || !origin_url){
+			if(!cdn_url){
+				modal.find("#cdn-url").css("background-color", "red");
+			}else{
+				modal.find("#cdn-url").css("background-color", "white");
+			}
+
+			if(!origin_url){
+				modal.find("#origin-url").css("background-color", "red");
+			}else{
+				modal.find("#origin-url").css("background-color", "white");
+			}
+
+			return;
+		}else{
+			modal.find("#cdn-url").css("background-color", "white");
+			modal.find("#origin-url").css("background-color", "white");
+		}
+
 		modal.find("#cdn-url-loading").show();
 		modal.find(".wpfc-cdn-pages-container div.wiz-cont:visible #cdn-url").nextAll("label").html("");
 		jQuery.ajax({
@@ -220,6 +241,8 @@ var WpfcCDN = {
 		    	modal.find("#cdn-url-loading").hide();
 		    	if(res.success){
 		    		self.show_page("next");
+		    		modal.find("#cdn-url").css("background-color", "white");
+		    		modal.find("#origin-url").css("background-color", "white");
 		    	}else{
 		    		modal.find(".wpfc-cdn-pages-container div.wiz-cont:visible #cdn-url").nextAll("label").html(res.error_message);
 		    	}
@@ -228,7 +251,7 @@ var WpfcCDN = {
 		    	modal.find("#cdn-url-loading").hide();
 		    	alert("unknown error");
 		    }
-		  });
+		});
 	},
 	show_page: function(type){
 		var current_page = jQuery("#wpfc-modal-" + this.id).find(".wpfc-cdn-pages-container div.wiz-cont:visible");

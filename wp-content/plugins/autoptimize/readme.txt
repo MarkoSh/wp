@@ -4,7 +4,7 @@ Tags: css, html, javascript, js, optimize, speed, cache, aggregate, minimize, mi
 Donate link: http://blog.futtta.be/2013/10/21/do-not-donate-to-me/
 Requires at least: 4.0
 Tested up to: 4.8
-Stable tag: 2.2.0
+Stable tag: 2.2.1
 
 Autoptimize speeds up your website and helps you save bandwidth by aggregating and minimizing JS, CSS and HTML.
 
@@ -224,6 +224,11 @@ Just [fork Autoptimize on Github](https://github.com/futtta/autoptimize) and cod
 
 == Changelog ==
 
+= 2.2.1 =
+* fix for images in CSS not all being translated to correct path, leading to 404’s as reported by Jeff Inho
+* fix for "[] operator not supported for strings" error in PHP7.1 as reported by falk-wussow.de
+* fix for security hash busting AO's cache in some cases (esp. in 2.1.1)
+
 = 2.2.0 =
 * new: Autoptimize minifies first (caching the individual snippets) and aggregrates the minified snippets, resulting in huge performance improvements for uncached JS/ CSS.
 * new: option to enable/ disable AO for logged in users (on by default)
@@ -235,6 +240,10 @@ Just [fork Autoptimize on Github](https://github.com/futtta/autoptimize) and cod
 * API: Lots of extra filters, making AO (even) more flexible.
 * Lots of bugfixes and smaller improvements (see [GitHub commit log](https://github.com/futtta/autoptimize/commits/master))
 * tested and confirmed working in WordPress 4.8
+
+= 2.1.2 =
+* fix for security hash busting AO's cache badly
+* identical to 2.1.0 except for the security fix backported from 2.2.0
 
 = 2.1.1 =
 * identical to 2.1.0 except for the security fix backported from 2.2.0

@@ -3,7 +3,7 @@
 Plugin Name: Autoptimize
 Plugin URI: http://autoptimize.com/
 Description: Optimizes your website, concatenating the CSS and JavaScript code, and compressing it.
-Version: 2.2.0
+Version: 2.2.1
 Author: Frank Goossens (futtta)
 Author URI: http://blog.futtta.be/
 Domain Path: localization/
@@ -238,7 +238,7 @@ function autoptimize_end_buffering($content) {
         define('AUTOPTIMIZE_CACHE_URL',AUTOPTIMIZE_WP_CONTENT_URL.AUTOPTIMIZE_CACHE_CHILD_DIR);
     }
     define('AUTOPTIMIZE_WP_ROOT_URL',str_replace(AUTOPTIMIZE_WP_CONTENT_NAME,'',AUTOPTIMIZE_WP_CONTENT_URL));
-    define('AUTOPTIMIZE_HASH',wp_hash(AUTOPTIMIZE_CACHE_URL.microtime()));
+    define('AUTOPTIMIZE_HASH',wp_hash(AUTOPTIMIZE_CACHE_DIR));
 
     // Config element
     $conf = autoptimizeConfig::instance();
