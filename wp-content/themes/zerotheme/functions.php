@@ -340,6 +340,12 @@ function zt_get_meta_box( $meta_boxes ) {
 }
 add_filter( 'rwmb_meta_boxes', 'zt_get_meta_box' );
 
+/**
+* Получение общей стоимости корзины
+*
+* @param идентификатор корзины $cartId
+* @return число, сумма стоимости всех товаров в корзине
+*/
 function getCartSummary($cartId = false) {
     if ($cartId) {
         $products = get_post_meta($cartId, 'zt-products');
@@ -352,6 +358,12 @@ function getCartSummary($cartId = false) {
     }
 }
 
+/**
+* Получение общей стоимости заказа
+*
+* @param идентификатор заказа $orderId
+* @return число, сумма стоимости всех товаров в корзине заказа
+*/
 function getOrderSummary($orderId = false) {
     if ($orderId) {
         $cartId = get_post_meta($orderId, 'zt-cart', 1);
@@ -359,6 +371,12 @@ function getOrderSummary($orderId = false) {
     }
 }
 
+/**
+* Получение идентификаторов товаров в заказе
+*
+* @param идентификатор заказа $orderId
+* @return массив идентификаторов всех товаров в корзине заказа
+*/
 function getOrderProducts($orderId = false) {
     if ($orderId) {
         $cartId = get_post_meta($orderId, 'zt-cart', 1);
