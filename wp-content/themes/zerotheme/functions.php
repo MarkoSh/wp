@@ -48,6 +48,7 @@ function ST4_columns_head($defaults) {
                 $defaults['cart'] = 'Идентификатор корзины';
                 break;
             case 'cart':
+                $defaults['cart_reference'] = 'Артикул корзины';
                 $defaults['order'] = 'Идентификатор заказа';
                 break;
         }
@@ -223,18 +224,18 @@ function zt_get_meta_box( $meta_boxes ) {
 				'options' => $brands_options,
 			),
             array(
-				'id' => $prefix . 'parent',
-				'name' => esc_html__( 'Родительский товар', $prefix . 'metabox' ),
-				'type' => 'select_advanced',
-				'placeholder' => esc_html__( 'Выберите родительский товар', $prefix . 'metabox' ),
-				'options' => $products_options,
+				'id'            => $prefix . 'parent',
+				'name'          => esc_html__( 'Родительский товар', $prefix . 'metabox' ),
+				'type'          => 'select_advanced',
+				'placeholder'   => esc_html__( 'Выберите родительский товар', $prefix . 'metabox' ),
+				'options'       => $products_options,
 			),
 		),
 	);
     $meta_boxes[] = array(
 		'id'            => 'order_information',
 		'title'         => esc_html__( 'Информация о заказе', $prefix . 'metabox' ),
-		'post_types'                => array( 'order_' ),
+		'post_types'    => array( 'order_' ),
 		'context'       => 'advanced',
 		'priority'      => 'default',
 		'autosave'      => true,
@@ -306,6 +307,14 @@ function zt_get_meta_box( $meta_boxes ) {
 		'priority'      => 'default',
 		'autosave'      => true,
 		'fields'        => array(
+            array(
+				'id'            => $prefix . 'cart_reference',
+				'type'          => 'text',
+				'name'          => esc_html__( 'Артикул корзины', $prefix . 'metabox' ),
+                'attributes'    => array(
+                    'disabled' => !current_user_can('administrator')
+                ),
+			),
 			array(
 				'id'            => $prefix . 'products',
 				'name'          => esc_html__( 'Товары в корзине', $prefix . 'metabox' ),
