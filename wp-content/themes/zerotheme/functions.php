@@ -245,9 +245,9 @@ function zt_get_meta_box( $meta_boxes ) {
 				'name'          => esc_html__( 'Идентификатор корзины', $prefix . 'metabox' ),
 				'type'          => 'select_advanced',
 				'placeholder'   => esc_html__( 'Идентификатор корзины', $prefix . 'metabox' ),
-                'attributes'    => !is_admin() ? array(
-					'disabled' => 'disabled',
-				) : false,
+                'attributes'    => array(
+                    'disabled' => 'disabled',
+                ),
 				'options' => $carts_options,
 			),
             array(
@@ -255,9 +255,9 @@ function zt_get_meta_box( $meta_boxes ) {
 				'name'          => esc_html__( 'Идентификатор покупателя', $prefix . 'metabox' ),
 				'type'          => 'select_advanced',
 				'placeholder'   => esc_html__( 'Идентификатор покупателя', $prefix . 'metabox' ),
-                'attributes'    => !is_admin() ? array(
-					'disabled' => 'disabled',
-				) : false,
+                'attributes'    => array(
+                    'disabled' => 'disabled',
+                ),
 				'options' => $customers_options,
 			),
             array(
