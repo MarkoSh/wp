@@ -44,12 +44,12 @@ function ST4_columns_head($defaults) {
     )) ) {
         switch ($post_type) {
             case 'order_':
-                $defaults['customer'] = 'Идентификатор покупателя';
-                $defaults['cart'] = 'Идентификатор корзины';
+                $defaults['customer']   = 'Идентификатор покупателя';
+                $defaults['cart']       = 'Идентификатор корзины';
                 break;
             case 'cart':
                 $defaults['cart_reference'] = 'Артикул корзины';
-                $defaults['order'] = 'Идентификатор заказа';
+                $defaults['order']          = 'Идентификатор заказа';
                 break;
         }
         $defaults['summary'] = 'Общая стоимость товаров';
@@ -57,9 +57,9 @@ function ST4_columns_head($defaults) {
     if ( in_array($post_type, array(
         'product'
     )) ) {
-        $defaults['reference'] = 'Артикул товара';
-        $defaults['brand'] = 'Бренд товара';
-        $defaults['price'] = 'Цена';
+        $defaults['reference']  = 'Артикул товара';
+        $defaults['brand']      = 'Бренд товара';
+        $defaults['price']      = 'Цена';
     }
     return $defaults;
     
@@ -98,10 +98,10 @@ function ST4_columns_content($column_name, $post_ID) {
         $data = get_post_meta($post_ID, 'zt-' . $column_name, 1);
         switch ($column_name) {
             case 'reference':
-                echo  $data;
+                echo $data;
                 break;
             case 'price':
-                echo  $data . 'руб.';
+                echo $data . 'руб.';
                 break;
         }
     }
@@ -121,7 +121,7 @@ add_filter('manage_posts_columns', 'ST4_columns_head');
 add_action('manage_posts_custom_column', 'ST4_columns_content', 1, 2);
 
 function my_column_register_sortable( $columns ) {
-  $columns['price'] = 'price';
+  $columns['price']     = 'price';
   $columns['reference'] = 'reference';
  
   return $columns;
@@ -197,40 +197,40 @@ function zt_get_meta_box( $meta_boxes ) {
     }
 
     $meta_boxes[] = array(
-		'id' => 'products',
-		'title' => esc_html__( 'Информация о товаре', $prefix . 'metabox' ),
-		'post_types' => array( 'product' ),
-		'context' => 'advanced',
-		'priority' => 'default',
-		'autosave' => true,
-		'fields' => array(
-			array(
-				'id' => $prefix . 'price',
-				'name' => esc_html__( 'Цена', $prefix . 'metabox' ),
-				'type' => 'text',
-				'placeholder' => esc_html__( 'Цена', $prefix . 'metabox' )
-			),
-            array(
-				'id' => $prefix . 'reference',
-				'name' => esc_html__( 'Артикул', $prefix . 'metabox' ),
-				'type' => 'text',
-				'placeholder' => esc_html__( 'Артикул', $prefix . 'metabox' )
-			),
-            array(
-				'id' => $prefix . 'brand',
-				'name' => esc_html__( 'Бренд', $prefix . 'metabox' ),
-				'type' => 'select_advanced',
-				'placeholder' => esc_html__( 'Выберите бренд', $prefix . 'metabox' ),
-				'options' => $brands_options,
-			),
-            array(
-				'id'            => $prefix . 'parent',
-				'name'          => esc_html__( 'Родительский товар', $prefix . 'metabox' ),
-				'type'          => 'select_advanced',
-				'placeholder'   => esc_html__( 'Выберите родительский товар', $prefix . 'metabox' ),
-				'options'       => $products_options,
-			),
-		),
+		'id'            => 'products',
+		'title'         => esc_html__( 'Информация о товаре', $prefix . 'metabox' ),
+		'post_types'    => array( 'product' ),
+		'context'       => 'advanced',
+		'priority'      => 'default',
+		'autosave'      => true,
+		'fields'        => array(
+                array(
+                    'id'            => $prefix . 'price',
+                    'name'          => esc_html__( 'Цена', $prefix . 'metabox' ),
+                    'type'          => 'text',
+                    'placeholder'   => esc_html__( 'Цена', $prefix . 'metabox' )
+                ),
+                array(
+                    'id'            => $prefix . 'reference',
+                    'name'          => esc_html__( 'Артикул', $prefix . 'metabox' ),
+                    'type'          => 'text',
+                    'placeholder'   => esc_html__( 'Артикул', $prefix . 'metabox' )
+                ),
+                array(
+                    'id'            => $prefix . 'brand',
+                    'name'          => esc_html__( 'Бренд', $prefix . 'metabox' ),
+                    'type'          => 'select_advanced',
+                    'placeholder'   => esc_html__( 'Выберите бренд', $prefix . 'metabox' ),
+                    'options'       => $brands_options,
+                ),
+                array(
+                    'id'            => $prefix . 'parent',
+                    'name'          => esc_html__( 'Родительский товар', $prefix . 'metabox' ),
+                    'type'          => 'select_advanced',
+                    'placeholder'   => esc_html__( 'Выберите родительский товар', $prefix . 'metabox' ),
+                    'options'       => $products_options,
+                ),
+            ),
 	);
     $meta_boxes[] = array(
 		'id'            => 'order_information',
@@ -240,32 +240,32 @@ function zt_get_meta_box( $meta_boxes ) {
 		'priority'      => 'default',
 		'autosave'      => true,
 		'fields'        => array(
-			array(
-				'id'            => $prefix . 'cart',
-				'name'          => esc_html__( 'Идентификатор корзины', $prefix . 'metabox' ),
-				'type'          => 'select_advanced',
-				'placeholder'   => esc_html__( 'Идентификатор корзины', $prefix . 'metabox' ),
-                'attributes'    => array(
-                    'disabled' => 'disabled',
-                ),
-				'options' => $carts_options,
-			),
-            array(
-				'id'            => $prefix . 'customer',
-				'name'          => esc_html__( 'Идентификатор покупателя', $prefix . 'metabox' ),
-				'type'          => 'select_advanced',
-				'placeholder'   => esc_html__( 'Идентификатор покупателя', $prefix . 'metabox' ),
-                'attributes'    => array(
-                    'disabled' => 'disabled',
-                ),
-				'options' => $customers_options,
-			),
-            array(
-				'id'    => $prefix . 'address',
-				'type'  => 'textarea',
-				'name'  => esc_html__( 'Адрес доставки', $prefix . 'metabox' ),
-			)
-		),
+                array(
+                        'id'            => $prefix . 'cart',
+                        'name'          => esc_html__( 'Идентификатор корзины', $prefix . 'metabox' ),
+                        'type'          => 'select_advanced',
+                        'placeholder'   => esc_html__( 'Идентификатор корзины', $prefix . 'metabox' ),
+                        'attributes'    => array(
+                                'disabled' => 'disabled',
+                            ),
+                        'options' => $carts_options,
+                    ),
+                array(
+                        'id'            => $prefix . 'customer',
+                        'name'          => esc_html__( 'Идентификатор покупателя', $prefix . 'metabox' ),
+                        'type'          => 'select_advanced',
+                        'placeholder'   => esc_html__( 'Идентификатор покупателя', $prefix . 'metabox' ),
+                        'attributes'    => array(
+                                'disabled' => 'disabled',
+                            ),
+                        'options' => $customers_options,
+                    ),
+                array(
+                        'id'    => $prefix . 'address',
+                        'type'  => 'textarea',
+                        'name'  => esc_html__( 'Адрес доставки', $prefix . 'metabox' ),
+                    )
+            ),
 	);
     $meta_boxes[] = array(
 		'id'            => 'order_contain',
@@ -276,27 +276,27 @@ function zt_get_meta_box( $meta_boxes ) {
 		'autosave'      => true,
 		'fields'        => array(
 			array(
-				'id'            => $prefix . 'products',
-				'name'          => esc_html__( 'Товары в корзине', $prefix . 'metabox' ),
-				'type'          => 'select_advanced',
-				'placeholder'   => esc_html__( 'Товары', $prefix . 'metabox' ),
-				'options'       => $products_options,
-                'std'           => getOrderProducts($post->ID),
-                'multiple'      => true,
-				'attributes'    => array(
-                                            'disabled' => 'disabled'
-                                        ),
-			),
+                    'id'            => $prefix . 'products',
+                    'name'          => esc_html__( 'Товары в корзине', $prefix . 'metabox' ),
+                    'type'          => 'select_advanced',
+                    'placeholder'   => esc_html__( 'Товары', $prefix . 'metabox' ),
+                    'options'       => $products_options,
+                    'std'           => getOrderProducts($post->ID),
+                    'multiple'      => true,
+                    'attributes'    => array(
+                            'disabled'      => 'disabled'
+                        ),
+                ),
             array(
-				'id'            => $prefix . 'summary',
-				'type'          => 'text',
-				'name'          => esc_html__( 'Общая стоимость товаров', $prefix . 'metabox' ),
-                'desc'          => esc_html__( 'Будет пересчитана автоматически после сохранения', $prefix . 'metabox' ),
-                'attributes'    => array(
-                                            'value' => getOrderSummary($post->ID),
-                                            'disabled' => 'disabled'
-                                        ),
-			),
+                    'id'            => $prefix . 'summary',
+                    'type'          => 'text',
+                    'name'          => esc_html__( 'Общая стоимость товаров', $prefix . 'metabox' ),
+                    'desc'          => esc_html__( 'Будет пересчитана автоматически после сохранения', $prefix . 'metabox' ),
+                    'attributes'    => array(
+                            'value'         => getOrderSummary($post->ID),
+                            'disabled'      => 'disabled'
+                        ),
+                ),
 		),
 	);
     $meta_boxes[] = array(
@@ -308,31 +308,31 @@ function zt_get_meta_box( $meta_boxes ) {
 		'autosave'      => true,
 		'fields'        => array(
             array(
-				'id'            => $prefix . 'cart_reference',
-				'type'          => 'text',
-				'name'          => esc_html__( 'Артикул корзины', $prefix . 'metabox' ),
-                'attributes'    => array(
-                    'disabled' => !current_user_can('administrator')
+                    'id'            => $prefix . 'cart_reference',
+                    'type'          => 'text',
+                    'name'          => esc_html__( 'Артикул корзины', $prefix . 'metabox' ),
+                    'attributes'    => array(
+                            'disabled'  => !current_user_can('administrator')
+                        ),
                 ),
-			),
 			array(
-				'id'            => $prefix . 'products',
-				'name'          => esc_html__( 'Товары в корзине', $prefix . 'metabox' ),
-				'type'          => 'select_advanced',
-				'placeholder'   => esc_html__( 'Выберите товары', $prefix . 'metabox' ),
-				'options'       => $products_options,
-				'multiple'      => true,
-			),
-            array(
-				'id'            => $prefix . 'summary',
-				'type'          => 'text',
-				'name'          => esc_html__( 'Общая стоимость товаров', $prefix . 'metabox' ),
-                'desc'          => esc_html__( 'Будет пересчитана автоматически после сохранения', $prefix . 'metabox' ),
-                'attributes'    => array(
-                    'value' => getCartSummary($post->ID),
-                    'disabled' => 'disabled'
+                    'id'            => $prefix . 'products',
+                    'name'          => esc_html__( 'Товары в корзине', $prefix . 'metabox' ),
+                    'type'          => 'select_advanced',
+                    'placeholder'   => esc_html__( 'Выберите товары', $prefix . 'metabox' ),
+                    'options'       => $products_options,
+                    'multiple'      => true,
                 ),
-			),
+            array(
+                    'id'            => $prefix . 'summary',
+                    'type'          => 'text',
+                    'name'          => esc_html__( 'Общая стоимость товаров', $prefix . 'metabox' ),
+                    'desc'          => esc_html__( 'Будет пересчитана автоматически после сохранения', $prefix . 'metabox' ),
+                    'attributes'    => array(
+                            'value'     => getCartSummary($post->ID),
+                            'disabled'  => 'disabled'
+                        ),
+                ),
 		),
 	);
 
