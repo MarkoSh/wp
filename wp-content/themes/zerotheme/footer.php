@@ -6,6 +6,7 @@
  * Time: 17:48
  */
 wp_footer(); ?>
+    </div>
 </div>
 
 </body>

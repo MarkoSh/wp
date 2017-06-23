@@ -40,7 +40,7 @@
             }
         };
 
-        main.init();
+        //main.init();
 
     });
     

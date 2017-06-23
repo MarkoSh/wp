@@ -55,7 +55,7 @@ function ST4_columns_head($defaults) {
         $defaults['summary'] = 'Общая стоимость товаров';
     }
     if ( in_array($post_type, array(
-        'product'
+        'product_'
     )) ) {
         $defaults['reference']  = 'Артикул товара';
         $defaults['brand']      = 'Бренд товара';
@@ -126,7 +126,7 @@ function my_column_register_sortable( $columns ) {
  
   return $columns;
 }
-add_filter( 'manage_edit-product_sortable_columns', 'my_column_register_sortable' );
+add_filter( 'manage_edit-product__sortable_columns', 'my_column_register_sortable' );
 function my_column_orderby( $vars ) {
   if ( isset( $vars['orderby'] ) ) {
       if ('price' == $vars['orderby']) {
@@ -185,7 +185,7 @@ function zt_get_meta_box( $meta_boxes ) {
     }
 
     $products = get_posts(array(
-        'post_type'     => 'product',
+        'post_type'     => 'product_',
         'post_per_page' => -1,
         'post__not_in'  => array($post->ID)
     ));
@@ -199,7 +199,7 @@ function zt_get_meta_box( $meta_boxes ) {
     $meta_boxes[] = array(
 		'id'            => 'products',
 		'title'         => esc_html__( 'Информация о товаре', $prefix . 'metabox' ),
-		'post_types'    => array( 'product' ),
+		'post_types'    => array( 'product_' ),
 		'context'       => 'advanced',
 		'priority'      => 'default',
 		'autosave'      => true,
@@ -222,6 +222,12 @@ function zt_get_meta_box( $meta_boxes ) {
                     'type'          => 'select_advanced',
                     'placeholder'   => esc_html__( 'Выберите бренд', $prefix . 'metabox' ),
                     'options'       => $brands_options,
+                    'js_options' => array(
+                        1 => 'Select2 options',
+                    ),
+                    'attributes' => array(
+                        1 => 'Custom Attributes',
+                    ),
                 ),
                 array(
                     'id'            => $prefix . 'parent',
@@ -384,3 +390,43 @@ function getOrderProducts($orderId = false) {
         return $products;
     }
 }
+
+
+/*
+ *
+ * wooCommerce
+ *
+ */
+define('WOOCOMMERCE_USE_CSS', false);
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+
+add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
+add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
+
+function my_theme_wrapper_start() {
+  echo '<section id="main">';
+}
+
+function my_theme_wrapper_end() {
+  echo '</section>';
+}
+
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+
+add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);
+
+function change_existing_currency_symbol( $currency_symbol, $currency ) {
+     switch( $currency ) {
+          case 'RUB': $currency_symbol = 'руб.'; break;
+     }
+     return $currency_symbol;
+}
+/*
+ *
+ * /wooCommerce
+ *
+ */
