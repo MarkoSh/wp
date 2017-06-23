@@ -42,9 +42,9 @@ function ST4_columns_head($defaults) {
         'order_',
         'cart'
     )) ) {
-        $defaults['customer'] = 'Идентификатор покупателя';
         switch ($post_type) {
             case 'order_':
+                $defaults['customer'] = 'Идентификатор покупателя';
                 $defaults['cart'] = 'Идентификатор корзины';
                 break;
             case 'cart':
@@ -56,7 +56,9 @@ function ST4_columns_head($defaults) {
     if ( in_array($post_type, array(
         'product'
     )) ) {
+        $defaults['reference'] = 'Артикул товара';
         $defaults['brand'] = 'Бренд товара';
+        $defaults['price'] = 'Цена';
     }
     return $defaults;
     
@@ -64,10 +66,8 @@ function ST4_columns_head($defaults) {
  
 // SHOW THE COLUMN DATA
 function ST4_columns_content($column_name, $post_ID) {
-    
+    $post_type = get_post_type($post_ID);
     if (in_array($column_name, array(
-        'cart',
-        'order_',
         'customer',
         'brand'
     ))) {
@@ -75,9 +75,42 @@ function ST4_columns_content($column_name, $post_ID) {
         echo '<a href="' . get_edit_post_link($post->ID) . '">' . ($post->post_title ? $post->post_title : $post->ID) . '</a>';
     }
     if (in_array($column_name, array(
+        'cart'
+    ))) {
+        $post = get_post(get_post_meta($post_ID, 'zt-' . $column_name, 1));
+        echo '<a href="' . get_edit_post_link($post->ID) . '">Корзина ' . $post->ID . '</a>';
+    }
+    if (in_array($column_name, array(
+        'order'
+    ))) {
+        $post = end(get_posts(array(
+            'post_type'     => 'order_',
+            'meta_key'      => 'zt-cart',
+            'meta_value'    => $post_ID
+        )));
+        echo '<a href="' . get_edit_post_link($post->ID) . '">Заказ ' . $post->ID . '</a>';
+    }
+    if (in_array($column_name, array(
+        'reference',
+        'price'
+    ))) {
+        $data = get_post_meta($post_ID, 'zt-' . $column_name, 1);
+        switch ($column_name) {
+            case 'reference':
+                echo  $data;
+                break;
+            case 'price':
+                echo  $data . 'руб.';
+                break;
+        }
+    }
+    if (in_array($column_name, array(
         'summary'
     ))) {
-        $summary = get_post_meta($post_ID, 'zt-' . $column_name, 1);
+        if ($post_type == 'cart')
+            $summary = getCartSummary($post_ID);
+        else
+            $summary = getOrderSummary($post_ID);
         echo $summary . 'руб.';
     }
 
@@ -86,13 +119,39 @@ function ST4_columns_content($column_name, $post_ID) {
 add_filter('manage_posts_columns', 'ST4_columns_head');
 add_action('manage_posts_custom_column', 'ST4_columns_content', 1, 2);
 
+function my_column_register_sortable( $columns ) {
+  $columns['price'] = 'price';
+  $columns['reference'] = 'reference';
+ 
+  return $columns;
+}
+add_filter( 'manage_edit-product_sortable_columns', 'my_column_register_sortable' );
+function my_column_orderby( $vars ) {
+  if ( isset( $vars['orderby'] ) ) {
+      if ('price' == $vars['orderby']) {
+        $vars = array_merge( $vars, array(
+            'meta_key'  => 'zt-price',
+            'orderby'   => 'meta_value_num'
+        ) );
+      } elseif ('reference' == $vars['orderby']) {
+        $vars = array_merge( $vars, array(
+            'meta_key'  => 'zt-reference',
+            'orderby'   => 'meta_value'
+        ) );
+      }
+  }
+ 
+  return $vars;
+}
+add_filter( 'request', 'my_column_orderby' );
+
+
 function zt_get_meta_box( $meta_boxes ) {
 	$prefix = 'zt-';
-    global $post;
-    print_r($post);
+    $post = get_post(intval($_GET['post']));
 
     $brands = get_posts(array(
-        'post_type' => 'brand',
+        'post_type'     => 'brand',
         'post_per_page' => -1
     ));
     
@@ -103,7 +162,7 @@ function zt_get_meta_box( $meta_boxes ) {
     }
 
     $carts = get_posts(array(
-        'post_type' => 'cart',
+        'post_type'     => 'cart',
         'post_per_page' => -1
     ));
     
@@ -114,7 +173,7 @@ function zt_get_meta_box( $meta_boxes ) {
     }
 
     $customers = get_posts(array(
-        'post_type' => 'customer',
+        'post_type'     => 'customer',
         'post_per_page' => -1
     ));
     
@@ -124,88 +183,146 @@ function zt_get_meta_box( $meta_boxes ) {
         $customers_options[$item->ID] = $item->post_title;
     }
 
-	$meta_boxes[] = array(
-		'id' => 'brands',
-		'title' => esc_html__( 'Бренд товара', 'zt-metabox' ),
+    $products = get_posts(array(
+        'post_type'     => 'product',
+        'post_per_page' => -1,
+        'post__not_in'  => array($post->ID)
+    ));
+    
+    $products_options = [];
+
+    foreach ($products as $item) {
+        $products_options[$item->ID] = $item->post_title;
+    }
+
+    $meta_boxes[] = array(
+		'id' => 'products',
+		'title' => esc_html__( 'Информация о товаре', $prefix . 'metabox' ),
 		'post_types' => array( 'product' ),
 		'context' => 'advanced',
 		'priority' => 'default',
 		'autosave' => true,
 		'fields' => array(
 			array(
+				'id' => $prefix . 'price',
+				'name' => esc_html__( 'Цена', $prefix . 'metabox' ),
+				'type' => 'text',
+				'placeholder' => esc_html__( 'Цена', $prefix . 'metabox' )
+			),
+            array(
+				'id' => $prefix . 'reference',
+				'name' => esc_html__( 'Артикул', $prefix . 'metabox' ),
+				'type' => 'text',
+				'placeholder' => esc_html__( 'Артикул', $prefix . 'metabox' )
+			),
+            array(
 				'id' => $prefix . 'brand',
-				'name' => esc_html__( 'Выберите бренд', 'zt-metabox' ),
-				'type' => 'select',
-				'placeholder' => esc_html__( 'Выберите бренд', 'zt-metabox' ),
+				'name' => esc_html__( 'Бренд', $prefix . 'metabox' ),
+				'type' => 'select_advanced',
+				'placeholder' => esc_html__( 'Выберите бренд', $prefix . 'metabox' ),
 				'options' => $brands_options,
+			),
+            array(
+				'id' => $prefix . 'parent',
+				'name' => esc_html__( 'Родительский товар', $prefix . 'metabox' ),
+				'type' => 'select_advanced',
+				'placeholder' => esc_html__( 'Выберите родительский товар', $prefix . 'metabox' ),
+				'options' => $products_options,
 			),
 		),
 	);
     $meta_boxes[] = array(
-		'id' => 'order_information',
-		'title' => esc_html__( 'Информация о заказе', 'zt-metabox' ),
-		'post_types' => array( 'order_' ),
-		'context' => 'advanced',
-		'priority' => 'default',
-		'autosave' => true,
-		'fields' => array(
+		'id'            => 'order_information',
+		'title'         => esc_html__( 'Информация о заказе', $prefix . 'metabox' ),
+		'post_types'                => array( 'order_' ),
+		'context'       => 'advanced',
+		'priority'      => 'default',
+		'autosave'      => true,
+		'fields'        => array(
 			array(
-				'id' => $prefix . 'cart',
-				'name' => esc_html__( 'Идентификатор корзины', 'zt-metabox' ),
-				'type' => 'select_advanced',
-				'placeholder' => esc_html__( 'Идентификатор корзины', 'zt-metabox' ),
-                'attributes' => !is_admin() ? array(
+				'id'            => $prefix . 'cart',
+				'name'          => esc_html__( 'Идентификатор корзины', $prefix . 'metabox' ),
+				'type'          => 'select_advanced',
+				'placeholder'   => esc_html__( 'Идентификатор корзины', $prefix . 'metabox' ),
+                'attributes'    => !is_admin() ? array(
 					'disabled' => 'disabled',
 				) : false,
 				'options' => $carts_options,
 			),
             array(
-				'id' => $prefix . 'customer',
-				'name' => esc_html__( 'Идентификатор покупателя', 'zt-metabox' ),
-				'type' => 'select_advanced',
-				'placeholder' => esc_html__( 'Идентификатор покупателя', 'zt-metabox' ),
-                'attributes' => !is_admin() ? array(
+				'id'            => $prefix . 'customer',
+				'name'          => esc_html__( 'Идентификатор покупателя', $prefix . 'metabox' ),
+				'type'          => 'select_advanced',
+				'placeholder'   => esc_html__( 'Идентификатор покупателя', $prefix . 'metabox' ),
+                'attributes'    => !is_admin() ? array(
 					'disabled' => 'disabled',
 				) : false,
 				'options' => $customers_options,
 			),
             array(
-				'id' => $prefix . 'address',
-				'type' => 'textarea',
-				'name' => esc_html__( 'Адрес доставки', 'zt-metabox' ),
+				'id'    => $prefix . 'address',
+				'type'  => 'textarea',
+				'name'  => esc_html__( 'Адрес доставки', $prefix . 'metabox' ),
 			)
 		),
 	);
     $meta_boxes[] = array(
-		'id' => 'order_contain',
-		'title' => esc_html__( 'Содержимое корзины', 'zt-metabox' ),
-		'post_types' => array( 'order_', 'cart' ),
-		'context' => 'advanced',
-		'priority' => 'default',
-		'autosave' => true,
-		'fields' => array(
+		'id'            => 'order_contain',
+		'title'         => esc_html__( 'Содержимое корзины', $prefix . 'metabox' ),
+		'post_types'    => array( 'order_' ),
+		'context'       => 'advanced',
+		'priority'      => 'default',
+		'autosave'      => true,
+		'fields'        => array(
 			array(
-				'id' => $prefix . 'products',
-				'name' => esc_html__( 'Товары в корзине', 'zt-metabox' ),
-				'type' => 'checkbox_list',
-				'options' => array(
-					1 => 'Какой-то товар',
-                    2 => 'Какой-то товар',
-                    3 => 'Какой-то товар',
-                    4 => 'Какой-то товар',
-                    5 => 'Какой-то товар',
-                    6 => 'Какой-то товар',
-                    7 => 'Какой-то товар',
-				),
-                'std' => array( '1', '2', '3', '4', '5', '6', '7' )
+				'id'            => $prefix . 'products',
+				'name'          => esc_html__( 'Товары в корзине', $prefix . 'metabox' ),
+				'type'          => 'select_advanced',
+				'placeholder'   => esc_html__( 'Товары', $prefix . 'metabox' ),
+				'options'       => $products_options,
+                'std'           => getOrderProducts($post->ID),
+                'multiple'      => true,
+				'attributes'    => array(
+                                            'disabled' => 'disabled'
+                                        ),
 			),
             array(
-				'id' => $prefix . 'summary',
-				'type' => 'text',
-				'name' => esc_html__( 'Общая стоимость товаров', 'zt-metabox' ),
-                'attributes' => !is_admin() ? array(
-					'disabled' => 'disabled',
-				) : false,
+				'id'            => $prefix . 'summary',
+				'type'          => 'text',
+				'name'          => esc_html__( 'Общая стоимость товаров', $prefix . 'metabox' ),
+                'desc'          => esc_html__( 'Будет пересчитана автоматически после сохранения', $prefix . 'metabox' ),
+                'attributes'    => array(
+                                            'value' => getOrderSummary($post->ID),
+                                            'disabled' => 'disabled'
+                                        ),
+			),
+		),
+	);
+    $meta_boxes[] = array(
+		'id'            => 'cart_contain',
+		'title'         => esc_html__( 'Содержимое корзины', $prefix . 'metabox' ),
+		'post_types'    => array( 'cart' ),
+		'context'       => 'advanced',
+		'priority'      => 'default',
+		'autosave'      => true,
+		'fields'        => array(
+			array(
+				'id'            => $prefix . 'products',
+				'name'          => esc_html__( 'Товары в корзине', $prefix . 'metabox' ),
+				'type'          => 'select_advanced',
+				'placeholder'   => esc_html__( 'Выберите товары', $prefix . 'metabox' ),
+				'options'       => $products_options,
+				'multiple'      => true,
+			),
+            array(
+				'id'            => $prefix . 'summary',
+				'type'          => 'text',
+				'name'          => esc_html__( 'Общая стоимость товаров', $prefix . 'metabox' ),
+                'desc'          => esc_html__( 'Будет пересчитана автоматически после сохранения', $prefix . 'metabox' ),
+                'attributes'    => array(
+                    'value' => getCartSummary($post->ID),
+                    'disabled' => 'disabled'
+                ),
 			),
 		),
 	);
@@ -213,3 +330,30 @@ function zt_get_meta_box( $meta_boxes ) {
 	return $meta_boxes;
 }
 add_filter( 'rwmb_meta_boxes', 'zt_get_meta_box' );
+
+function getCartSummary($cartId = false) {
+    if ($cartId) {
+        $products = get_post_meta($cartId, 'zt-products');
+
+        $products_summary = 0;
+        foreach ($products as $product) {
+            $products_summary += intval(get_post_meta($product, 'zt-price', 1));
+        }
+        return $products_summary;
+    }
+}
+
+function getOrderSummary($orderId = false) {
+    if ($orderId) {
+        $cartId = get_post_meta($orderId, 'zt-cart', 1);
+        return getCartSummary($cartId);
+    }
+}
+
+function getOrderProducts($orderId = false) {
+    if ($orderId) {
+        $cartId = get_post_meta($orderId, 'zt-cart', 1);
+        $products = get_post_meta($cartId, 'zt-products');
+        return $products;
+    }
+}
