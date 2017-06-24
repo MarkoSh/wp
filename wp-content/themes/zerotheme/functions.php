@@ -101,7 +101,7 @@ function ST4_columns_content($column_name, $post_ID) {
                 echo $data;
                 break;
             case 'price':
-                echo $data . 'руб.';
+                //echo $data . 'руб.';
                 break;
         }
     }

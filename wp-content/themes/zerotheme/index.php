@@ -7,16 +7,10 @@
  */
 get_header();
 
-?>
+while ( have_posts() ) : the_post();
 
-<a href="#" class="add-to-cart">add-to-cart</a><br />
-<a href="#" class="load-more">load-more</a>
+    the_content();
 
-<form>
-    <div><input type="text" name="name" /></div>
-    <div><input type="submit" value="submit" /></div>
-</form>
-
-<?php
+endwhile; // End of the loop.
 
 get_footer();
