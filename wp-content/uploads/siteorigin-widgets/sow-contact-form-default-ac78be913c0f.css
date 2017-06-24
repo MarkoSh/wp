@@ -1,0 +1,124 @@
+.so-widget-sow-contact-form-default-ac78be913c0f .sow-form-field {
+  display: block;
+  margin-bottom: 1em;
+  zoom: 1;
+}
+.so-widget-sow-contact-form-default-ac78be913c0f .sow-form-field:before {
+  content: '';
+  display: block;
+}
+.so-widget-sow-contact-form-default-ac78be913c0f .sow-form-field:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.so-widget-sow-contact-form-default-ac78be913c0f .sow-form-field > label {
+  display: block;
+  margin-bottom: 5px;
+  
+  text-align: left;
+}
+.so-widget-sow-contact-form-default-ac78be913c0f .sow-form-field > label.sow-form-field-label-left {
+  float: left;
+  margin-right: 10px;
+}
+.so-widget-sow-contact-form-default-ac78be913c0f .sow-form-field > label.sow-form-field-label-right {
+  float: right;
+  margin-left: 10px;
+}
+.so-widget-sow-contact-form-default-ac78be913c0f .sow-form-field .sow-field-container {
+  overflow: hidden;
+  display: block;
+}
+.so-widget-sow-contact-form-default-ac78be913c0f .sow-form-field .sow-field-container textarea:focus,
+.so-widget-sow-contact-form-default-ac78be913c0f .sow-form-field .sow-field-container input:focus,
+.so-widget-sow-contact-form-default-ac78be913c0f .sow-form-field .sow-field-container > :focus {
+  outline-style: solid;
+  
+  outline-width: 1px;
+}
+.so-widget-sow-contact-form-default-ac78be913c0f .sow-form-field textarea,
+.so-widget-sow-contact-form-default-ac78be913c0f .sow-form-field .sow-text-field {
+  display: block;
+  width: 100%;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 0px;
+  
+  border: 1px solid #c0c0c0;
+  
+  
+  
+  
+  
+}
+.so-widget-sow-contact-form-default-ac78be913c0f .sow-form-field.sow-form-field-checkboxes ul,
+.so-widget-sow-contact-form-default-ac78be913c0f .sow-form-field.sow-form-field-radio ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.so-widget-sow-contact-form-default-ac78be913c0f .sow-form-field.sow-form-field-checkboxes ul li,
+.so-widget-sow-contact-form-default-ac78be913c0f .sow-form-field.sow-form-field-radio ul li {
+  margin: 0;
+}
+.so-widget-sow-contact-form-default-ac78be913c0f .sow-form-field.sow-form-field-checkboxes ul label,
+.so-widget-sow-contact-form-default-ac78be913c0f .sow-form-field.sow-form-field-radio ul label {
+  margin-bottom: 0;
+}
+.so-widget-sow-contact-form-default-ac78be913c0f .sow-form-field.sow-form-field-checkboxes ul input,
+.so-widget-sow-contact-form-default-ac78be913c0f .sow-form-field.sow-form-field-radio ul input {
+  float: left;
+  margin: 0.4em 0.5em 0 0;
+  height: auto;
+}
+.so-widget-sow-contact-form-default-ac78be913c0f .sow-form-field .sow-form-field-description {
+  font-size: 0.9em;
+  margin-top: 0.2em;
+  margin-left: 0.2em;
+  color: #999999;
+  font-style: italic;
+}
+.so-widget-sow-contact-form-default-ac78be913c0f .sow-recaptcha {
+  margin-bottom: 1em;
+}
+.so-widget-sow-contact-form-default-ac78be913c0f .sow-contact-form {
+  padding: 0px;
+  border: #c0c0c0 none 0px;
+  
+}
+.so-widget-sow-contact-form-default-ac78be913c0f .sow-contact-form .sow-error {
+  background: #fce4e5;
+  border: 1px solid #ec666a;
+  color: #ec666a;
+  border-radius: 2px;
+  padding: 5px;
+  font-size: 0.8em;
+  list-style: none;
+  margin: 0 0 10px 0;
+}
+.so-widget-sow-contact-form-default-ac78be913c0f .sow-contact-form .sow-error li {
+  margin: 0;
+}
+.so-widget-sow-contact-form-default-ac78be913c0f .sow-contact-form .sow-submit-styled .sow-submit {
+  color: #333333;
+  background: #ffffff;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ffffff), color-stop(1, #ffffff));
+  background: -ms-linear-gradient(bottom, #ffffff, #ffffff);
+  background: -moz-linear-gradient(center bottom, #ffffff 0%, #ffffff 100%);
+  background: -o-linear-gradient(#ffffff, #ffffff);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0);
+  border: 1px solid #333333;
+  border-radius: 0px;
+  font-weight: bold;
+  
+  padding: 15px 30px;
+  display: inline-block;
+}
+.so-widget-sow-contact-form-default-ac78be913c0f .sow-contact-form .sow-submit-styled .sow-submit:disabled {
+  color: #666666;
+  background: #ffffff;
+  border: 1px solid #666666;
+}

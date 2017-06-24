@@ -22,16 +22,7 @@
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
-    <style>
-    body {
-        opacity: 0;
-        transition: 30s;
-    }
-    </style>
     <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-
-<div class="container-fluid">
-    <div class="container">
