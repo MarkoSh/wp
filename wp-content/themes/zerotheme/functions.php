@@ -420,17 +420,15 @@ function woocommerce_support() {
 add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);
 
 function change_existing_currency_symbol( $currency_symbol, $currency ) {
-     switch( $currency ) {
-          case 'RUB': $currency_symbol = 'руб.'; break;
-     }
-     return $currency_symbol;
+    switch( $currency ) {
+        case 'RUB': $currency_symbol = 'руб.'; break;
+    }
+    return $currency_symbol;
 }
 
 add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
-
-add_filter( 'rewrite_rules_array', function( $rules )
-{
+add_filter( 'rewrite_rules_array', function( $rules ) {
     $new_rules = array(
         'catalog/([^/]*?)/page/([0-9]{1,})/?$' => 'index.php?product_cat=$matches[1]&paged=$matches[2]',
         'catalog/([^/]*?)/?$' => 'index.php?product_cat=$matches[1]',
