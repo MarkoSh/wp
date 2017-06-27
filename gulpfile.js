@@ -20,6 +20,8 @@ var gulp           = require('gulp'),
 // Скрипты проекта
 gulp.task('scripts', function() {
 	return gulp.src([
+        'node_modules/tether/dist/js/tether.js',
+        'node_modules/bootstrap/dist/js/bootstrap.js',
         'wp-content/themes/' + currentTheme + '/js/**/*.js',
         '!wp-content/themes/' + currentTheme + '/js/**/*.min.js'
     ])

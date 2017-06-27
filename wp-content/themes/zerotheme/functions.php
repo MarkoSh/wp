@@ -18,16 +18,10 @@ foreach ($theme_features as $feature)
     add_theme_support($feature);
 
 function enqueue_styles() {
-    wp_enqueue_style( 'meyer-reset', '//cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css', false );
-    wp_enqueue_style( 'normalize', '//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css', false );
-    wp_enqueue_style( 'tether', '//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/css/tether.min.css', false );
-    wp_enqueue_style( 'bootstrap4', '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css', false );
     wp_enqueue_style( 'style', get_template_directory_uri() . '/style.min.css', array() );
 }
 
 function enqueue_scripts() {
-    wp_enqueue_script( 'tether', '//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js', false );
-    wp_enqueue_script( 'bootstrap4', '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js', array('jquery', 'tether') );
     wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.min.js', array() );
 }
 
@@ -397,7 +391,7 @@ function getOrderProducts($orderId = false) {
  * wooCommerce
  *
  */
-define('WOOCOMMERCE_USE_CSS', false);
+
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
 
