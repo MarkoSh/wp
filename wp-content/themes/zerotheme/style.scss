@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 @import "../../../node_modules/reset-css/_reset";
-@import "../../../node_modules/tether/src/css/tether.sass";
+//@import "../../../node_modules/tether/src/css/tether.sass";
 @import "../../../node_modules/normalize-css/normalize.css";
-@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
 
 * {
     box-sizing: border-box;
 }
 
 body {
+    font-family: 'Noto Sans', sans-serif;
     &.admin-bar {
         padding-top: 32px;
     }
