@@ -28,6 +28,8 @@
     "normalize-css": "^2.3.1",
     "reset-css": "^2.2.0",
     "tether": "^1.4.0",
-    "vinyl-ftp": "^0.6.0"
+    "vinyl-ftp": "^0.6.0",
+    "woocommerce-api": "^1.4.2",
+    "wp-cli": "0.0.5"
   }
 }
