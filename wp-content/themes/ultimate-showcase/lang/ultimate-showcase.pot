@@ -1,0 +1,611 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Ultimate Showcase Theme\n"
+"POT-Creation-Date: 2017-06-08 16:46-0500\n"
+"PO-Revision-Date: 2017-06-08 16:47-0500\n"
+"Last-Translator: \n"
+"Language-Team: Etoile Web Design\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../ultimate-showcase/archive.php:28 ../ultimate-showcase/index.php:28
+msgid "Previous page"
+msgstr ""
+
+#: ../ultimate-showcase/archive.php:29 ../ultimate-showcase/index.php:29
+msgid "Next page"
+msgstr ""
+
+#: ../ultimate-showcase/archive.php:30 ../ultimate-showcase/index.php:30
+#: ../ultimate-showcase/single.php:38
+msgid "Page"
+msgstr ""
+
+#: ../ultimate-showcase/archive.php:33 ../ultimate-showcase/home.php:35
+#: ../ultimate-showcase/index.php:33
+#: ../ultimate-showcase/page-leftsidebar.php:33
+#: ../ultimate-showcase/page-sidebar.php:33 ../ultimate-showcase/page.php:30
+#: ../ultimate-showcase/single.php:70
+msgid "Sorry, no content matched your criteria."
+msgstr ""
+
+#: ../ultimate-showcase/comments.php:53
+msgid "Comments are closed."
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:91
+msgid "Main Menu"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:106
+msgid "Page Sidebar"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:114
+msgid "Blog Sidebar"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:122
+msgid "Footer"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:257
+msgid "Logo"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:272
+msgid "Logo Height"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:273
+msgid "Specify the logo height in pixels (e.g. 24px)"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:288
+msgid "Logo Top Margin"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:289
+msgid "Specify the margin above the logo in pixels (e.g. 28px)"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:309
+#: ../ultimate-showcase/functions.php:686
+#: ../ultimate-showcase/functions.php:805
+msgid "Text Color"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:327
+msgid "Link Color"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:345
+msgid "Header Background Color"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:363
+msgid "Menu Text Color"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:381
+msgid "Menu Text Hover Color"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:399
+msgid "Menu Drop Down Background Color"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:417
+msgid "Menu Drop Down Background Hover Color"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:435
+msgid "Menu Drop Down Text Color"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:453
+msgid "Menu Drop Down Text Hover Color"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:471
+msgid "Page Title Bar Background Color"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:489
+msgid "Page Title Bar Text Color"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:508
+msgid "Fonts"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:509
+msgid ""
+"Please note that, if you use a Google font or other webfont, you must also "
+"properly include that font (i.e. in the header file, the functions file or "
+"via CSS)."
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:524
+msgid "Main Body Font"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:539
+msgid "Heading Font"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:554
+msgid "Menu Font"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:573
+msgid "Callout Area"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:588
+msgid "Display Callout Area on Homepage"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:591
+#: ../ultimate-showcase/functions.php:728
+#: ../ultimate-showcase/functions.php:884
+#: ../ultimate-showcase/functions.php:904
+#: ../ultimate-showcase/functions.php:924
+#: ../ultimate-showcase/functions.php:944
+#: ../ultimate-showcase/functions.php:964
+msgid "Yes"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:592
+#: ../ultimate-showcase/functions.php:729
+#: ../ultimate-showcase/functions.php:885
+#: ../ultimate-showcase/functions.php:905
+#: ../ultimate-showcase/functions.php:925
+#: ../ultimate-showcase/functions.php:945
+#: ../ultimate-showcase/functions.php:965
+msgid "No"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:607
+#: ../ultimate-showcase/functions.php:744
+msgid "Heading Text"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:622
+#: ../ultimate-showcase/functions.php:759
+msgid "Sub-Heading Text"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:637
+#: ../ultimate-showcase/functions.php:774
+msgid "Button Text"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:652
+#: ../ultimate-showcase/functions.php:789
+msgid "Button Link"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:668
+msgid "Background Color"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:709
+msgid "Text on Picture"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:724
+msgid "Display Text-on-Picture Area on Homepage"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:725
+msgid "Should the text overlay on a background image area be displayed?"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:823
+msgid "Background Image"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:841
+msgid "Overlay Image"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:864
+msgid "Homepage General"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:865
+msgid ""
+"The options to enable the Callout and Text-on-Picture areas can be found in "
+"the \"Callout Area\" and \"Text on Picture\" sections just below."
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:880
+msgid "Display Slider"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:881
+msgid "Should the slider be displayed on the homepage?"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:900
+msgid "Display Static First Slide Only"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:901
+msgid ""
+"Select this option to display your first slide as a static image, with no "
+"sliding or animation."
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:920
+msgid "Display Jump Boxes"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:921
+msgid "Should the jump boxes be displayed on the homepage?"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:940
+msgid "Display Testimonials"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:941
+msgid "Should the testimonials be displayed on the homepage?"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:960
+msgid "Display Featured Products"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:961
+msgid "Should featured products be displayed on the homepage?"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:986
+#: ../ultimate-showcase/functions.php:1001
+msgid "Catalogue URL"
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:1002
+msgid ""
+"Input here the URL of the page on which you've placed the [product-catalogue "
+"id=\"X\"] shortcode. This will ensure correct functionality of the catalogue-"
+"specific features."
+msgstr ""
+
+#: ../ultimate-showcase/functions.php:1081
+msgid "Read More"
+msgstr ""
+
+#: ../ultimate-showcase/header.php:10
+msgid "SEARCH CATALOG"
+msgstr ""
+
+#: ../ultimate-showcase/home.php:5
+msgid "Blog"
+msgstr ""
+
+#: ../ultimate-showcase/home.php:26 ../ultimate-showcase/single.php:21
+msgid "Posted by"
+msgstr ""
+
+#: ../ultimate-showcase/home.php:26 ../ultimate-showcase/single.php:21
+msgid "on"
+msgstr ""
+
+#: ../ultimate-showcase/home.php:26 ../ultimate-showcase/single.php:21
+msgid "in"
+msgstr ""
+
+#: ../ultimate-showcase/page-home.php:18
+msgid "Featured Products"
+msgstr ""
+
+#: ../ultimate-showcase/page-home.php:20
+msgid "Testimonials"
+msgstr ""
+
+#: ../ultimate-showcase/page-home.php:22
+msgid "FULL CATALOG"
+msgstr ""
+
+#: ../ultimate-showcase/page-home.php:61
+msgid "Sorry, but it seems that a homepage hasn't been created."
+msgstr ""
+
+#: ../ultimate-showcase/page-leftsidebar.php:25
+#: ../ultimate-showcase/page-sidebar.php:25 ../ultimate-showcase/page.php:24
+#: ../ultimate-showcase/single.php:30
+msgid "Edit"
+msgstr ""
+
+#: ../ultimate-showcase/searchform.php:2
+msgid "Search"
+msgstr ""
+
+#: ../ultimate-showcase/searchform.php:3
+msgid "Submit"
+msgstr ""
+
+#: ../ultimate-showcase/single.php:29
+msgid "<p>Tags: "
+msgstr ""
+
+#: ../ultimate-showcase/single.php:29
+msgid "</p>"
+msgstr ""
+
+#: ../ultimate-showcase/single.php:34
+msgid "Pages:"
+msgstr ""
+
+#: ../ultimate-showcase/single.php:46
+msgid "Next:"
+msgstr ""
+
+#: ../ultimate-showcase/single.php:47
+msgid "Next post:"
+msgstr ""
+
+#: ../ultimate-showcase/single.php:49
+msgid "Previous:"
+msgstr ""
+
+#: ../ultimate-showcase/single.php:50
+msgid "Previous post:"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:327
+msgid "Install Required Plugins"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:328
+msgid "Install Plugins"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:330
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:332
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:333
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:385
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:386
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:387
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:3159
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:388
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:390
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:392
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:394
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:395
+msgid "Dismiss this notice"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:396
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:397
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:1982
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2273
+msgid "Required"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2276
+msgid "Recommended"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2292
+msgid "WordPress Repository"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2295
+msgid "External Source"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2298
+msgid "Pre-Packaged"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2315
+msgid "Not Installed"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2319
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2321
+msgid "Active"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2327
+msgid "Required Update not Available"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2330
+msgid "Requires Update"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2333
+msgid "Update recommended"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2490
+msgid "Installed version:"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2498
+msgid "Minimum required version:"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2510
+msgid "Available version:"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2547
+msgid "Plugin"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2548
+msgid "Source"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2549
+msgid "Type"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2553
+msgid "Version"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2554
+msgid "Status"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2603
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2608
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2614
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2717
+msgid "Install"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2723
+msgid "Update"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2726
+msgid "Activate"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2757
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2759
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2800
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:2802
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:3158
+msgid "Plugin activation failed."
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:3498
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:3501
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:3503
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:3507
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:3509
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:3510
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:3512
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:3515
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:3518
+msgid "All installations have been completed."
+msgstr ""
+
+#: ../ultimate-showcase/lib/class-tgm-plugin-activation.php:3520
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""

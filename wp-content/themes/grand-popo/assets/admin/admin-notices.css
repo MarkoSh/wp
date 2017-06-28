@@ -1,0 +1,47 @@
+.grand-popo-admin-notice {
+    background: #fff;
+    border-color: #ED494D;
+    border-top: 4px;
+    display: block;
+    min-height: 68px;
+    padding: 10px 40px 10px 145px;
+    position: relative;
+}
+.grand-popo-notice-logo {
+    clear: both;
+    content: "";
+    display: block;
+    background-image: url("../images/thumb.png");
+    /*background-size: 125px 83px;*/
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 125px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 5px;
+}
+.grand-popo-notice-title {
+    font-size: 24px;
+    margin: 0;
+}
+.grand-popo-notice-body {
+    font-weight: normal;
+    margin: 5px 0;
+}
+.grand-popo-notice-body li {
+    display: inline-block;
+    margin-right: 20px;
+}
+.grand-popo-admin-notice a {
+    color: #ED494D;
+}
+.grand-popo-red {
+    color: #ED494D;
+}
+.grand-popo-admin-notice > .dashicons {
+    color: #424242;
+    position: absolute;
+    right: 20px;
+    top: 40%;
+}

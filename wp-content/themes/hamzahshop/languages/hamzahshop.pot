@@ -1,0 +1,315 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: HamzahShop\n"
+"POT-Creation-Date: 2017-02-28 03:03+0600\n"
+"PO-Revision-Date: 2017-02-28 03:03+0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:19
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:23
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: comments.php:32
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:41 comments.php:64
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:44 comments.php:67
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:45 comments.php:68
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:81
+msgid "Comments are closed."
+msgstr ""
+
+#: customizer/class-customize.php:74
+msgid "Lite Theme Options"
+msgstr ""
+
+#: customizer/class-customize.php:91
+msgid "Post show"
+msgstr ""
+
+#: customizer/class-customize.php:96
+msgid "Show excerpt"
+msgstr ""
+
+#: customizer/class-customize.php:97
+msgid "Show full post"
+msgstr ""
+
+#: customizer/class-customize.php:108
+msgid "Contact Location"
+msgstr ""
+
+#: customizer/class-customize.php:112
+msgid "Contact Email"
+msgstr ""
+
+#: customizer/class-customize.php:116
+msgid "Contact Phone"
+msgstr ""
+
+#: customizer/class-customize.php:126
+msgid "Copyright Text"
+msgstr ""
+
+#: customizer/class-customize.php:135 index.php:24
+msgid "Blog - Posts List"
+msgstr ""
+
+#: customizer/class-customize.php:139
+msgid "Blog Posts List Page Title"
+msgstr ""
+
+#: customizer/class-customize.php:151 index.php:25
+msgid "There are many variations of passages"
+msgstr ""
+
+#: customizer/class-customize.php:155
+msgid "Blog Posts List Page Sub Title"
+msgstr ""
+
+#: customizer/class-customize.php:193
+msgid "eds bootstrap Pro"
+msgstr ""
+
+#: customizer/class-customize.php:194
+msgid "Go Pro"
+msgstr ""
+
+#: functions.php:47
+msgid "Primary / Main Menu"
+msgstr ""
+
+#: functions.php:48
+msgid "My Account After Login"
+msgstr ""
+
+#: functions.php:49
+msgid "My Account Before Login"
+msgstr ""
+
+#: functions.php:97
+msgid "Right Sidebar"
+msgstr ""
+
+#: functions.php:99 functions.php:108 functions.php:117 functions.php:126
+#: functions.php:136 functions.php:146 functions.php:156
+msgid "Add widgets here."
+msgstr ""
+
+#: functions.php:106
+msgid "Footer Sidebar"
+msgstr ""
+
+#: functions.php:115
+msgid "Footer Top  Sidebar"
+msgstr ""
+
+#: functions.php:124
+msgid "Home Page Slider Sidebar"
+msgstr ""
+
+#: functions.php:134
+msgid "Static Front Page Content "
+msgstr ""
+
+#: functions.php:144
+msgid "Woocommerce Sidebar"
+msgstr ""
+
+#: functions.php:154
+msgid "Logo Right Sidebar"
+msgstr ""
+
+#: inc/comment-helper.php:18
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: inc/comment-helper.php:18
+msgid "(Edit)"
+msgstr ""
+
+#: inc/comment-helper.php:23
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/comment-helper.php:45
+msgid "Name"
+msgstr ""
+
+#: inc/comment-helper.php:47
+msgid "Email"
+msgstr ""
+
+#: inc/comment-helper.php:49
+msgid "Website"
+msgstr ""
+
+#: inc/comment-helper.php:60
+msgid "Comment"
+msgstr ""
+
+#: inc/template-tags.php:18
+#, php-format
+msgctxt "post author"
+msgid "Posted by %s"
+msgstr ""
+
+#: inc/template-tags.php:21
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:40
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#: inc/template-tags.php:47
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: inc/template-tags.php:54 template-parts/content-page.php:36
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: index.php:66 search.php:65
+msgid "Previous"
+msgstr ""
+
+#: index.php:67 search.php:66
+msgid "Next"
+msgstr ""
+
+#: index.php:68 search.php:67
+msgid "&nbsp;"
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/content-page.php:23 template-parts/single/content.php:39
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content-search.php:42 template-parts/content.php:48
+msgid "Continue Reading"
+msgstr ""
+
+#: template-parts/parts/footer.php:46
+msgid "https://wordpress.org/"
+msgstr ""
+
+#: template-parts/parts/footer.php:46
+#, php-format
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: template-parts/parts/footer.php:49
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#: template-parts/parts/footer.php:49
+msgid "https://edatastyle.com"
+msgstr ""
+
+#. Author of the plugin/theme
+#: template-parts/parts/footer.php:49
+msgid "eDataStyle"
+msgstr ""
+
+#: template-parts/single/content.php:34
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: template-parts/single/content.php:70
+msgid "Prev Article"
+msgstr ""
+
+#: template-parts/single/content.php:71
+msgid "Next Article"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "HamzahShop"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://underscores.me/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Hamzah Shop is a simple yet modern e-commerce WordPress theme. It is "
+"esthetically minimalist, fresh-faced and bright, elegantly styled and well "
+"developed, readily responsive e-commerce WordPress theme. It is a perfect "
+"theme for commercial endeavors of all kinds, from digital download shops to "
+"online commercial retail of all kinds. It integrates the industry standard "
+"WooCommerce e-commerce plugin, a wonderful solution for all your online "
+"commerce needs, which allows your users to browse your product catalogs in "
+"easy but stylish grace, add items to their shopping carts intuitively, and "
+"proceed to checkout and make payments, all right off your website. Official "
+"Support Forum: http://themepalace.com/support-forum/ Full Demo: http://"
+"wenthemes.com/theme-demos/?demo=clean-commerce"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://edatastyle.com/"
+msgstr ""

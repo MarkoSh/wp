@@ -1,0 +1,351 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Milestone Lite\n"
+"POT-Creation-Date: 2017-04-17 00:29+0530\n"
+"PO-Revision-Date: 2017-04-17 00:29+0530\n"
+"Last-Translator: \n"
+"Language-Team: Grace Themes <support@gracethemes.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _;__;_e;gettext;gettext_noop;esc_attr;esc_attr__;"
+"esc_attr_e;esc_html;esc_html__;esc_html_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:14
+msgid "404 Not Found"
+msgstr ""
+
+#: 404.php:17
+msgid ""
+"Looks like you have taken a wrong turn.....<br />Don't worry... it happens "
+"to the best of us."
+msgstr ""
+
+#: comments.php:68
+msgid "Comments are closed."
+msgstr ""
+
+#: content-page.php:18 content-single.php:27 content.php:35 image.php:56
+#: template-full-width.php:24
+msgid "Pages:"
+msgstr ""
+
+#: content-page.php:23 content-single.php:38 image.php:30 image.php:62
+#: inc/template-tags.php:21
+msgid "Edit"
+msgstr ""
+
+#: content.php:28
+msgid "Read More &raquo;"
+msgstr ""
+
+#: content.php:32
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: footer.php:31
+msgid "All Rights Reserved"
+msgstr ""
+
+#: footer.php:34
+msgid "https://wordpress.org/"
+msgstr ""
+
+#: footer.php:34
+#, php-format
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: functions.php:41
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:53
+msgid "Blog Sidebar"
+msgstr ""
+
+#: functions.php:54
+msgid "Appears on blog page sidebar"
+msgstr ""
+
+#: functions.php:63
+msgid "Header Contact info"
+msgstr ""
+
+#: functions.php:64 functions.php:74 functions.php:84 functions.php:94
+#: functions.php:104
+msgid "Appears on footer"
+msgstr ""
+
+#: functions.php:73
+msgid "Footer Widget 1"
+msgstr ""
+
+#: functions.php:83
+msgid "Footer Widget 2"
+msgstr ""
+
+#: functions.php:93
+msgid "Footer Widget 3"
+msgstr ""
+
+#: functions.php:103
+msgid "Footer Widget 4"
+msgstr ""
+
+#: header.php:67
+msgid "Menu"
+msgstr ""
+
+#: header.php:151
+msgid "Read More"
+msgstr ""
+
+#: image.php:20
+#, php-format
+msgid ""
+"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span> at <a href=\"%3$s\">%4$s &times; %5$s</a> in <a "
+"href=\"%6$s\" rel=\"gallery\">%7$s</a>"
+msgstr ""
+
+#: image.php:35
+msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+msgstr ""
+
+#: image.php:36
+msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: inc/about-themes.php:11 inc/about-themes.php:20
+msgid "About Theme Info"
+msgstr ""
+
+#: inc/about-themes.php:22
+msgid ""
+"milestone-lite is a Free Corporate WordPress theme. It is Perfect for all "
+"Corporate, Professional, personal, medical and any type of business. It is "
+"user friendly customizer options and Compatible in WordPress Latest Version. "
+"also Compatible with WooCommerce, Nextgen gallery ,Contact Form 7 and many "
+"WordPress popular plugins."
+msgstr ""
+
+#: inc/about-themes.php:23
+msgid "Theme Features"
+msgstr ""
+
+#: inc/about-themes.php:27 inc/about-themes.php:56
+msgid "Theme Customizer"
+msgstr ""
+
+#: inc/about-themes.php:28
+msgid ""
+"The built-in customizer panel quickly change aspects of the design and "
+"display changes live before saving them."
+msgstr ""
+
+#: inc/about-themes.php:32 inc/about-themes.php:57
+msgid "Responsive Ready"
+msgstr ""
+
+#: inc/about-themes.php:33
+msgid ""
+"The themes layout will automatically adjust and fit on any screen resolution "
+"and looks great on any device. Fully optimized for iPhone and iPad."
+msgstr ""
+
+#: inc/about-themes.php:37 inc/about-themes.php:58
+msgid "Cross Browser Compatible"
+msgstr ""
+
+#: inc/about-themes.php:38
+msgid ""
+"Our themes are tested in all mordern web browsers and compatible with the "
+"latest version including Chrome,Firefox, Safari, Opera, IE11 and above."
+msgstr ""
+
+#: inc/about-themes.php:42 inc/about-themes.php:59
+msgid "E-commerce"
+msgstr ""
+
+#: inc/about-themes.php:43
+msgid ""
+"Fully compatible with WooCommerce plugin. Just install the plugin and turn "
+"your site into a full featured online shop and start selling products."
+msgstr ""
+
+#: inc/about-themes.php:50
+msgid "Live Demo"
+msgstr ""
+
+#: inc/about-themes.php:51
+msgid "Purchase Pro"
+msgstr ""
+
+#: inc/about-themes.php:52
+msgid "Documentation"
+msgstr ""
+
+#: inc/about-themes.php:60
+msgid "Contact Form 7 Plugin Compatible"
+msgstr ""
+
+#: inc/about-themes.php:61
+msgid "User Friendly"
+msgstr ""
+
+#: inc/about-themes.php:62
+msgid "Translation Ready"
+msgstr ""
+
+#: inc/about-themes.php:63
+msgid "Many Other Plugins  Compatible"
+msgstr ""
+
+#: inc/customizer.php:25
+msgid "Layout Option"
+msgstr ""
+
+#: inc/customizer.php:35
+msgid "Check to Box Layout"
+msgstr ""
+
+#: inc/customizer.php:45
+msgid "Check to list layout without sidebar for homepage"
+msgstr ""
+
+#: inc/customizer.php:56
+msgid "Check to disable sticky header"
+msgstr ""
+
+#: inc/customizer.php:66
+msgid "Check to grid layout without sidebar for homepage"
+msgstr ""
+
+#: inc/customizer.php:77
+msgid "Color Scheme"
+msgstr ""
+
+#: inc/customizer.php:78
+msgid "More color options in PRO Version"
+msgstr ""
+
+#: inc/customizer.php:86
+msgid "Slider Options"
+msgstr ""
+
+#: inc/customizer.php:88
+msgid "Featured Image Size Should be ( 1400x600 )."
+msgstr ""
+
+#: inc/customizer.php:100
+msgid "Select page for slide one:"
+msgstr ""
+
+#: inc/customizer.php:112
+msgid "Select page for slide two:"
+msgstr ""
+
+#: inc/customizer.php:124
+msgid "Select page for slide three:"
+msgstr ""
+
+#: inc/customizer.php:136
+msgid "Add text for slide read more button"
+msgstr ""
+
+#: inc/customizer.php:149 inc/customizer.php:210 inc/customizer.php:268
+msgid "Uncheck To Enable This Section"
+msgstr ""
+
+#: inc/customizer.php:156
+msgid "Four Page Boxes Section"
+msgstr ""
+
+#: inc/customizer.php:157
+msgid "Select Pages from the dropdown for four services boxes section"
+msgstr ""
+
+#: inc/customizer.php:216
+msgid "Social Settings"
+msgstr ""
+
+#: inc/customizer.php:217
+msgid "Add social icons link here. more social icons available in PRO Version"
+msgstr ""
+
+#: inc/customizer.php:226
+msgid "Add facebook link here"
+msgstr ""
+
+#: inc/customizer.php:236
+msgid "Add twitter link here"
+msgstr ""
+
+#: inc/customizer.php:245
+msgid "Add google plus link here"
+msgstr ""
+
+#: inc/customizer.php:254
+msgid "Add linkedin link here"
+msgstr ""
+
+#: inc/template-tags.php:21
+msgid "Pingback:"
+msgstr ""
+
+#: inc/template-tags.php:33
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/template-tags.php:124
+#, php-format
+msgid ""
+"<span class=\"posted-on\">Published %1$s</span><span class=\"byline\"> by "
+"%2$s</span>"
+msgstr ""
+
+#: no-results.php:12
+msgid "Nothing Found"
+msgstr ""
+
+#: no-results.php:17
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: no-results.php:21
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: no-results.php:26
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: sidebar.php:11
+msgid "Category"
+msgstr ""
+
+#: sidebar.php:18
+msgid "Archives"
+msgstr ""
+
+#: sidebar.php:25
+msgid "Meta"
+msgstr ""

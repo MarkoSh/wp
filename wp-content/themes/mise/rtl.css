@@ -1,0 +1,256 @@
+/*
+Theme Name: mise
+
+Adding support for language written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+https://codex.wordpress.org/Right_to_Left_Language_Support
+
+*/
+
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+.spaceLeft {
+	margin-left: 0;
+	margin-right: 0.5em;
+}
+.spaceRight {
+	margin-right: 0;
+	margin-left: 0.5em;
+}
+.site-branding .site-title, .aboutus_columns_three.one {
+	text-align: left;
+}
+.skillTop .skillName, .serviceIcon, .widget_archive li a, .widget_categories li a {
+	float: right;
+}
+.skillTop .skillNameUnder {
+	left: inherit;
+	right: 0;
+}
+.skillTop .skillValue {
+    float: left;
+}
+.skillBottom .skillRealBarCyrcle {
+	left: -5px;
+	right: inherit;
+}
+.cta_columns .ctaIcon {
+	margin-left: 1em;
+	margin-right: inherit;
+}
+.cta_columns .ctaText {
+	float: right;
+}
+.services_columns_single .serviceContent, .widget_archive li, .widget_categories li, .page-links{
+	text-align: left;
+}
+.widget.widget_categories li:before {
+	padding-right: inherit;
+	padding-left: 0.5em;
+	float: right;
+}
+.widget.widget_archive li:before {
+	content: "\f0d9";
+	padding-right: inherit;
+	padding-left: 0.5em;
+	float: right;
+}
+.serviceText {
+    float: left;
+    padding-right: 3em;
+    padding-left: inherit;
+}
+header.site-header .mainStuff, .site-social {
+	direction: ltr;
+}
+.site-social .socialText{
+	direction: rtl;
+}
+aside ul.menu .indicatorBar {
+	right: inherit;
+	left: 0;
+	border-left-width: 0px;
+    border-left-style: dashed;
+	border-right-width: 1px;
+    border-right-style: dashed;
+}
+aside ul.menu ul.sub-menu {
+    padding-left: inherit;
+	padding-right: 2em;
+}
+.sticky .entry-theContent:before {
+	left: 0;
+	right: inherit;
+}
+.entry-featuredImg {
+	float: right;
+    margin-right: inherit;
+	margin-left: 1%;
+}
+#content.site-content article.has-post-thumbnail .entry-theContent {
+    margin-right: 1%;
+	margin-left: inherit;
+}
+.entry-featuredImg .insideImage span a i:before {
+	content: "\f104";
+}
+.scrollDown {
+	right: -50px;
+	left: inherit;
+}
+.flexslider .scrollDown {
+	right: inherit;
+}
+.woocommerce #reviews #comments ol.commentlist li .comment-text {
+    margin-right: 85px;
+	margin-left: 0;
+}
+.woocommerce #reviews .commentlist li .avatar {
+    top: 0;
+    right: 0;
+    left: inherit;
+}
+.woocommerce div.product form.cart .variations td.label {
+    float: right;
+}
+.woocommerce .woocommerce-error:before, .woocommerce .woocommerce-info:before, .woocommerce .woocommerce-message:before {
+    left: inherit;
+	right: 1em;
+}
+.woocommerce-error li a, .woocommerce-message a {
+    float: left;
+}
+.woocommerce-message, .woocommerce-info, .woocommerce-error {
+    padding: 1.5em 2.5em 1.5em 1.5em;
+}
+.product_list_widget li img {
+    margin-right: inherit;
+    margin-left: 1em;
+    float: right;
+}
+.widget_shopping_cart .product_list_widget li a.remove {
+    right: inherit;
+    left: 0;
+}
+.woocommerce .content-area .images {
+	float: right;
+}
+.woocommerce .content-area .summary {
+	float: left;
+}
+.content-area .onsale {
+	right: 5px;
+	left: inherit;
+}
+.main-navigation ul {
+	padding-right: 0;
+}
+.main-navigation ul ul a, .team_columns .miseTeamSingle, .cta_columns .ctaPhrase h3, .cta_columns .ctaPhrase p {
+	text-align: right;
+}
+.main-navigation li a:not(:last-child):after {
+    margin: 0 7px 0 0;
+	float: left;
+	line-height: inherit;
+}
+.main-navigation ul ul li a:not(:last-child):after {
+    content: "\f104";
+    margin: 0 7px 0 0;
+    float: left;
+}
+.main-navigation ul ul ul {
+	right: 100%;
+	left: inherit;
+}
+#comments article footer img {
+    float: right;
+    margin-right: inherit;
+    margin-left: 1em;
+}
+#comments .reply {
+	left: 1.5em;
+    right: inherit;
+}
+#comments ol ol {
+    padding-left: 0;
+	padding-right: 10%;
+}
+.comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous {
+    text-align: left;
+}
+.widget.widget_search input[type="search"],
+.widget.woocommerce.widget_product_search input[type="search"] {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+	border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+	float: right;
+}
+.widget.widget_search input[type="submit"],
+.widget.woocommerce.widget_product_search input[type="submit"] {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+	border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+	float: left;
+}
+
+.site-main .navigation.pagination .nav-links .prev {
+	float: right;
+}
+.navigation.pagination .nav-links .prev i:before {
+	content: "\f101";
+}
+.site-main .navigation.pagination .nav-links .next {
+	float: left;
+}
+.navigation.pagination .nav-links .next i:before {
+	content: "\f100";
+}
+blockquote {
+    padding: 1.5em 3.5em 1.5em 1.5em;
+}
+blockquote::before {
+	left: inherit;
+	right: 10px;
+	content: "\f10e";
+}
+.woocommerce ul.products > li {
+	float: right;
+}
+@media all and (max-width: 1024px) {
+	header.site-header {
+		direction: ltr;
+	}
+	.main-navigation a {
+		text-align: right;
+	}
+	.main-navigation ul li .indicator {
+		left: 0;
+		right: inherit;
+		border-left-width: 0px;
+		border-right-width: 1px;
+		border-right-style: dashed;
+	}
+	.main-navigation ul ul, .main-navigation ul ul ul {
+		padding-left: 0;
+		padding-right: 3%;
+	}
+	.cta_columns .ctaPhrase h3, .cta_columns .ctaPhrase p {
+		text-align: center;
+	}
+}
+@media all and (max-width: 850px) {
+	.aboutus_columns_three.one, .aboutus_columns_three {
+		text-align: center;
+	}
+}
+@media all and (max-width: 559px) {
+	.serviceIcon {
+		float: none;
+	}
+}

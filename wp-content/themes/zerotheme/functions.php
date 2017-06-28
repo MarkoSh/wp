@@ -422,13 +422,6 @@ function change_existing_currency_symbol( $currency_symbol, $currency ) {
 
 add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
-add_filter( 'rewrite_rules_array', function( $rules ) {
-    $new_rules = array(
-        'catalog/([^/]*?)/page/([0-9]{1,})/?$' => 'index.php?product_cat=$matches[1]&paged=$matches[2]',
-        'catalog/([^/]*?)/?$' => 'index.php?product_cat=$matches[1]',
-    );
-    return $new_rules + $rules;
-} );
 /*
  *
  * /wooCommerce

@@ -1,0 +1,5 @@
+Version 1.0.1
+i) Intial version Release
+
+Version 1.0.2
+i) theme updated and fixed issues as per reviewer pointed out.

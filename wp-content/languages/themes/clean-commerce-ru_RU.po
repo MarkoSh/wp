@@ -1,0 +1,662 @@
+# Translation of Themes - Clean Commerce in Russian
+# This file is distributed under the same license as the Themes - Clean Commerce package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2017-05-11 10:20:22+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: ru\n"
+"Project-Id-Version: Themes - Clean Commerce\n"
+
+#. Theme Name of the plugin/theme
+msgid "Clean Commerce"
+msgstr "Clean Commerce"
+
+#: inc/widgets.php:352
+msgid "CC: Recent Posts"
+msgstr "CC: Последние записи"
+
+#: inc/widgets.php:202
+msgid "CC: Featured Page"
+msgstr "CC: Рекомендуемые страницы"
+
+#: inc/widgets.php:77
+msgid "CC: Social"
+msgstr "CC: Социальные иконки"
+
+#: inc/customizer.php:51
+msgid "Buy Pro"
+msgstr "Купить Pro"
+
+#: inc/customizer.php:50
+msgid "Clean Commerce Pro"
+msgstr "Clean Commerce Pro"
+
+#. translators: %s: post title
+#: comments.php:33
+msgctxt "comments title"
+msgid "One thought on &ldquo;%s&rdquo;"
+msgstr "Один комментарий к &ldquo;%s&rdquo"
+
+#. translators: %s: Name of current post.
+#: template-parts/content.php:41
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Продолжить чтение %s <span class=\"meta-nav\">&rarr;</span>"
+
+#: template-parts/content-page.php:31 template-parts/content-single.php:35
+#: template-parts/content.php:47
+msgid "Pages:"
+msgstr "Страницы:"
+
+#: template-parts/content-none.php:29
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Похоже, мы не можем найти то, что вы ищете. Возможно, поиск может помочь."
+
+#: template-parts/content-none.php:24
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "К сожалению, ничего не найдено. Пожалуйста, попробуйте еще раз с другими ключевыми словами."
+
+#: template-parts/content-none.php:20
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Готовы опубликовать свою первую запись? <a href=\"%1$s\">Начните здесь</a>."
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "Ничего не найдено"
+
+#: single.php:26
+msgid "Previous post:"
+msgstr "Предыдущая запись:"
+
+#: single.php:25
+msgid "Previous"
+msgstr "Предыдущий"
+
+#: single.php:23
+msgid "Next post:"
+msgstr "Следующая запись:"
+
+#: single.php:22
+msgid "Next"
+msgstr "Следующий"
+
+#: search.php:18
+msgid "Search Results for: %s"
+msgstr "Результаты поиска для: %s"
+
+#: lib/widget-base/class-widget-base.php:292
+msgctxt "Remove Button"
+msgid "X"
+msgstr "Х"
+
+#: lib/widget-base/class-widget-base.php:281
+msgid "Choose Image"
+msgstr "Выберите изображение"
+
+#: lib/widget-base/class-widget-base.php:281
+msgid "Select Image"
+msgstr "Выберите изображение"
+
+#: lib/widget-base/class-widget-base.php:281
+msgid "Upload"
+msgstr "Загрузить"
+
+#: lib/breadcrumbs/breadcrumbs.php:788
+msgctxt "weekly archives date format"
+msgid "W"
+msgstr "W"
+
+#: lib/breadcrumbs/breadcrumbs.php:760 lib/breadcrumbs/breadcrumbs.php:1190
+msgctxt "daily archives date format"
+msgid "j"
+msgstr "j"
+
+#: lib/breadcrumbs/breadcrumbs.php:759 lib/breadcrumbs/breadcrumbs.php:815
+#: lib/breadcrumbs/breadcrumbs.php:1186
+msgctxt "monthly archives date format"
+msgid "F"
+msgstr "F"
+
+#: lib/breadcrumbs/breadcrumbs.php:758 lib/breadcrumbs/breadcrumbs.php:787
+#: lib/breadcrumbs/breadcrumbs.php:814 lib/breadcrumbs/breadcrumbs.php:841
+#: lib/breadcrumbs/breadcrumbs.php:1182
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: lib/breadcrumbs/breadcrumbs.php:742
+msgctxt "hour archives time format"
+msgid "g a"
+msgstr "g a"
+
+#: lib/breadcrumbs/breadcrumbs.php:725
+msgctxt "minute archives time format"
+msgid "i"
+msgstr "i"
+
+#: lib/breadcrumbs/breadcrumbs.php:708
+msgctxt "minute and hour archives time format"
+msgid "g:i a"
+msgstr "g:i a"
+
+#. Translators: Weekly archive title. %s is the week date format.
+#: lib/breadcrumbs/breadcrumbs.php:256
+msgid "Week %s"
+msgstr "Неделя %s"
+
+#. Translators: Minute archive title. %s is the minute time format.
+#: lib/breadcrumbs/breadcrumbs.php:254
+msgid "Minute %s"
+msgstr "Минут %s"
+
+#. Translators: %s is the page number.
+#: lib/breadcrumbs/breadcrumbs.php:252
+msgid "Page %s"
+msgstr "Страница %s"
+
+#. Translators: %s is the search query. The HTML entities are opening and
+#. closing curly quotes.
+#: lib/breadcrumbs/breadcrumbs.php:250
+msgid "Search results for &#8220;%s&#8221;"
+msgstr "Результаты поиска для: &#8220;%s&#8221;"
+
+#: lib/breadcrumbs/breadcrumbs.php:248
+msgid "Archives"
+msgstr "Архив"
+
+#: lib/breadcrumbs/breadcrumbs.php:247
+msgid "404 Not Found"
+msgstr "404. Не найдено"
+
+#: lib/breadcrumbs/breadcrumbs.php:245
+msgctxt "breadcrumbs aria label"
+msgid "Breadcrumbs"
+msgstr "Хлебные крошки"
+
+#: lib/breadcrumbs/breadcrumbs.php:244
+msgid "Browse:"
+msgstr "Просмотр:"
+
+#: inc/widgets.php:346
+msgid "Disable Date"
+msgstr "Отключить дату"
+
+#: inc/widgets.php:338
+msgid "px"
+msgstr "px"
+
+#: inc/widgets.php:336
+msgid "Image Width:"
+msgstr "Ширина изображения:"
+
+#: inc/widgets.php:322
+msgid "Number of Posts:"
+msgstr "Количество записей:"
+
+#: inc/widgets.php:319
+msgid "All Categories"
+msgstr "Все рубрики"
+
+#: inc/widgets.php:317
+msgid "Select Category:"
+msgstr "Выберите рубрику:"
+
+#: inc/widgets.php:302
+msgid "Displays recent posts."
+msgstr "Отображает последние записи."
+
+#: inc/widgets.php:195
+msgid "Image Alignment:"
+msgstr "Выравнивание изображения:"
+
+#: inc/widgets.php:190 inc/widgets.php:330
+msgid "Featured Image:"
+msgstr "Рекомендованное изображение:"
+
+#: inc/widgets.php:182
+msgid "Applies when Excerpt is selected in Content option."
+msgstr "Применяется, когда Отрывок выбран в опции контента."
+
+#: inc/widgets.php:181
+msgid "Excerpt Length:"
+msgstr "Длина отрывка:"
+
+#: inc/widgets.php:177
+msgid "Full"
+msgstr "Полностью"
+
+#: inc/widgets.php:176
+msgid "Excerpt"
+msgstr "Отрывок"
+
+#: inc/widgets.php:172
+msgid "Show Content:"
+msgstr "Показать содержимое:"
+
+#: inc/widgets.php:167
+msgid "Eg: 1234"
+msgstr "Например: 1234"
+
+#: inc/widgets.php:166
+msgid "Post ID:"
+msgstr "ID записи"
+
+#: inc/widgets.php:162
+msgctxt "Featured Page Widget"
+msgid "OR"
+msgstr "или"
+
+#: inc/widgets.php:159
+msgid "&mdash; Select &mdash;"
+msgstr "&mdash; Выбрать &mdash;"
+
+#: inc/widgets.php:157
+msgid "Select Page:"
+msgstr "Выберите страницу:"
+
+#: inc/widgets.php:152
+msgid "Use Page/Post Title as Widget Title"
+msgstr "Использовать заголовок страницы / заголовка в качестве заголовка виджетов"
+
+#: inc/widgets.php:137
+msgid "Displays single featured Page or Post."
+msgstr "Отображает одну страницу или запись."
+
+#: inc/widgets.php:71
+msgid "Social menu is not set. Please create menu and assign it to Social Menu."
+msgstr "Меню социальных иконок не установлено. Создайте меню и назначьте его в область темы \"Меню социальных иконок\"."
+
+#: inc/widgets.php:63 inc/widgets.php:147 inc/widgets.php:312
+msgid "Subtitle:"
+msgstr "Подзаголовок:"
+
+#: inc/widgets.php:58 inc/widgets.php:142 inc/widgets.php:307
+msgid "Title:"
+msgstr "Название:"
+
+#: inc/widgets.php:53
+msgid "Displays social icons."
+msgstr "Отображает меню, назначенное для области темы \"Меню социальных иконок\""
+
+#: inc/template-tags.php:91 template-parts/content-page.php:39
+msgid "Edit"
+msgstr "Редактировать"
+
+#: inc/template-tags.php:86
+msgid "% Comments"
+msgstr "% Комментариев"
+
+#: inc/template-tags.php:86
+msgid "1 Comment"
+msgstr "1 Комментарий"
+
+#: inc/template-tags.php:86
+msgid "Leave a comment"
+msgstr "Оставить комментарий"
+
+#. Translators: used between list items, there is a space after the comma.
+#: inc/template-tags.php:67 inc/template-tags.php:75
+msgid ", "
+msgstr ", "
+
+#: inc/support/footer-widgets.php:109
+msgid "Footer Widget %d"
+msgstr "Виджет нижнего колонтитула %d"
+
+#: inc/metabox.php:80
+msgid "Image Settings"
+msgstr "Настройки изображения"
+
+#: inc/metabox.php:62
+msgid "Layout Settings"
+msgstr "Настройки макета"
+
+#: inc/metabox.php:59
+msgid "Image"
+msgstr "Изображение"
+
+#: inc/metabox.php:58
+msgid "Layout"
+msgstr "Макет"
+
+#: inc/metabox.php:22
+msgid "Theme Settings"
+msgstr "Настройки темы"
+
+#. #-#-#-#-#  clean-commerce.pot (Clean Commerce 1.0.8)  #-#-#-#-#
+#. Author of the plugin/theme
+#: inc/hook/custom.php:190
+msgid "WEN Themes"
+msgstr "WEN Themes"
+
+#: inc/hook/custom.php:190
+msgid "Clean Commerce by %s"
+msgstr "Clean Commerce от %s"
+
+#: inc/hook/custom.php:73
+msgid "Shopping Cart"
+msgstr "Корзина"
+
+#: inc/hook/custom.php:71
+msgid "Login / Register"
+msgstr "Мой аккаунт"
+
+#: inc/hook/custom.php:71
+msgid "My Account"
+msgstr "Мой аккаунт"
+
+#: inc/hook/custom.php:17
+msgid "Skip to content"
+msgstr "Перейти к содержимому"
+
+#: inc/helper/options.php:170
+msgid "Featured Product Category"
+msgstr "Рекомендуемая категория товаров"
+
+#: inc/helper/options.php:169
+msgid "Featured Category"
+msgstr "Рекомендуемая рубрика"
+
+#: inc/helper/options.php:146
+msgid "Static Front Page and Shop Page"
+msgstr "Статическая страница главной страницы и магазина"
+
+#: inc/helper/options.php:145
+msgid "Disabled"
+msgstr "Отключено"
+
+#: inc/helper/options.php:125
+msgctxt "Alignment"
+msgid "Right"
+msgstr "Справа"
+
+#: inc/helper/options.php:124
+msgctxt "Alignment"
+msgid "Center"
+msgstr "По центру"
+
+#: inc/helper/options.php:123
+msgctxt "Alignment"
+msgid "Left"
+msgstr "Слева"
+
+#: inc/helper/options.php:122
+msgctxt "Alignment"
+msgid "None"
+msgstr "Нет"
+
+#: inc/helper/options.php:78
+msgid "Full (original)"
+msgstr "Полный (оригинальный)"
+
+#: inc/helper/options.php:77
+msgid "Large"
+msgstr "Большой"
+
+#: inc/helper/options.php:76
+msgid "Medium"
+msgstr "Средний"
+
+#: inc/helper/options.php:75
+msgid "Thumbnail"
+msgstr "Миниатюра"
+
+#: inc/helper/options.php:73
+msgid "No Image"
+msgstr "Нет изображения"
+
+#: inc/helper/options.php:44
+msgid "Post Excerpt"
+msgstr "Отрывок записи"
+
+#: inc/helper/options.php:43
+msgid "Full Post"
+msgstr "Запись полностью"
+
+#: inc/helper/options.php:22
+msgid "No Sidebar"
+msgstr "Нет боковой панели"
+
+#: inc/helper/options.php:21
+msgid "Content - Primary Sidebar"
+msgstr "Содержание - основная боковая панель"
+
+#: inc/helper/options.php:20
+msgid "Primary Sidebar - Content"
+msgstr "Основная боковая панель - содержание"
+
+#: inc/helper/common.php:259
+msgid "Default"
+msgstr "По умолчанию"
+
+#: inc/helper/common.php:135 lib/breadcrumbs/breadcrumbs.php:246
+msgid "Home"
+msgstr "Главная"
+
+#. translators: If there are characters in your language that are not supported
+#. by Open Sans, translate this to 'off'. Do not translate into your own
+#. language.
+#: inc/helper/common.php:84
+msgctxt "Open Sans font: on or off"
+msgid "on"
+msgstr "on"
+
+#. translators: If there are characters in your language that are not supported
+#. by Rajdhani, translate this to 'off'. Do not translate into your own
+#. language.
+#: inc/helper/common.php:79
+msgctxt "Rajdhani font: on or off"
+msgid "on"
+msgstr "on"
+
+#: inc/customizer.php:39
+msgid "Note: Background Color is applicable only if no image is set as Background Image."
+msgstr "Примечание. Цвет фона применим только в том случае, если в качестве фонового изображения не установлено никакое изображение."
+
+#: inc/customizer/option.php:328
+msgid "Enter category ID to exclude in Blog Page. Separate with comma if more than one"
+msgstr "Введите ID рубрики, чтобы исключить её на странице блога. Отделяйте запятой, если их несколько"
+
+#: inc/customizer/option.php:327
+msgid "Exclude Categories in Blog"
+msgstr "Исключить рубрики в блоге"
+
+#: inc/customizer/option.php:310
+msgid "Read More Text"
+msgstr "Текст \"читать далее\""
+
+#: inc/customizer/option.php:292
+msgid "in words"
+msgstr "слов"
+
+#: inc/customizer/option.php:291
+msgid "Excerpt Length"
+msgstr "Длина отрывка "
+
+#: inc/customizer/option.php:274
+msgid "Blog Options"
+msgstr "Параметры блога"
+
+#: inc/customizer/option.php:247
+msgid "Copyright Text"
+msgstr "Текст авторских прав"
+
+#: inc/customizer/option.php:229
+msgid "Footer Options"
+msgstr "Параметры нижнего колонтитула"
+
+#: inc/customizer/option.php:218 inc/metabox.php:82
+msgid "Image in Single Post/Page"
+msgstr "Изображение в одиночной записи / странице"
+
+#: inc/customizer/option.php:200
+msgid "Image Alignment in Archive"
+msgstr "Выравнивание изображения в архивах"
+
+#: inc/customizer/option.php:183
+msgid "Image in Archive"
+msgstr "Изображение в архивах"
+
+#: inc/customizer/option.php:166
+msgid "Archive Layout"
+msgstr "Макет архива"
+
+#: inc/customizer/option.php:149
+msgid "Global Layout"
+msgstr "Глобальный макет"
+
+#: inc/customizer/option.php:132
+msgid "Layout Options"
+msgstr "Параметры макета"
+
+#: inc/customizer/option.php:122
+msgid "Enable Search"
+msgstr "Включить поиск"
+
+#: inc/customizer/option.php:106 inc/customizer/option.php:264
+msgid "Show Social Icons"
+msgstr "Показать социальные иконки"
+
+#: inc/customizer/option.php:89
+msgid "Contact Email"
+msgstr "Контактный Email"
+
+#: inc/customizer/option.php:72
+msgid "Contact Number"
+msgstr "Контактный телефон"
+
+#: inc/customizer/option.php:55
+msgid "Show Tagline"
+msgstr "Показать слоган"
+
+#: inc/customizer/option.php:39
+msgid "Show Site Title"
+msgstr "Показать название сайта"
+
+#: inc/customizer/option.php:22
+msgid "Header Options"
+msgstr "Параметры заголовка"
+
+#: inc/customizer/option.php:13
+msgid "Theme Options"
+msgstr "Параметры темы"
+
+#: inc/customizer/default.php:42
+msgid "READ MORE"
+msgstr "ЧИТАТЬ ДАЛЕЕ"
+
+#: inc/customizer/carousel.php:121
+msgid "in seconds"
+msgstr "в секундах"
+
+#: inc/customizer/carousel.php:120
+msgid "Transition Delay"
+msgstr "Задержка перехода"
+
+#: inc/customizer/carousel.php:107
+msgid "Enable Autoplay"
+msgstr "Включить автозапуск"
+
+#: inc/customizer/carousel.php:94
+msgid "Carousel Options"
+msgstr "Параметры карусели"
+
+#: inc/customizer/carousel.php:84
+msgid "Select Product Category"
+msgstr "Выберите категорию товара"
+
+#: inc/customizer/carousel.php:71
+msgid "Select Category"
+msgstr "Выберите рубрику"
+
+#: inc/customizer/carousel.php:57
+msgid "Enter number between 1 and 20."
+msgstr "Введите число от 1 до 20."
+
+#: inc/customizer/carousel.php:56
+msgid "No of Carousel Items"
+msgstr "Количество элементов карусели"
+
+#: inc/customizer/carousel.php:42
+msgid "Select Carousel Type"
+msgstr "Выберите тип карусели"
+
+#: inc/customizer/carousel.php:29
+msgid "Enable Carousel On"
+msgstr "Включить карусель"
+
+#: inc/customizer/carousel.php:18
+msgid "Carousel Type"
+msgstr "Тип карусели"
+
+#: inc/customizer/carousel.php:12
+msgid "Featured Carousel"
+msgstr "Карусель избранного"
+
+#: functions.php:99
+msgid "Add widgets here to appear in your Primary Sidebar."
+msgstr "Добавьте виджеты здесь, чтобы они появились на главной боковой панели."
+
+#: functions.php:97
+msgid "Primary Sidebar"
+msgstr "Главная боковая панель"
+
+#: functions.php:38
+msgid "404 Menu"
+msgstr "404 меню"
+
+#: functions.php:37
+msgid "Social Menu"
+msgstr "Меню социальных иконок"
+
+#: functions.php:36
+msgid "Header Menu"
+msgstr "Меню заголовка"
+
+#: functions.php:35
+msgid "Primary Menu"
+msgstr "Основное меню"
+
+#: comments.php:90
+msgid "Comments are closed."
+msgstr "Комментарии закрыты."
+
+#: comments.php:57 comments.php:78
+msgid "Newer Comments"
+msgstr "Новые Комментарии"
+
+#: comments.php:56 comments.php:77
+msgid "Older Comments"
+msgstr "Старые комментарии"
+
+#: comments.php:53 comments.php:74
+msgid "Comment navigation"
+msgstr "Навигация по комментариям"
+
+#. translators: 1: number of comments, 2: post title
+#: comments.php:37
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s комментарий к &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s комментария к &ldquo;%2$s&rdquo;"
+msgstr[2] "%1$s комментариев к &ldquo;%2$s&rdquo;"
+
+#: 404.php:23
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr "Похоже, что ничего не было найдено в этом месте. Может быть, попробовать одну из ссылок ниже или поиск?"
+
+#: 404.php:18
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Ой! Эта страница не найдена."
+
+#. Theme URI of the plugin/theme
+msgid "http://wenthemes.com/item/wordpress-themes/clean-commerce/"
+msgstr "http://wenthemes.com/item/wordpress-themes/clean-commerce/"
+
+#. Author URI of the plugin/theme
+msgid "http://wenthemes.com/"
+msgstr "http://wenthemes.com/"
