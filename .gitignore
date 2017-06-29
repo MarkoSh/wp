@@ -1,3 +1,5 @@
+.gitignore
+
 wp-config.php
 
 node_modules
