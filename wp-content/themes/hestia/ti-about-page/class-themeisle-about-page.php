@@ -1045,11 +1045,11 @@ if ( ! class_exists( 'Themeisle_About_Page' ) ) {
 		public function style_and_scripts( $hook_suffix ) {
 
 			// this is needed on all admin pages, not just the about page, for the badge action count in the wordpress main sidebar
-			wp_enqueue_style( 'ti-about-page-css', get_template_directory_uri() . '/ti-about-page/css/ti_about_page_css.css' );
+			wp_enqueue_style( 'ti-about-page-css', get_template_directory_uri() . '/ti-about-page/css/ti_about_page_css.css', array(), HESTIA_VERSION );
 
 			if ( 'appearance_page_' . $this->theme_slug . '-welcome' == $hook_suffix ) {
 
-				wp_enqueue_script( 'ti-about-page-js', get_template_directory_uri() . '/ti-about-page/js/ti_about_page_scripts.js', array( 'jquery' ) );
+				wp_enqueue_script( 'ti-about-page-js', get_template_directory_uri() . '/ti-about-page/js/ti_about_page_scripts.js', array( 'jquery' ), HESTIA_VERSION );
 
 				wp_enqueue_style( 'plugin-install' );
 				wp_enqueue_script( 'plugin-install' );
@@ -1061,7 +1061,7 @@ if ( ! class_exists( 'Themeisle_About_Page' ) ) {
 					'nr_actions_required'      => count( $required_actions ),
 					'ajaxurl'                  => admin_url( 'admin-ajax.php' ),
 					'template_directory'       => get_template_directory_uri(),
-					'activating_string'        => __( 'Activating', 'hestia' ),
+					'activating_string'        => esc_html__( 'Activating', 'hestia' ),
 				) );
 
 			}

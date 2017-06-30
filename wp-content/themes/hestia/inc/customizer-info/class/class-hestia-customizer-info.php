@@ -42,6 +42,24 @@ class Hestia_Customizer_Info extends WP_Customize_Section {
 	public $slug = '';
 
 	/**
+	 * Hide notice.
+	 *
+	 * @since  1.1.34
+	 * @access public
+	 * @var    string
+	 */
+	public $hide_notice = false;
+
+	/**
+	 * Screen reader text on dismiss button.
+	 *
+	 * @since  1.1.34
+	 * @access public
+	 * @var    string
+	 */
+	public $button_screenreader = '';
+
+	/**
 	 * Enqueue function.
 	 */
 	public function enqueue() {
@@ -58,6 +76,8 @@ class Hestia_Customizer_Info extends WP_Customize_Section {
 	public function json() {
 		$json = parent::json();
 		$json['section_text'] = $this->section_text;
+		$json['hide_notice'] = $this->hide_notice;
+		$json['button_screenreader'] = $this->button_screenreader;
 		$json['plugin_install_button'] = $this->create_plugin_install_button( $this->slug );
 		return $json;
 	}
@@ -71,18 +91,26 @@ class Hestia_Customizer_Info extends WP_Customize_Section {
 	 */
 	protected function render_template() {
 	?>
+		<# if ( !data.hide_notice ) { #>
+			<li id="accordion-section-{{ data.id }}" class="hestia-notice accordion-section control-section control-section-{{ data.type }} cannot-expand">
+				<button type="button" class="notice-dismiss" style="z-index: 1;">
+						<span class="screen-reader-text">
+							<# if ( data.section_text ) { #>
+								{{data.$button_screenreader}}
+							<# } #>
+						</span>
+				</button>
+				<h4 class="accordion-section-title" style="padding-right: 36px">
+					<# if ( data.section_text ) { #>
+						{{{data.section_text}}}
+					<# } #>
+					<# if ( data.plugin_install_button ) { #>
+						{{{data.plugin_install_button}}}
+					<# } #>
+				</h4>
 
-		<li id="accordion-section-{{ data.id }}" class="accordion-section control-section control-section-{{ data.type }} cannot-expand">
-			<h4 class="accordion-section-title">
-				<# if ( data.section_text ) { #>
-					{{{data.section_text}}}
-				<# } #>
-				<# if ( data.plugin_install_button ) { #>
-					{{{data.plugin_install_button}}}
-				<# } #>
-			</h4>
-
-		</li>
+			</li>
+		<# } #>
 		<?php
 	}
 

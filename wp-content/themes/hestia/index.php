@@ -35,11 +35,11 @@ $class_to_add = hestia_get_content_classes( $hestia_blog_sidebar_layout, 'sideba
 get_header();
 
 ?>
-<div id="primary" class="page-header header-filter header-small" data-parallax="active" style="background-image: url('<?php echo( esc_url( get_header_image() ) ); ?>');">
+<div id="primary" class="<?php echo hestia_boxed_layout_header(); ?> page-header header-filter header-small" data-parallax="active" style="background-image: url('<?php echo( esc_url( get_header_image() ) ); ?>');">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2 text-center">
-				<h2 class="title"><?php bloginfo( 'description' ); ?></h2>
+			<div class="col-md-10 col-md-offset-1 text-center">
+				<h1 class="hestia-title"><?php bloginfo( 'description' ); ?></h1>
 			</div>
 		</div>
 	</div>

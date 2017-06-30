@@ -54,8 +54,14 @@ function hestia_custom_colors_inline_style() {
 	if ( ! empty( $color_accent ) ) {
 
 		$custom_css .= '	
-a,.hestia-blogs article:nth-child(6n+1) .category a, a:hover, .card-blog a.moretag:hover, .card-blog a.more-link:hover, .widget a:hover, .navbar.navbar-not-transparent li.active a {
+a,.hestia-blogs article:nth-child(6n+1) .category a, a:hover, .card-blog a.moretag:hover, .card-blog a.more-link:hover, .widget a:hover, .navbar.navbar-not-transparent li.active a, .woocommerce div.product .woocommerce-tabs ul.tabs.wc-tabs li.active a {
     color:' . esc_attr( $color_accent ) . ';
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs.wc-tabs li.active a,
+.woocommerce div.product .woocommerce-tabs ul.tabs.wc-tabs li a:hover,
+.pagination span.current, .pagination span.current:focus, .pagination span.current:hover {
+	border-color:' . esc_attr( $color_accent ) . '
 }
            
 button,
@@ -83,6 +89,7 @@ input#searchsubmit,
 .open > .btn.btn-primary.dropdown-toggle, 
 .open > .btn.btn-primary.dropdown-toggle:focus, 
 .open > .btn.btn-primary.dropdown-toggle:hover,
+.dropdown-submenu:hover > a,
 .navbar .dropdown-menu li > a:hover, 
 .navbar .dropdown-menu li > a:focus, 
 .navbar.navbar-default .dropdown-menu li > a:hover, 
@@ -94,7 +101,6 @@ input#searchsubmit,
 #add_payment_method .wc-proceed-to-checkout a.checkout-button:hover, 
 #add_payment_method .wc-proceed-to-checkout a.checkout-button, 
 .added_to_cart.wc-forward, 
-.woocommerce-message a.button,
 .woocommerce nav.woocommerce-pagination ul li span.current,
 .woocommerce ul.products li.product .onsale, 
 .woocommerce span.onsale,
@@ -114,7 +120,6 @@ input#searchsubmit,
 .woocommerce a.button.wc-backward, 
 .woocommerce .single-product div.product form.cart .button:hover, 
 .woocommerce #respond input#submit:hover, 
-.woocommerce-message a.button:hover, 
 .woocommerce button.button:hover, 
 .woocommerce input.button:hover, 
 .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover, 
@@ -125,8 +130,6 @@ input#searchsubmit,
 .woocommerce input.button.alt:hover, 
 .woocommerce input.button:disabled:hover, 
 .woocommerce input.button:disabled[disabled]:hover,
-.woocommerce div.product .woocommerce-tabs ul.tabs.wc-tabs li.active a, 
-.woocommerce div.product .woocommerce-tabs ul.tabs.wc-tabs li.active a:hover,
 .woocommerce #respond input#submit.alt.disabled, 
 .woocommerce #respond input#submit.alt.disabled:hover, 
 .woocommerce #respond input#submit.alt:disabled, 
@@ -159,6 +162,23 @@ div[id^=woocommerce_widget_cart].widget .buttons .button {
     background-color: ' . esc_attr( $color_accent ) . ';
 }
 
+@media (max-width: 767px) { 
+	.navbar .navbar-nav .dropdown a .caret {
+	    background-color: ' . esc_attr( $color_accent ) . ';
+	}
+	
+	.navbar li:not(.btn) a:hover,
+	.navbar li:not(.btn) a:hover i,
+	.navbar li:not(.btn) a:hover .fa,
+	.navbar li:not(.btn) a:focus,
+	.navbar li:not(.btn) a:focus i,
+	.navbar li:not(.btn) a:focus .fa {
+		color: ' . esc_attr( $color_accent ) . ' !important;
+	}
+	
+	
+}
+
 button,
 .button,
 input[type="submit"], 
@@ -178,7 +198,6 @@ input[type="button"],
 .woocommerce input.button.alt, 
 .woocommerce input.button:disabled, 
 .woocommerce input.button:disabled[disabled],
-.woocommerce-message a.button,
 .woocommerce a.button.wc-backward,
 .woocommerce div[id^=woocommerce_widget_cart].widget .buttons .button {
     -webkit-box-shadow: 0 2px 2px 0 ' . hestia_hex_rgba( $color_accent, '0.14' ) . ',0 3px 1px -2px ' . hestia_hex_rgba( $color_accent, '0.2' ) . ',0 1px 5px 0 ' . hestia_hex_rgba( $color_accent, '0.12' ) . ';
@@ -218,11 +237,9 @@ input#searchsubmit:hover,
 .woocommerce input.button.alt:hover, 
 .woocommerce input.button:disabled:hover, 
 .woocommerce input.button:disabled[disabled]:hover,
-.woocommerce div.product .woocommerce-tabs ul.tabs.wc-tabs li.active a, 
-.woocommerce div.product .woocommerce-tabs ul.tabs.wc-tabs li.active a:hover,
-.woocommerce-message a.button:hover,
 .woocommerce a.button.wc-backward:hover,
-.woocommerce div[id^=woocommerce_widget_cart].widget .buttons .button:hover {
+.woocommerce div[id^=woocommerce_widget_cart].widget .buttons .button:hover,
+.pagination span.current:hover{
 	-webkit-box-shadow: 0 14px 26px -12px' . hestia_hex_rgba( $color_accent, '0.42' ) . ',0 4px 23px 0 rgba(0,0,0,0.12),0 8px 10px -5px ' . hestia_hex_rgba( $color_accent, '0.2' ) . ';
     box-shadow: 0 14px 26px -12px ' . hestia_hex_rgba( $color_accent, '0.42' ) . ',0 4px 23px 0 rgba(0,0,0,0.12),0 8px 10px -5px ' . hestia_hex_rgba( $color_accent, '0.2' ) . ';
 	color: #fff;
@@ -243,7 +260,7 @@ background-image: -webkit-gradient(linear,left top, left bottom,from(' . esc_att
 
 		// Hover Effect for navbar items
 		$custom_css .= '
-.navbar:not(.navbar-transparent) .navbar-nav > li > a:hover, .navbar:not(.navbar-transparent) .navbar-nav > li.active > a {
+.navbar:not(.navbar-transparent) .navbar-nav > li:not(.btn) > a:hover, .navbar:not(.navbar-transparent) .navbar-nav > li.active:not(.btn) > a {
 	color:' . esc_attr( $color_accent ) . '}';
 	}// End if().
 

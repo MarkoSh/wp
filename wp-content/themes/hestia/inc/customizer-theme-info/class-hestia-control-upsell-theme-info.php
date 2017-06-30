@@ -74,7 +74,7 @@ if ( $define_classs ) :
 		 * Enqueue resources for the control
 		 */
 		public function enqueue() {
-			wp_enqueue_style( 'hestia_upsell-style', get_template_directory_uri() . '/inc/customizer-theme-info/css/style.css', '1.0.0' );
+			wp_enqueue_style( 'hestia_upsell-style', get_template_directory_uri() . '/inc/customizer-theme-info/css/style.css', HESTIA_VERSION );
 		}
 
 		/**

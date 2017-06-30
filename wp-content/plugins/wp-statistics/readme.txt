@@ -4,7 +4,7 @@ Donate link: https://wp-statistics.com/donate/
 Tags: statistics, stats, visit, visitors, chart, browser, blog, today, yesterday, week, month, year, total, post, page, sidebar, summary, hits, pagerank, google, alexa, live visit
 Requires at least: 3.0
 Tested up to: 4.8
-Stable tag: 12.0.7
+Stable tag: 12.0.8
 License: GPL3
 
 Complete statistics for your WordPress site.
@@ -38,9 +38,12 @@ This product includes GeoLite2 data created by MaxMind, available from https://w
 * Comprehensive Admin Manual
 
 = Translations =
-WP Statistics has been translated in to many languages, for the current list and contributors, please visit the [translators](https://wp-statistics.com/translators/) page on [wp-statistics.com](https://wp-statistics.com/).
+WP Statistics has been translated in to many languages, for the current list and contributors, please visit the [translate page](https://translate.wordpress.org/projects/wp-plugins/wp-statistics).
 
 Translations are done by people just like you, help make WP Statistics available to more people around the world and [do a translation](https://wp-statistics.com/translations/) today!
+
+= Contributing and Reporting Bugs =
+WP-Statistics is being developed on GitHub, If you’re interested in contributing to plugin, Please look at [Github page](https://github.com/wp-statistics/wp-statistics)
 
 = Support =
 We're sorry you're having problem with WP Statistics and we're happy to help out.  Here are a few things to do before contacting us:
@@ -280,17 +283,23 @@ You may also downgrade to WP Statistics 10.3 as a temporary measure, but no new 
 10. View latest search engine referrers Statistics page.
 
 == Upgrade Notice ==
-= 12.0.5 =
+= 12.0.8 =
 This is a security fix, please update immediately.
 
 == Changelog ==
+= 12.0.8 =
+* Release Date: June 29, 2017
+* Fixed: SQL Injection vulnerability, thanks John Castro for reporting issue from sucuri.net Team.
+* Added: new hook (`wp_statistics_final_text_report_email`) in email reporting.
+* Removed: all language files from the language folder. Translations have moved to [translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/wp-statistics).
+
 = 12.0.7 =
 * Release Date: June 8, 2017
 * WordPress 4.8 compatibility
-* Updated WP-Statistics logo! Thanks [Arin Hacopian](http://aringrafix.com/) for design the logo.
-* Remove manual file and moved to [wp-statistics.com/category/documentation](http://wp-statistics.com/category/documentation)
-* Fixed items show issue in referring page.
-* Fixed recent visitor link in dashboard widget.
+* Updated: WP-Statistics logo! Thanks [Arin Hacopian](http://aringrafix.com/) for design the logo.
+* Removed: manual file and moved to [wp-statistics.com/category/documentation](http://wp-statistics.com/category/documentation)
+* Fixed: items show issue in referring page.
+* Fixed: recent visitor link in dashboard widget.
 
 = 12.0.6 =
 * Release Date: April 27, 2017

@@ -17,15 +17,13 @@ $args         = array(
 	'sidebar-left'  => 'col-md-9 page-content-wrap',
 	'full-width'    => 'col-md-8 col-md-offset-2 page-content-wrap',
 );
-$class_to_add = hestia_get_content_classes( $hestia_page_sidebar_layout, 'sidebar-woocommerce', $args ); ?>
+$class_to_add = hestia_get_content_classes( $hestia_page_sidebar_layout, 'sidebar-1', $args ); ?>
 
 <article id="post-<?php the_ID(); ?>" class="section section-text">
 	<div class="row">
 		<?php
 		if ( $hestia_page_sidebar_layout === 'sidebar-left' ) {
-			if ( ( class_exists( 'WooCommerce' ) && ! is_cart() && ! is_checkout() && ! is_account_page() ) || ! class_exists( 'WooCommerce' ) ) {
-				get_sidebar( 'woocommerce' );
-			}
+			hestia_get_sidebar();
 		}
 		?>
 		<div class="<?php echo esc_attr( $class_to_add ); ?>">
@@ -33,9 +31,7 @@ $class_to_add = hestia_get_content_classes( $hestia_page_sidebar_layout, 'sideba
 		</div>
 		<?php
 		if ( $hestia_page_sidebar_layout === 'sidebar-right' ) {
-			if ( ( class_exists( 'WooCommerce' ) && ! is_cart() && ! is_checkout() && ! is_account_page() ) || ! class_exists( 'WooCommerce' ) ) {
-				get_sidebar( 'woocommerce' );
-			}
+			hestia_get_sidebar();
 		}
 		?>
 	</div>

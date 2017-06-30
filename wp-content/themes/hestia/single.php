@@ -7,11 +7,11 @@
  */
 
 get_header(); ?>
-			<div id="primary" class="page-header header-filter header-small" data-parallax="active" style="background-image: url('<?php echo hestia_featured_header(); ?>');">
+			<div id="primary" class="<?php echo hestia_boxed_layout_header(); ?> page-header header-filter header-small" data-parallax="active" style="background-image: url('<?php echo hestia_featured_header(); ?>');">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-10 col-md-offset-1 text-center">
-							<?php single_post_title( '<h1 class="title">', '</h1>' ); ?>
+							<?php single_post_title( '<h1 class="hestia-title">', '</h1>' ); ?>
 							<h4 class="author">
 								<?php
 								/* translators: %1$s is Author name wrapped, %2$s is Date*/

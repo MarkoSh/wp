@@ -165,6 +165,12 @@ $config = array(
 				'is_in_pro'   => 'true',
 			),
 			array(
+				'title'       => __( 'Shortcodes for each section', 'hestia' ),
+				'description' => __( 'Display a frontpage section wherever you like by adding its shortcode in page or post content.', 'hestia' ),
+				'is_in_lite'  => 'false',
+				'is_in_pro'   => 'true',
+			),
+			array(
 				'title'       => __( 'Header Slider', 'hestia' ),
 				'description' => __( 'You will be able to add more content to your site header with an awesome slider.', 'hestia' ),
 				'is_in_lite'  => 'false',

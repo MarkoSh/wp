@@ -24,7 +24,9 @@
  * @since Hestia 1.0
  */
 
-define( 'HESTIA_VERSION', '1.1.33' );
+define( 'HESTIA_VERSION', '1.1.37' );
+
+define( 'HESTIA_VENDOR_VERSION', '1.0' );
 
 define( 'HESTIA_PHP_INCLUDE', trailingslashit( get_template_directory() ) . 'inc/' );
 
@@ -124,7 +126,7 @@ if ( ! function_exists( 'hestia_setup_theme' ) ) {
 		}
 
 		/* Customizer upsell. */
-		$info_path = trailingslashit( get_template_directory() ) . 'inc/customizer-info/class/class-hestia-customizer-info-singleton.php';
+		$info_path = HESTIA_PHP_INCLUDE . 'customizer-info/class/class-hestia-customizer-info-singleton.php';
 		if ( file_exists( $info_path ) ) {
 			require_once( $info_path );
 		}
@@ -135,6 +137,8 @@ if ( ! function_exists( 'hestia_setup_theme' ) ) {
 			add_theme_support( 'wc-product-gallery-lightbox' );
 			add_theme_support( 'wc-product-gallery-slider' );
 		}
+
+		add_editor_style();
 	}
 
 	add_action( 'after_setup_theme', 'hestia_setup_theme' );
@@ -151,7 +155,7 @@ function hestia_widgets_init() {
 	register_sidebar( array(
 		'name'		  => esc_html__( 'Sidebar', 'hestia' ),
 		'id'			=> 'sidebar-1',
-		'before_widget' => '<div id="%1$s" class="widget">',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h5>',
 		'after_title'   => '</h5>',
@@ -178,7 +182,7 @@ function hestia_widgets_init() {
 	register_sidebar( array(
 		'name'		  => esc_html__( 'Footer One', 'hestia' ),
 		'id'			=> 'footer-one-widgets',
-		'before_widget' => '<div id="%1$s" class="widget">',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h5>',
 		'after_title'   => '</h5>',
@@ -187,7 +191,7 @@ function hestia_widgets_init() {
 	register_sidebar( array(
 		'name'		  => esc_html__( 'Footer Two', 'hestia' ),
 		'id'			=> 'footer-two-widgets',
-		'before_widget' => '<div id="%1$s" class="widget">',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h5>',
 		'after_title'   => '</h5>',
@@ -196,7 +200,7 @@ function hestia_widgets_init() {
 	register_sidebar( array(
 		'name'		  => esc_html__( 'Footer Three', 'hestia' ),
 		'id'			=> 'footer-three-widgets',
-		'before_widget' => '<div id="%1$s" class="widget">',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h5>',
 		'after_title'   => '</h5>',
@@ -205,7 +209,7 @@ function hestia_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'WooCommerce Sidebar', 'hestia' ),
 		'id'            => 'sidebar-woocommerce',
-		'before_widget' => '<div id="%1$s" class="widget">',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h5>',
 		'after_title'   => '</h5>',
@@ -256,25 +260,25 @@ function hestia_fonts_url() {
  * @since Hestia 1.0
  */
 function hestia_scripts() {
-	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css' );
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css', array(), HESTIA_VENDOR_VERSION );
 	wp_style_add_data( 'bootstrap', 'rtl', 'replace' );
 	wp_style_add_data( 'bootstrap', 'suffix', '.min' );
-	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css', array(), '4.7.0' );
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css', array(), HESTIA_VENDOR_VERSION );
 	wp_enqueue_style( 'hestia_style', get_stylesheet_uri(), array(), HESTIA_VERSION );
 	wp_style_add_data( 'hestia_style', 'rtl', 'replace' );
-	wp_enqueue_style( 'hestia_fonts', hestia_fonts_url(), array(), null );
+	wp_enqueue_style( 'hestia_fonts', hestia_fonts_url(), array(), HESTIA_VERSION );
 	if ( is_singular() ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 	if ( is_customize_preview() ) {
 		wp_enqueue_style( 'hestia-customizer-preview-style', get_template_directory_uri() . '/assets/css/customizer-preview.css', array(), HESTIA_VERSION );
 	}
-	wp_enqueue_script( 'jquery-bootstrap', get_template_directory_uri() . '/assets/bootstrap/js/bootstrap.min.js', array( 'jquery' ),'',true );
-	wp_enqueue_script( 'jquery-hestia-material', get_template_directory_uri() . '/assets/js/material.js', array( 'jquery' ),'',true );
+	wp_enqueue_script( 'jquery-bootstrap', get_template_directory_uri() . '/assets/bootstrap/js/bootstrap.min.js', array( 'jquery' ), HESTIA_VENDOR_VERSION, true );
+	wp_enqueue_script( 'jquery-hestia-material', get_template_directory_uri() . '/assets/js/material.js', array( 'jquery' ), HESTIA_VENDOR_VERSION, true );
 	if ( ( 'page' === get_option( 'show_on_front' ) ) || is_home() || is_single() || is_archive() || is_search() ) {
-		wp_enqueue_script( 'jquery-matchHeight', get_template_directory_uri() . '/assets/js/jquery.matchHeight.js', array( 'jquery' ),'',true );
+		wp_enqueue_script( 'jquery-matchHeight', get_template_directory_uri() . '/assets/js/jquery.matchHeight.js', array( 'jquery' ), HESTIA_VENDOR_VERSION, true );
 	}
-	wp_enqueue_script( 'hestia_scripts', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery-hestia-material', 'jquery-ui-core' ),HESTIA_VERSION,true );
+	wp_enqueue_script( 'hestia_scripts', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery-hestia-material', 'jquery-ui-core' ),HESTIA_VERSION, true );
 
 	$hestia_cart_url = '';
 	if ( class_exists( 'WooCommerce' ) ) {
@@ -344,18 +348,6 @@ function hestia_excerpt_more( $more ) {
 add_filter( 'excerpt_more', 'hestia_excerpt_more' );
 
 /**
- * Modify comment reply link.
- *
- * @since Hestia 1.0
- */
-function hestia_reply_link_class( $class ) {
-	$class = str_replace( "class='comment-reply-link", "class='comment-reply-link pull-right", $class );
-	return $class;
-}
-
-add_filter( 'comment_reply_link', 'hestia_reply_link_class' );
-
-/**
  * Move comment field above user details.
  *
  * @since Hestia 1.0
@@ -422,6 +414,10 @@ function hestia_filter_features( $array ) {
 		'features/feature-pro-manager',
 		'features/feature-about-page',
 		'companion/customizer',
+
+		'wpml-pll/functions',
+		'legacy',
+		'shortcodes/functions',
 
 	));
 }
@@ -548,9 +544,6 @@ function hestia_repeater_input_types( $string, $id, $control ) {
 }
 add_filter( 'hestia_repeater_input_types_filter','hestia_repeater_input_types', 10 , 3 );
 
-
-
-
 add_action( 'wp_ajax_nopriv_request_post', 'hestia_requestpost' );
 add_action( 'wp_ajax_request_post', 'hestia_requestpost' );
 /**
@@ -573,7 +566,7 @@ function hestia_requestpost() {
  * @modified 1.1.31
  */
 function hestia_starter_content() {
-	$default_home_content = '<div class="col-md-5"><h3>' . __( 'About Hestia', 'hestia' ) . '</h3>' . __( 'Need more details? Please check our full documentation for detailed information on how to use Hestia.', 'hestia' ) . '</div><div class="col-md-6 col-md-offset-1"><img class="size-medium alignright" src="' . esc_url( get_template_directory_uri() . '/assets/img/about-content.png' ) . '"/></div>';
+	$default_home_content = '<div class="col-md-5"><h3>' . esc_html__( 'About Hestia', 'hestia' ) . '</h3>' . esc_html__( 'Need more details? Please check our full documentation for detailed information on how to use Hestia.', 'hestia' ) . '</div><div class="col-md-6 col-md-offset-1"><img class="size-medium alignright" src="' . esc_url( get_template_directory_uri() . '/assets/img/about-content.png' ) . '"/></div>';
 	$default_home_featured_image = get_template_directory_uri() . '/assets/img/contact.jpg';
 
 	/*
@@ -617,65 +610,6 @@ function hestia_starter_content() {
 add_action( 'after_setup_theme', 'hestia_starter_content' );
 
 /**
- * Filter to translate strings
- */
-function hestia_translate_single_string( $original_value, $domain ) {
-	if ( is_customize_preview() ) {
-		$wpml_translation = $original_value;
-	} else {
-		$wpml_translation = apply_filters( 'wpml_translate_single_string', $original_value, $domain, $original_value );
-		if ( $wpml_translation === $original_value && function_exists( 'pll__' ) ) {
-			return pll__( $original_value );
-		}
-	}
-	return $wpml_translation;
-}
-add_filter( 'hestia_translate_single_string', 'hestia_translate_single_string', 10, 2 );
-
-/**
- * Helper to register pll string.
- *
- * @param String    $theme_mod Theme mod name.
- * @param bool/json $default Default value.
- * @param String    $name Name for polylang backend.
- */
-function hestia_pll_string_register_helper( $theme_mod, $default = false, $name ) {
-	if ( ! function_exists( 'pll_register_string' ) ) {
-		return;
-	}
-
-	$repeater_content = get_theme_mod( $theme_mod, $default );
-	$repeater_content = json_decode( $repeater_content );
-	if ( ! empty( $repeater_content ) ) {
-		foreach ( $repeater_content as $repeater_item ) {
-			foreach ( $repeater_item as $field_name => $field_value ) {
-				if ( $field_name === 'social_repeater' ) {
-					$social_repeater_value = json_decode( $field_value );
-					if ( ! empty( $social_repeater_value ) ) {
-						foreach ( $social_repeater_value as $social ) {
-							foreach ( $social as $key => $value ) {
-								if ( $key === 'link' ) {
-									pll_register_string( 'Social link', $value, $name );
-								}
-								if ( $key === 'icon' ) {
-									pll_register_string( 'Social icon', $value, $name );
-								}
-							}
-						}
-					}
-				} else {
-					if ( $field_name !== 'id' ) {
-						$f_n = ucfirst( $field_name );
-						pll_register_string( $f_n, $field_value, $name );
-					}
-				}
-			}
-		}
-	}
-}
-
-
-/**
  * Save activation time.
  *
  * @since 1.1.22
@@ -715,3 +649,19 @@ function hestia_bb_upgrade_link() {
 }
 
 add_filter( 'fl_builder_upgrade_url', 'hestia_bb_upgrade_link' );
+
+
+
+
+add_action( 'wp_ajax_dismissed_notice_handler', 'hestia_ajax_notice_handler' );
+
+add_action( 'wp_ajax_nopriv_dismissed_notice_handler', 'hestia_ajax_notice_handler' );
+/**
+ * AJAX handler to store the state of dismissible notices.
+ */
+function hestia_ajax_notice_handler() {
+	$control_id = sanitize_text_field( wp_unslash( $_POST['control'] ) );
+	update_option( 'dismissed-' . $control_id, true );
+	echo $control_id;
+	die();
+}

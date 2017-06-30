@@ -110,7 +110,7 @@ class Hestia_Plugin_Install_Helper {
 		wp_enqueue_script( 'hestia-plugin-install-helper', get_template_directory_uri() . '/inc/plugin-install/js/hestia-plugin-install.js', array( 'jquery' ), HESTIA_VERSION, true );
 		wp_localize_script( 'hestia-plugin-install-helper', 'hestia_plugin_helper',
 			array(
-				'activating' => __( 'Activating ', 'hestia' ),
+				'activating' => esc_html__( 'Activating ', 'hestia' ),
 		) );
 		wp_localize_script( 'hestia-plugin-install-helper', 'pagenow',
 		array( 'import' ) );

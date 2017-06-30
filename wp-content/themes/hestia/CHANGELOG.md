@@ -1,41 +1,98 @@
 
-### 1.1.33 - 20/06/2017
-**Changes:** 
-- Fixed form placeholder issues on Mozilla Firefox
-- Remove support for WPML on frontpage
 
-### 1.1.32 - 13/06/2017
-**Changes:** 
-- Updated some strings
+### 1.1.37 - 30/06/2017
 
-### 1.1.31 - 13/06/2017
-**Changes:** 
-- New option in Hestia PRO for selecting the sidebar's width
-- Improved layout of cart and checkout pages for WooCommerce
-- Added Install & Activate buttons for the recommended plugins
-- Added selective refresh to all options for better UX
-- Added started content
-- Converted Contact content option from textarea to WYSIWYG
-- Prefixed all generic CSS classes with hestia
-- Fixed issue with inputs of type file beeing not visible in content
-- Removed the sidebar on Cart and Checkout pages
-- Other small CSS improvements
+**Changes:**
 
-### 1.1.30 - 07/06/2017
-**Changes:** 
-- Removed redundant trailingslashit causing warnings
+- New option to allow multiple dropdown levels for the main navigation menu
 
-### 1.1.29 - 07/06/2017
-**Changes:** 
-- Redid some of the strings used in the theme
-- Recommend BeaverBuilder plugin instead of SiteOrigin Panels
-- Fixed menu dropdown colors
-- Fixed Warning: Cannot modify header information – headers already sent
+- New editor style feature
 
-### 1.1.28 - 07/06/2017
-**Changes:** 
-- Improved theme description and tags
-
+- New Shortcodes options for each of the frontpage sections
+
+- Compatibility with major Form plugins: Contact Form 7, WP forms, Ninja Forms, Formidable Forms, Visual Form Builder, Fast Secure Contact Form, Jetpack Contact form, MailChimp
+
+- New options for customizing the Footer layout + Support for Socials menu in the footer area
+
+- Redone some visual elements to better match the Material Design
+
+- Fixed SEO issue with the meta description on the single post page
+
+- Allow classes for i html tags in textarea inputs for the frontpage
+
+- Added versioning for all assets used in the theme
+
+- Fixed issue with contact form placeholder not working in Mozilla Firefox
+
+
+### 1.1.33 - 20/06/2017
+
+**Changes:** 
+
+- Fixed form placeholder issues on Mozilla Firefox
+
+- Remove support for WPML on frontpage
+
+
+### 1.1.32 - 13/06/2017
+
+**Changes:** 
+
+- Updated some strings
+
+
+### 1.1.31 - 13/06/2017
+
+**Changes:** 
+
+- New option in Hestia PRO for selecting the sidebar's width
+
+- Improved layout of cart and checkout pages for WooCommerce
+
+- Added Install & Activate buttons for the recommended plugins
+
+- Added selective refresh to all options for better UX
+
+- Added started content
+
+- Converted Contact content option from textarea to WYSIWYG
+
+- Prefixed all generic CSS classes with hestia
+
+- Fixed issue with inputs of type file beeing not visible in content
+
+- Removed the sidebar on Cart and Checkout pages
+
+- Other small CSS improvements
+
+
+### 1.1.30 - 07/06/2017
+
+**Changes:** 
+
+- Removed redundant trailingslashit causing warnings
+
+
+### 1.1.29 - 07/06/2017
+
+**Changes:** 
+
+- Redid some of the strings used in the theme
+
+- Recommend BeaverBuilder plugin instead of SiteOrigin Panels
+
+- Fixed menu dropdown colors
+
+- Fixed Warning: Cannot modify header information – headers already sent
+
+
+### 1.1.28 - 07/06/2017
+
+**Changes:** 
+
+- Improved theme description and tags
+
+
 
 ### 1.1.27 - 06/06/2017
 

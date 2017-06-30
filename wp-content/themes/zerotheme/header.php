@@ -26,3 +26,5 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<?php woocommerce_breadcrumb(); ?>

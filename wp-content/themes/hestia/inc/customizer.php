@@ -12,7 +12,10 @@
  * @since Hestia 1.0
  */
 function hestia_customizer_live_preview() {
-	wp_enqueue_script( 'hestia-customizer-preview', get_template_directory_uri() . '/assets/js/customizer.js', array( 'jquery', 'customize-preview' ), '', true );
+	wp_enqueue_script( 'hestia-customizer-preview', get_template_directory_uri() . '/assets/js/customizer.js', array(
+		'jquery',
+		'customize-preview',
+	), HESTIA_VERSION, true );
 }
 
 add_action( 'customize_preview_init', 'hestia_customizer_live_preview' );
@@ -24,7 +27,7 @@ add_action( 'customize_preview_init', 'hestia_customizer_live_preview' );
  */
 function hestia_customizer_controls() {
 	wp_enqueue_style( 'hestia-customizer-style', get_template_directory_uri() . '/assets/css/customizer-style.css', array(), HESTIA_VERSION );
-	wp_enqueue_script( 'hestia_customize_controls', get_template_directory_uri() . '/assets/js/customizer-controls.js', array( 'jquery', 'customize-controls' ), false, true );
+	wp_enqueue_script( 'hestia_customize_controls', get_template_directory_uri() . '/assets/js/customizer-controls.js', array( 'jquery', 'customize-controls' ), HESTIA_VERSION, true );
 
 }
 add_action( 'customize_controls_enqueue_scripts', 'hestia_customizer_controls' );
@@ -107,6 +110,44 @@ function hestia_customize_register( $wp_customize ) {
 			'settings' => 'custom_logo',
 			'render_callback' => 'hestia_custom_logo_callback',
 		));
+	}
+
+	/* Controls used for selective refresh on Sidebar placeholder */
+
+	$wp_customize->add_setting( 'hestia_placeholder_sidebar_1', array(
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	$wp_customize->add_control( 'hestia_placeholder_sidebar_1', array(
+		'type' => 'hidden',
+		'section'  => 'header_image',
+		'priority' => 10,
+	) );
+
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$wp_customize->selective_refresh->add_partial( 'hestia_placeholder_sidebar_1', array(
+			'selector'        => '.hestia-widget-placeholder.sidebar-1',
+			'settings'        => 'hestia_placeholder_sidebar_1',
+			'render_callback' => '',
+		) );
+	}
+
+	$wp_customize->add_setting( 'hestia_placeholder_sidebar_woocommerce', array(
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	$wp_customize->add_control( 'hestia_placeholder_sidebar_woocommerce', array(
+		'type' => 'hidden',
+		'section'  => 'header_image',
+		'priority' => 10,
+	) );
+
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$wp_customize->selective_refresh->add_partial( 'hestia_placeholder_sidebar_woocommerce', array(
+			'selector'        => '.hestia-widget-placeholder.sidebar-woocommerce',
+			'settings'        => 'hestia_placeholder_sidebar_woocommerce',
+			'render_callback' => '',
+		) );
 	}
 
 }

@@ -22,8 +22,7 @@ gulp.task('scripts', function() {
 	return gulp.src([
         'node_modules/tether/dist/js/tether.js',
         'node_modules/bootstrap/dist/js/bootstrap.js',
-        'wp-content/themes/' + currentTheme + '/js/**/*.js',
-        '!wp-content/themes/' + currentTheme + '/js/**/*.min.js'
+        'wp-content/themes/' + currentTheme + '/js/script.js'
     ])
 	.pipe(concat('script.min.js'))
 	.pipe(uglify().on("error", notify.onError()))
@@ -32,7 +31,7 @@ gulp.task('scripts', function() {
 
 // Стили проекта
 gulp.task('scss', function() {
-	return gulp.src('wp-content/themes/' + currentTheme + '/*.scss')
+	return gulp.src('wp-content/themes/' + currentTheme + '/style.scss')
 	.pipe(scss({
 		includePaths: bourbon.includePaths
 	}).on("error", notify.onError()))
@@ -44,7 +43,7 @@ gulp.task('scss', function() {
 });
 
 gulp.task('watch', ['scss', 'scripts'], function() {
-	gulp.watch('wp-content/themes/' + currentTheme + '/*.scss', ['scss']);
-	gulp.watch('wp-content/themes/' + currentTheme + '/js/**/*.js', ['scripts']);
+	gulp.watch('wp-content/themes/' + currentTheme + '/style.scss', ['scss']);
+	gulp.watch('wp-content/themes/' + currentTheme + '/js/script.js', ['scripts']);
     gulp.watch('wp-content/themes/' + currentTheme + '/**/*.php', ['scripts', 'scss']);
 });

@@ -23,25 +23,26 @@ if ( post_password_required() ) {
 						<div class="row">
 							<div class="col-md-12">
 								<div class="media-area">
-									<h3 class="title text-center">
+									<h3 class="hestia-title text-center">
 									<?php
 									$comments_number = get_comments_number();
-									if ( 1 === $comments_number ) {
-										/* translators: %s: post title */
-										printf( _x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'hestia' ), get_the_title() );
-									} else {
-										printf(
-											/* translators: 1: number of comments, 2: post title */
-											_nx(
-												'%1$s thought on &ldquo;%2$s&rdquo;',
-												'%1$s thoughts on &ldquo;%2$s&rdquo;',
-												$comments_number,
-												'comments title',
-												'hestia'
-											),
-											number_format_i18n( $comments_number ),
-											get_the_title()
-										);
+									if ( 0 == ! $comments_number ) {
+										if ( 1 === $comments_number ) {
+											/* translators: %s: post title */
+											_x( 'One comment', 'comments title', 'hestia' );
+										} else {
+											printf(
+												/* translators: 1: number of comments, 2: post title */
+												_nx(
+													'%1$s Comment',
+													'%1$s Comments',
+													$comments_number,
+													'comments title',
+													'hestia'
+												),
+												number_format_i18n( $comments_number )
+											);
+										}
 									}
 									?>
 									</h3>
@@ -55,7 +56,7 @@ if ( post_password_required() ) {
 								<?php comment_form( hestia_comments_template() ); ?>
 								<?php if ( ! comments_open() && get_comments_number() ) : ?>
 									<?php if ( is_single() ) : ?>
-										<h4 class="no-comments title text-center"><?php esc_html_e( 'Comments are closed.' , 'hestia' ); ?></h4>
+										<h4 class="no-comments hestia-title text-center"><?php esc_html_e( 'Comments are closed.' , 'hestia' ); ?></h4>
 									<?php endif; ?>
 								<?php endif; ?>
 								</div>

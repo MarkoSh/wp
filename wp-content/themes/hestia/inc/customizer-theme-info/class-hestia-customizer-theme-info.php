@@ -126,9 +126,9 @@ final class Hestia_Customizer_Theme_Info {
 	 */
 	public function enqueue_control_scripts() {
 
-		wp_enqueue_script( 'hestia_theme-info-js', trailingslashit( get_template_directory_uri() ) . 'inc/customizer-theme-info/js/hestia-theme-info-customize-controls.js', array( 'customize-controls' ) );
+		wp_enqueue_script( 'hestia_theme-info-js', trailingslashit( get_template_directory_uri() ) . 'inc/customizer-theme-info/js/hestia-theme-info-customize-controls.js', array( 'customize-controls' ), HESTIA_VERSION );
 
-		wp_enqueue_style( 'hestia_theme-info-style', trailingslashit( get_template_directory_uri() ) . 'inc/customizer-theme-info/css/hestia-theme-info-customize-controls.css' );
+		wp_enqueue_style( 'hestia_theme-info-style', trailingslashit( get_template_directory_uri() ) . 'inc/customizer-theme-info/css/hestia-theme-info-customize-controls.css', array(), HESTIA_VERSION );
 	}
 }
 

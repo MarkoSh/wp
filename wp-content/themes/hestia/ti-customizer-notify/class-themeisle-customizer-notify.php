@@ -153,7 +153,7 @@ class Themeisle_Customizer_Notify {
 	 */
 	public function themeisle_customizer_notify_scripts_for_customizer() {
 
-		wp_enqueue_style( 'ti-customizer-notify-customizer-css', get_template_directory_uri() . '/ti-customizer-notify/css/ti-customizer-notify-customizer.css' );
+		wp_enqueue_style( 'ti-customizer-notify-customizer-css', get_template_directory_uri() . '/ti-customizer-notify/css/ti-customizer-notify-customizer.css', array(), HESTIA_VERSION );
 
 		wp_enqueue_style( 'plugin-install' );
 		wp_enqueue_script( 'plugin-install' );
@@ -161,7 +161,7 @@ class Themeisle_Customizer_Notify {
 
 		wp_enqueue_script( 'updates' );
 
-		wp_enqueue_script( 'ti-customizer-notify-customizer-js', get_template_directory_uri() . '/ti-customizer-notify/js/ti-customizer-notify-customizer.js', array( 'customize-controls' ) );
+		wp_enqueue_script( 'ti-customizer-notify-customizer-js', get_template_directory_uri() . '/ti-customizer-notify/js/ti-customizer-notify-customizer.js', array( 'customize-controls' ), HESTIA_VERSION );
 		wp_localize_script( 'ti-customizer-notify-customizer-js', 'tiCustomizerNotifyObject', array(
 			'ajaxurl'                  => admin_url( 'admin-ajax.php' ),
 			'template_directory'       => get_template_directory_uri(),

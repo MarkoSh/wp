@@ -20,12 +20,12 @@ if ( ! function_exists( 'hestia_subscribe' ) ) :
 
 		if ( current_user_can( 'edit_theme_options' ) ) {
 			/* translators: 1 - link to customizer setting. 2 - 'customizer' */
-			$hestia_subscribe_subtitle = get_theme_mod( 'hestia_subscribe_subtitle', sprintf( __( 'Change this subtitle in %s.','hestia' ), sprintf( '<a href="%1$s" class="default-link">%2$s</a>', esc_url( admin_url( 'customize.php?autofocus&#91;control&#93;=hestia_subscribe_subtitle' ) ), __( 'customizer','hestia' ) ) ) );
+			$hestia_subscribe_subtitle = get_theme_mod( 'hestia_subscribe_subtitle', sprintf( esc_html__( 'Change this subtitle in %s.','hestia' ), sprintf( '<a href="%1$s" class="default-link">%2$s</a>', esc_url( admin_url( 'customize.php?autofocus&#91;control&#93;=hestia_subscribe_subtitle' ) ), esc_html__( 'customizer','hestia' ) ) ) );
 		} else {
 			$hestia_subscribe_subtitle = get_theme_mod( 'hestia_subscribe_subtitle' );
 		}
 
-		$hestia_subscribe_title = get_theme_mod( 'hestia_subscribe_title', __( 'Subscribe to our Newsletter', 'hestia' ) );
+		$hestia_subscribe_title = get_theme_mod( 'hestia_subscribe_title', esc_html__( 'Subscribe to our Newsletter', 'hestia' ) );
 			?>
 		<section class="subscribe-line subscribe-line-image" id="subscribe" data-sorder="hestia_subscribe" style="background-image: url('<?php echo get_theme_mod( 'hestia_subscribe_background', get_template_directory_uri() . '/assets/img/about.jpg' ); ?>');">
 			<?php
@@ -38,7 +38,7 @@ if ( ! function_exists( 'hestia_subscribe' ) ) :
 				<div class="row text-center">
 					<div class="col-md-8 col-md-offset-2 text-center">
 					<?php if ( ! empty( $hestia_subscribe_title ) || is_customize_preview() ) : ?>
-						<h2 class="title"><?php echo esc_html( $hestia_subscribe_title ); ?></h2>
+						<h2 class="hestia-title"><?php echo esc_html( $hestia_subscribe_title ); ?></h2>
 					<?php endif; ?>
 					<?php if ( ! empty( $hestia_subscribe_subtitle ) || is_customize_preview() ) : ?>
 						<h5 class="subscribe-description"><?php echo wp_kses_post( $hestia_subscribe_subtitle ); ?></h5>

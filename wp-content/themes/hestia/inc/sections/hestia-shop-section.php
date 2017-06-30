@@ -11,10 +11,11 @@ if ( ! function_exists( 'hestia_shop' ) ) :
 	 * Shop section content.
 	 *
 	 * @since Hestia 1.0
+	 * @modified 1.1.34
 	 */
-	function hestia_shop() {
+	function hestia_shop( $is_shortcode = false ) {
 		$hide_section = get_theme_mod( 'hestia_shop_hide', false );
-		if ( (bool) $hide_section === true ) {
+		if ( ! $is_shortcode && (bool) $hide_section === true ) {
 			return;
 		}
 		if ( class_exists( 'woocommerce' ) ) :
@@ -25,16 +26,25 @@ if ( ! function_exists( 'hestia_shop' ) ) :
 			} else {
 				$hestia_shop_subtitle = get_theme_mod( 'hestia_shop_subtitle' );
 			}
+			$hestia_shop_title = get_theme_mod( 'hestia_shop_title', esc_html__( 'Products', 'hestia' ) );
+			if ( $is_shortcode ) {
+				$hestia_shop_title = '';
+				$hestia_shop_subtitle = '';
+			}
 
-			$hestia_shop_title = get_theme_mod( 'hestia_shop_title', __( 'Products', 'hestia' ) );
 			$hestia_shop_items = get_theme_mod( 'hestia_shop_items', 4 );
+
+			$class_to_add = 'container';
+			if ( $is_shortcode ) {
+				$class_to_add = '';
+			}
 			?>
 			<section class="products section-gray" id="products" data-sorder="hestia_shop">
-				<div class="container">
+				<div class="<?php echo esc_attr( $class_to_add ); ?>">
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 text-center">
 							<?php if ( ! empty( $hestia_shop_title ) || is_customize_preview() ) : ?>
-								<h2 class="title"><?php echo esc_html( $hestia_shop_title ); ?></h2>
+								<h2 class="hestia-title"><?php echo esc_html( $hestia_shop_title ); ?></h2>
 							<?php endif; ?>
 							<?php if ( ! empty( $hestia_shop_subtitle ) || is_customize_preview() ) : ?>
 								<h5 class="description"><?php echo wp_kses_post( $hestia_shop_subtitle ); ?></h5>
@@ -68,19 +78,19 @@ function hestia_shop_content( $hestia_shop_items, $is_callback = false ) {
 
 	$args = array(
 		'post_type' => 'product',
-	);
-	$args['posts_per_page'] = ! empty( $hestia_shop_items ) ? absint( $hestia_shop_items ) : 4;
+		);
+		$args['posts_per_page'] = ! empty( $hestia_shop_items ) ? absint( $hestia_shop_items ) : 4;
 
-	$loop = new WP_Query( $args );
+		$loop = new WP_Query( $args );
 
 	if ( $loop->have_posts() ) :
 		while ( $loop->have_posts() ) :
 			$loop->the_post();
 			global $product;
 			global $post; ?>
-			<div class="col-sm-6 col-md-3 shop-item">
-				<div class="card card-product">
-					<?php if ( has_post_thumbnail() ) : ?>
+				<div class="col-sm-6 col-md-3 shop-item">
+					<div class="card card-product">
+						<?php if ( has_post_thumbnail() ) : ?>
 						<div class="card-image">
 							<a href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title_attribute(); ?>">
 								<?php the_post_thumbnail( 'hestia-shop' ); ?>
@@ -88,36 +98,36 @@ function hestia_shop_content( $hestia_shop_items, $is_callback = false ) {
 							<div class="ripple-container"></div>
 						</div>
 					<?php endif; ?>
-					<div class="content">
-						<?php
-						if ( function_exists( 'wc_get_product_category_list' ) ) {
-							$prod_id = get_the_ID();
-							$product_categories = wc_get_product_category_list( $prod_id );
-						} else {
-							$product_categories = $product->get_categories();
-						}
+						<div class="content">
+							<?php
+							if ( function_exists( 'wc_get_product_category_list' ) ) {
+								$prod_id = get_the_ID();
+								$product_categories = wc_get_product_category_list( $prod_id );
+							} else {
+								$product_categories = $product->get_categories();
+							}
 
-						if ( ! empty( $product_categories ) ) {
+							if ( ! empty( $product_categories ) ) {
 
-							$allowed_html = array(
+								$allowed_html = array(
 								'a' => array(
 									'href' => array(),
 									'rel' => array(),
 								),
-							);
+								);
 
-							echo '<h6 class="category">';
+								echo '<h6 class="category">';
 
-							echo wp_kses( $product_categories, $allowed_html );
+								echo wp_kses( $product_categories, $allowed_html );
 
-							echo '</h6>';
-						}
-						?>
+								echo '</h6>';
+							}
+							?>
 
-						<h4 class="card-title">
+							<h4 class="card-title">
 
 							<a class="shop-item-title-link" href="<?php the_permalink(); ?>"
-							   title="<?php the_title_attribute(); ?>"><?php esc_html( the_title() ); ?></a>
+						   title="<?php the_title_attribute(); ?>"><?php esc_html( the_title() ); ?></a>
 
 						</h4>
 
@@ -147,20 +157,20 @@ function hestia_shop_content( $hestia_shop_items, $is_callback = false ) {
 
 							} ?>
 
-							<div class="stats">
+								<div class="stats">
 								<?php hestia_add_to_cart(); ?>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<?php
-		endwhile;
+				<?php
+				endwhile;
 	endif;
 
 	if ( ! $is_callback ) { ?>
-				</div>
-				<?php
+						</div>
+						<?php
 	}
 }
 

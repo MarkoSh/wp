@@ -246,11 +246,11 @@ function hestia_contact_form_placeholder() {
 <div class="col-md-5 col-md-offset-2 pirate-forms-placeholder">
     <div class="card card-contact">
         <div class="header header-raised header-primary text-center">
-            <h4 class="title">' . __( 'Contact', 'hestia' ) . '</h4>
+            <h4 class="hestia-title">' . esc_html__( 'Contact', 'hestia' ) . '</h4>
         </div>
         <div class="pirate-forms-placeholder-overlay">
         	<div class="pirate-forms-placeholder-align">
-            	<h4 class="placeholder-text"> ' . __( 'In order to add a contact form to this section, you need to install the Pirate Forms plugin.','hestia' ) . ' </h4>
+            	<h4 class="placeholder-text"> ' . esc_html__( 'In order to add a contact form to this section, you need to install the Pirate Forms plugin.','hestia' ) . ' </h4>
             </div>
 		</div>
         <div class="content">

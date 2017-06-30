@@ -50,16 +50,16 @@ if ( ! function_exists( 'hestia_slider' ) ) :
 											<div class="col-md-8 col-md-offset-2 text-center">
 												<?php if ( ! empty( $title ) ) :
 													$title = html_entity_decode( $title ); ?>
-													<h2 class="title"><?php echo wp_kses_post( $title ); ?></h2>
+													<h1 class="hestia-title"><?php echo wp_kses_post( $title ); ?></h1>
 												<?php endif; ?>
 												<?php if ( ! empty( $subtitle ) ) :
 													$subtitle = html_entity_decode( $subtitle );?>
-													<h4><?php echo wp_kses_post( $subtitle ); ?></h4>
+													<span class="sub-title"><?php echo wp_kses_post( $subtitle ); ?></span>
 												<?php endif; ?>
 												<?php if ( ! empty( $link ) || ! empty( $button ) ) : ?>
 													<div class="buttons">
 														<a href="<?php echo esc_url( $link ); ?>"
-														   class="btn btn-primary btn-lg"><?php echo esc_html( $button ); ?></a>
+														   title="<?php echo esc_html( $button ); ?>" class="btn btn-primary btn-lg"><?php echo esc_html( $button ); ?></a>
 													</div>
 												<?php endif; ?>
 											</div>
@@ -157,15 +157,3 @@ function hestia_get_slider_default() {
 	}
 	return $default;
 }
-
-/**
- * Register polylang strings
- *
- * @since 1.1.31
- * @access public
- */
-function hestia_slider_register_strings() {
-	$default = hestia_get_slider_default();
-	hestia_pll_string_register_helper( 'hestia_slider_content', json_encode( $default ), 'Slider section' );
-}
-add_action( 'after_setup_theme', 'hestia_slider_register_strings', 11 );

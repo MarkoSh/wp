@@ -24,8 +24,8 @@ if ( ! function_exists( 'hestia_contact' ) ) :
 		} else {
 			$hestia_contact_subtitle   = get_theme_mod( 'hestia_contact_subtitle' );
 		}
-		$hestia_contact_title      = get_theme_mod( 'hestia_contact_title', __( 'Get in Touch', 'hestia' ) );
-		$hestia_contact_area_title = get_theme_mod( 'hestia_contact_area_title', __( 'Contact Us', 'hestia' ) );
+		$hestia_contact_title      = get_theme_mod( 'hestia_contact_title', esc_html__( 'Get in Touch', 'hestia' ) );
+		$hestia_contact_area_title = get_theme_mod( 'hestia_contact_area_title', esc_html__( 'Contact Us', 'hestia' ) );
 		?>
 		<section class="contactus section-image" id="contact" data-sorder="hestia_contact"
 				 style="background-image: url('<?php echo get_theme_mod( 'hestia_contact_background', get_template_directory_uri() . '/assets/img/contact.jpg' ); ?>')">
@@ -39,7 +39,7 @@ if ( ! function_exists( 'hestia_contact' ) ) :
 				<div class="row">
 					<div class="col-md-5">
 						<?php if ( ! empty( $hestia_contact_title ) || is_customize_preview() ) : ?>
-							<h2 class="title"><?php echo esc_html( $hestia_contact_title ); ?></h2>
+							<h2 class="hestia-title"><?php echo esc_html( $hestia_contact_title ); ?></h2>
 						<?php endif; ?>
 						<?php if ( ! empty( $hestia_contact_subtitle ) || is_customize_preview() ) : ?>
 							<h5 class="description"><?php echo wp_kses_post( $hestia_contact_subtitle ); ?></h5>

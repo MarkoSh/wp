@@ -168,7 +168,7 @@ function hestia_big_title_button_render_callback() {
 	$button_text = get_theme_mod( 'hestia_big_title_button_text' );
 	$button_link = get_theme_mod( 'hestia_big_title_button_link' );
 
-	$output = '<a href="' . $button_link . '" class="btn btn-primary btn-lg">' . $button_text . '</a>';
+	$output = '<a href="' . $button_link . '" title="' . $button_text . '" class="btn btn-primary btn-lg">' . $button_text . '</a>';
 
 	return wp_kses_post( $output );
 }

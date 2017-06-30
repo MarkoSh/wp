@@ -11,10 +11,11 @@ if ( ! function_exists( 'hestia_blog' ) ) :
 	 * Blog section content.
 	 *
 	 * @since Hestia 1.0
+	 * @modified 1.1.34
 	 */
-	function hestia_blog() {
+	function hestia_blog( $is_shortcode = false ) {
 		$hide_section = get_theme_mod( 'hestia_blog_hide', false );
-		if ( (bool) $hide_section === true ) {
+		if ( ! $is_shortcode && (bool) $hide_section === true ) {
 			return;
 		}
 
@@ -25,14 +26,23 @@ if ( ! function_exists( 'hestia_blog' ) ) :
 			$hestia_blog_subtitle = get_theme_mod( 'hestia_blog_subtitle' );
 		}
 		$hestia_blog_title = get_theme_mod( 'hestia_blog_title', __( 'Blog', 'hestia' ) );
+		if ( $is_shortcode ) {
+			$hestia_blog_title = '';
+			$hestia_blog_subtitle = '';
+		}
 		$hestia_blog_items = get_theme_mod( 'hestia_blog_items', 3 );
+
+		$class_to_add = 'container';
+		if ( $is_shortcode ) {
+			$class_to_add = '';
+		}
 		?>
 		<section class="blogs hestia-blogs" id="blog" data-sorder="hestia_blog">
-			<div class="container">
+			<div class="<?php echo esc_attr( $class_to_add ); ?>">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center">
 					<?php if ( ! empty( $hestia_blog_title ) || is_customize_preview() ) : ?>
-						<h2 class="title"><?php echo esc_html( $hestia_blog_title ); ?></h2>
+						<h2 class="hestia-title"><?php echo esc_html( $hestia_blog_title ); ?></h2>
 					<?php endif; ?>
 					<?php if ( ! empty( $hestia_blog_subtitle ) || is_customize_preview() ) : ?>
 						<h5 class="description"><?php echo wp_kses_post( $hestia_blog_subtitle ); ?></h5>
@@ -63,44 +73,44 @@ function hestia_blog_content( $hestia_blog_items, $is_callback = false ) {
 
 	$args = array(
 		'ignore_sticky_posts' => true,
-	);
-	$args['posts_per_page'] = ! empty( $hestia_blog_items ) ? absint( $hestia_blog_items ) : 3;
+		);
+		$args['posts_per_page'] = ! empty( $hestia_blog_items ) ? absint( $hestia_blog_items ) : 3;
 
-	$loop = new WP_Query( $args );
+		$loop = new WP_Query( $args );
 
 	if ( $loop->have_posts() ) :
 		while ( $loop->have_posts() ) :
 			$loop->the_post(); ?>
-			<article class="col-md-4 hestia-blog-item">
-				<div class="card card-plain card-blog">
-					<?php if ( has_post_thumbnail() ) : ?>
+				<article class="col-md-4 hestia-blog-item">
+					<div class="card card-plain card-blog">
+						<?php if ( has_post_thumbnail() ) : ?>
 						<div class="card-image">
 							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 								<?php the_post_thumbnail( 'hestia-blog' ); ?>
 							</a>
 						</div>
 					<?php endif; ?>
-					<div class="content">
-						<h6 class="category"><?php hestia_category(); ?></h6>
-						<?php the_title(sprintf('<h4 class="card-title"><a class="blog-item-title-link" href="%s" title="%s" rel="bookmark">', esc_url( get_permalink() ), the_title_attribute(array(
-							'echo' => false,
-						))), '</a></h4>'); ?>
-						<p class="card-description"><?php echo wp_kses_post( get_the_excerpt() ); ?></p>
+						<div class="content">
+							<h6 class="category"><?php hestia_category(); ?></h6>
+							<?php the_title(sprintf('<h4 class="card-title"><a class="blog-item-title-link" href="%s" title="%s" rel="bookmark">', esc_url( get_permalink() ), the_title_attribute(array(
+								'echo' => false,
+							))), '</a></h4>'); ?>
+							<p class="card-description"><?php echo wp_kses_post( get_the_excerpt() ); ?></p>
+						</div>
 					</div>
-				</div>
-			</article>
-			<?php
-		endwhile;
+				</article>
+				<?php
+				endwhile;
 	endif;
 
 	if ( ! $is_callback ) { ?>
-		</div>
-		<?php
+				</div>
+				<?php
 	}
 }
 
 
 if ( function_exists( 'hestia_blog' ) ) {
 	$section_priority = apply_filters( 'hestia_section_priority', 50, 'hestia_blog' );
-	add_action( 'hestia_sections', 'hestia_blog', absint( $section_priority ) );
+	add_action( 'hestia_sections', 'hestia_blog', absint( $section_priority ), 2 );
 }

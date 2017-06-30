@@ -37,7 +37,7 @@ if ( ! is_page_template() ) {
 		 * @hooked hestia_blog_section - 9
 		 * @hooked hestia_contact_section - 10
 		 */
-		do_action( 'hestia_sections' );
+		do_action( 'hestia_sections', false );
 
 		get_footer();
 

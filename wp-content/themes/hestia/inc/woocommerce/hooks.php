@@ -20,6 +20,8 @@ add_action( 'woocommerce_after_main_content', 		'hestia_woocommerce_after_main_c
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 add_action( 'woocommerce_after_single_product', 'woocommerce_output_related_products', 20 );
 
+/* Remove title on shop main */
+add_filter( 'woocommerce_show_page_title' , 'hestia_woocommerce_hide_page_title' );
 
 /**
  * Layout for each product content on the shop page
@@ -66,3 +68,15 @@ add_filter( 'woocommerce_add_to_cart_fragments', 'hestia_woocommerce_header_add_
  */
 add_action( 'woocommerce_before_checkout_form', 'hestia_coupon_after_order_table_js' );
 add_action( 'woocommerce_checkout_order_review', 'hestia_coupon_after_order_table' );
+
+/**
+ * Reposition breadcrumb, sorting and results count
+ */
+add_action( 'woocommerce_before_main_content', 'hestia_woocommerce_remove_shop_elements' );
+add_action( 'hestia_woocommerce_custom_reposition_left_shop_elements', 'hestia_woocommerce_reposition_left_shop_elements' );
+add_action( 'hestia_woocommerce_custom_reposition_right_shop_elements', 'hestia_woocommerce_reposition_right_shop_elements' );
+
+/**
+ * Remove category on single product
+ */
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );

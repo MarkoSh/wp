@@ -91,6 +91,8 @@ final class Hestia_Customizer_Info_Singleton {
 					'panel'        => 'hestia_frontpage_sections',
 					'priority'     => 451,
 					'capability'   => 'install_plugins',
+					'hide_notice'  => (bool) get_option( 'dismissed-hestia_info_woocommerce', false ),
+					'button_screenreader' => '',
 				) ) );
 			}
 		}
@@ -105,7 +107,10 @@ final class Hestia_Customizer_Info_Singleton {
 	 */
 	public function enqueue_control_scripts() {
 
-		wp_enqueue_script( 'hestia_customizer-info-js', trailingslashit( get_template_directory_uri() ) . 'inc/customizer-info/js/customizer-info-controls.js', array( 'customize-controls' ) );
+		wp_enqueue_script( 'hestia_customizer-info-js', trailingslashit( get_template_directory_uri() ) . 'inc/customizer-info/js/customizer-info-controls.js', array( 'customize-controls' ), HESTIA_VERSION );
+		wp_localize_script( 'hestia_customizer-info-js', 'requestpost', array(
+			'ajaxurl' => admin_url( 'admin-ajax.php' ),
+		) );
 	}
 }
 

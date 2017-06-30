@@ -3,7 +3,7 @@
 Plugin Name: Autoptimize
 Plugin URI: http://autoptimize.com/
 Description: Optimizes your website, concatenating the CSS and JavaScript code, and compressing it.
-Version: 2.2.1
+Version: 2.2.2
 Author: Frank Goossens (futtta)
 Author URI: http://blog.futtta.be/
 Domain Path: localization/
@@ -121,8 +121,8 @@ function autoptimize_start_buffering() {
     $ao_noptimize = false;
 
     // noptimize in qs to get non-optimized page for debugging
-    if (array_key_exists("ao_noptimize",$_GET)) {
-        if ( ($_GET["ao_noptimize"]==="1") && (apply_filters('autoptimize_filter_honor_qs_noptimize',true)) ) {
+    if (array_key_exists("ao_noptimize",$_GET) || array_key_exists("ao_noptirocket",$_GET)) {
+        if ( ( ($_GET["ao_noptimize"]==="1") || ($_GET["ao_noptirocket"]==="1") ) && (apply_filters('autoptimize_filter_honor_qs_noptimize',true)) ) {
             $ao_noptimize = true;
         }
     }
@@ -199,7 +199,7 @@ function autoptimize_start_buffering() {
                 }
             } else {
                 if (!class_exists('CSSmin')) {
-                    @include(AUTOPTIMIZE_PLUGIN_DIR.'classes/external/php/yui-php-cssmin-2.4.8-p10/cssmin.php');
+                    @include(AUTOPTIMIZE_PLUGIN_DIR.'classes/external/php/yui-php-cssmin-2.4.8-4_fgo.php');
                 }
             }
             if ( ! defined( 'COMPRESS_CSS' )) {

@@ -369,18 +369,37 @@ jQuery(document).ready(function($) {
 
 
     function fixHeaderPadding() {
-        var navbar_height = $('.navbar-fixed-top').outerHeight();
-        var beaver_offset = 40;
-        $('.pagebuilder-section').css('padding-top', navbar_height);
-        $('.fl-builder-edit .pagebuilder-section').css('padding-top', navbar_height + beaver_offset);
-        $('.page-header.header-small .container').css('padding-top', navbar_height + 110);
+        if ( $(window).width() > 992 ) {
+            var navbar_height = $('.navbar-fixed-top').outerHeight();
+            var beaver_offset = 40;
+            $('.pagebuilder-section').css('padding-top', navbar_height);
+            $('.fl-builder-edit .pagebuilder-section').css('padding-top', navbar_height + beaver_offset);
+            $('.page-header.header-small .container').css('padding-top', navbar_height + 100);
+        }
     }
-
     fixHeaderPadding();
 
+    // Fix for Bootstrap Navwalker
+    $('.navbar .dropdown > a .caret').click(function(){
+        event.preventDefault();
+        event.stopPropagation();
+        $(this).toggleClass('caret-open');
+        $(this).parent().siblings().toggleClass('open');
+
+        if ( $( '.navbar .dropdown' ).hasClass( 'open' ) ) {
+            $( '.navbar .dropdown' ).removeClass( 'open' );
+            $(this).toggleClass('caret-open');
+            $(this).parent().siblings().toggleClass('open');
+        }
+    });
+
+    // Add active parent links on navigation
+    $('.navbar .dropdown > a').click(function(){
+        location.href = this.href;
+    });
+
+    // Functions on window resize
     $( window ).resize(function() {
         fixHeaderPadding();
     });
-
 });
-

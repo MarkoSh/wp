@@ -257,7 +257,7 @@
 				'box-shadow: 0 14px 26px -12px ' + accentColorVariation3 + ',0 4px 23px 0 rgba(0,0,0,0.12),0 8px 10px -5px ' + accentColorVariation2 + '!important;'+
 				'}	';
 
-			style += '.form-group.is-focused .form-control {'+
+			style += '.form-group.is-focused .form-control, div.wpforms-container .wpforms-form .form-group.is-focused .form-control, .nf-form-cont input:not([type=button]):focus, .nf-form-cont select:focus, .nf-form-cont textarea:focus {'+
 				'background-image: -webkit-gradient(linear,left top, left bottom,from(' + newval + '),to(' + newval + ')),-webkit-gradient(linear,left top, left bottom,from(#d2d2d2),to(#d2d2d2));'+
 				'background-image: -webkit-linear-gradient(' + newval + '),to(' + newval + '),-webkit-linear-gradient(#d2d2d2,#d2d2d2);'+
 				'background-image: linear-gradient(' + newval + '),to(' + newval + '),linear-gradient(#d2d2d2,#d2d2d2);'+

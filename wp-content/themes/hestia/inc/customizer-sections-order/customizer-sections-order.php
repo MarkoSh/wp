@@ -9,14 +9,14 @@
  * Function to enqueue sections order main script.
  */
 function hestia_sections_customizer_script() {
-	wp_enqueue_script( 'hestia_customizer-sections-order-script', get_template_directory_uri() . '/inc/customizer-sections-order/js/customizer-sections-order.js', array( 'jquery', 'jquery-ui-sortable' ), '1.0.0', true );
+	wp_enqueue_script( 'hestia_customizer-sections-order-script', get_template_directory_uri() . '/inc/customizer-sections-order/js/customizer-sections-order.js', array( 'jquery', 'jquery-ui-sortable' ), HESTIA_VERSION, true );
 	$control_settings = array(
 		'sections_container' => '#accordion-panel-hestia_frontpage_sections > ul, #sub-accordion-panel-hestia_frontpage_sections',
 		'blocked_items' => '#accordion-section-hestia_slider, #accordion-section-hestia_info_jetpack, #accordion-section-hestia_info_woocommerce',
 		'saved_data_input' => '#customize-control-sections_order input',
 	);
 	wp_localize_script( 'hestia_customizer-sections-order-script', 'control_settings', $control_settings );
-	wp_enqueue_style( 'hestia_customizer-sections-order-style', get_template_directory_uri() . '/inc/customizer-sections-order/css/customizer-sections-order-style.css', array( 'dashicons' ) );
+	wp_enqueue_style( 'hestia_customizer-sections-order-style', get_template_directory_uri() . '/inc/customizer-sections-order/css/customizer-sections-order-style.css', array( 'dashicons' ), HESTIA_VERSION );
 }
 add_action( 'customize_controls_enqueue_scripts', 'hestia_sections_customizer_script' );
 

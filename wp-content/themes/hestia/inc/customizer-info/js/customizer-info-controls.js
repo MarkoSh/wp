@@ -1,3 +1,4 @@
+/* global requestpost */
 ( function( api ) {
 
     // Extends our custom "customizer-info" section.
@@ -25,3 +26,24 @@
     } );
 
 } )( wp.customize );
+
+
+// shorthand no-conflict safe document-ready function
+jQuery(function($) {
+    // Hook into the "notice-my-class" class we added to the notice, so
+    // Only listen to YOUR notices being dismissed
+    $( document ).on( 'click', '.hestia-notice .notice-dismiss', function () {
+        var control_id = $( this ).parent().attr('id').replace('accordion-section-','');
+        $.ajax({
+            url: requestpost.ajaxurl,
+            type: 'POST',
+            data: {
+                action: 'dismissed_notice_handler',
+                control: control_id
+            },
+            success: function(data) {
+                $( '#accordion-section-' + data ).fadeOut(300, function() { $(this).remove(); });
+            }
+        } );
+    } );
+});

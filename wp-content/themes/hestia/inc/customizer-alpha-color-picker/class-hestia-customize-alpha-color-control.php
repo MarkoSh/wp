@@ -63,14 +63,14 @@ class Hestia_Customize_Alpha_Color_Control extends WP_Customize_Control {
 			'hestia_alpha-color-picker',
 			get_template_directory_uri() . '/inc/customizer-alpha-color-picker/js/alpha-color-picker.js',
 			array( 'jquery', 'wp-color-picker' ),
-			'1.0.0',
+			HESTIA_VERSION,
 			true
 		);
 		wp_enqueue_style(
 			'hestia_alpha-color-picker',
 			get_template_directory_uri() . '/inc/customizer-alpha-color-picker/css/alpha-color-picker.css',
 			array( 'wp-color-picker' ),
-			'1.0.0'
+			HESTIA_VERSION
 		);
 	}
 	/**

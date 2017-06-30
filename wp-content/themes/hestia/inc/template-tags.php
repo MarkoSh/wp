@@ -27,7 +27,26 @@ if ( ! function_exists( 'hestia_layout' ) ) :
 		} else {
 			$layout = 'main main-raised';
 		}
+
 		return $layout;
+	}
+endif;
+
+if ( ! function_exists( 'hestia_boxed_layout_header' ) ) :
+	/**
+	 * Return class based on the layout.
+	 *
+	 * @since Hestia 1.0
+	 * @modified 1.1.24
+	 */
+	function hestia_boxed_layout_header() {
+		$hestia_general_layout = get_theme_mod( 'hestia_general_layout', 1 );
+
+		$header_class = '';
+		if ( isset( $hestia_general_layout ) && $hestia_general_layout == 1 ) {
+			$header_class = 'boxed-layout-header';
+		}
+		return $header_class;
 	}
 endif;
 
@@ -39,14 +58,10 @@ if ( ! function_exists( 'hestia_logo' ) ) :
 	 */
 	function hestia_logo() {
 		if ( get_theme_mod( 'custom_logo' ) ) {
-			$logo = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ) , 'full' );
+			$logo = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
 			$logo = '<img src="' . esc_url( $logo[0] ) . '">';
 		} else {
-			if ( is_front_page() ) {
-				$logo = '<h1>' . get_bloginfo( 'name' ) . '</h1>';
-			} else {
-				$logo = '<p>' . get_bloginfo( 'name' ) . '</p>';
-			}
+			$logo = '<p>' . get_bloginfo( 'name' ) . '</p>';
 		}
 		return $logo;
 	}
@@ -62,8 +77,8 @@ if ( ! function_exists( 'hestia_category' ) ) :
 		$category = get_the_category();
 		if ( $category ) {
 			echo '<a href="' . esc_url( get_category_link( $category[0]->term_id ) ) . '" title="' .
-				 /* translators: %s is Category name */
-				 esc_attr( sprintf( __( 'View all posts in %s', 'hestia' ), $category[0]->name ) ) . '" ' . '>' . esc_html( $category[0]->name ) . '</a> ';
+			     /* translators: %s is Category name */
+			     esc_attr( sprintf( __( 'View all posts in %s', 'hestia' ), $category[0]->name ) ) . '" ' . '>' . esc_html( $category[0]->name ) . '</a> ';
 		}
 	}
 endif;
@@ -77,7 +92,8 @@ if ( ! function_exists( 'hestia_get_author' ) ) :
 	function hestia_get_author( $info ) {
 		global $post;
 		$author_id = $post->post_author;
-		$author = get_the_author_meta( $info, $author_id );
+		$author    = get_the_author_meta( $info, $author_id );
+
 		return $author;
 	}
 endif;
@@ -94,7 +110,8 @@ if ( ! function_exists( 'hestia_author_box' ) ) :
 			<div class="row">
 				<div class="col-md-2">
 					<div class="card-avatar">
-						<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php the_author();  ?>"><?php echo get_avatar( get_the_author_meta( 'ID' ), 100 ); ?></a>
+						<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"
+						   title="<?php the_author(); ?>"><?php echo get_avatar( get_the_author_meta( 'ID' ), 100 ); ?></a>
 					</div>
 				</div>
 				<div class="col-md-10">
@@ -118,6 +135,23 @@ if ( ! function_exists( 'hestia_featured_header' ) ) :
 		if ( ! $thumbnail ) {
 			$thumbnail = get_header_image();
 		}
+
+		if ( class_exists( 'WooCommerce' ) && is_product() ) {
+			$terms = get_the_terms( get_queried_object_id(), 'product_cat' );
+			if ( ! empty( $terms ) ) {
+				foreach ( $terms as $term ) {
+					$category_thumbnail = get_woocommerce_term_meta( $term->term_id, 'thumbnail_id', true );
+					if ( ! empty( $category_thumbnail ) ) {
+						$category_image = wp_get_attachment_url( $category_thumbnail );
+						if ( ! empty( $category_image ) ) {
+							return $category_image;
+							break;
+						}
+					}
+				}
+			}
+		}
+
 		return esc_url( $thumbnail );
 	}
 endif;
@@ -130,15 +164,15 @@ if ( ! function_exists( 'hestia_wp_link_pages' ) ) :
 	 */
 	function hestia_wp_link_pages( $args = '' ) {
 		$defaults = array(
-			'before' => '<ul class="nav pagination pagination-primary">',
-			'after' => '</ul>',
-			'link_before' => '',
-			'link_after' => '',
-			'next_or_number' => 'number',
-			'nextpagelink' => esc_html__( 'Next page', 'hestia' ),
+			'before'           => '<ul class="nav pagination pagination-primary">',
+			'after'            => '</ul>',
+			'link_before'      => '',
+			'link_after'       => '',
+			'next_or_number'   => 'number',
+			'nextpagelink'     => esc_html__( 'Next page', 'hestia' ),
 			'previouspagelink' => esc_html__( 'Previous page', 'hestia' ),
-			'pagelink' => '%',
-			'echo' => 1,
+			'pagelink'         => '%',
+			'echo'             => 1,
 		);
 
 		$r = wp_parse_args( $args, $defaults );
@@ -188,17 +222,17 @@ if ( ! function_exists( 'hestia_wp_link_pages' ) ) :
 
 		if ( $r['echo'] ) {
 			echo wp_kses( $output, array(
-				'div' => array(
+				'div'  => array(
 					'class' => array(),
-					'id' => array(),
+					'id'    => array(),
 				),
-				'ul' => array(
+				'ul'   => array(
 					'class' => array(),
 				),
-				'a' => array(
+				'a'    => array(
 					'href' => array(),
 				),
-				'li' => array(),
+				'li'   => array(),
 				'span' => array(
 					'class' => array(),
 				),
@@ -217,11 +251,14 @@ if ( ! function_exists( 'hestia_comments_list' ) ) :
 	 */
 	function hestia_comments_list( $comment, $args, $depth ) {
 		?>
-		<div <?php comment_class( empty( $args['has_children'] ) ? 'media' : 'parent media' ) ?> id="comment-<?php comment_ID() ?>">
+		<div <?php comment_class( empty( $args['has_children'] ) ? 'media' : 'parent media' ) ?>
+				id="comment-<?php comment_ID() ?>">
 			<?php if ( $args['type'] != 'pings' ) : ?>
 				<a class="pull-left" href="<?php echo esc_url( get_comment_author_url( $comment ) ); ?> ">
 					<div class="comment-author avatar vcard">
-						<?php if ( $args['avatar_size'] != 0 ) { echo get_avatar( $comment, 64 ); } ?>
+						<?php if ( $args['avatar_size'] != 0 ) {
+							echo get_avatar( $comment, 64 );
+} ?>
 					</div>
 				</a>
 			<?php endif; ?>
@@ -244,8 +281,8 @@ if ( ! function_exists( 'hestia_comments_list' ) ) :
 					<?php
 					echo get_comment_reply_link(
 						array(
-							'depth' => $depth,
-							'max_depth' => $args['max_depth'],
+							'depth'      => $depth,
+							'max_depth'  => $args['max_depth'],
 							'reply_text' => sprintf( '<i class="fa fa-mail-reply"></i> %s', esc_html__( 'Reply', 'hestia' ) ),
 						),
 						$comment->comment_ID,
@@ -270,27 +307,28 @@ if ( ! function_exists( 'hestia_comments_template' ) ) :
 		} else {
 			$current_user = '<img src="' . get_template_directory_uri() . '/assets/img/placeholder.jpg" height="64" width="64"/>';
 		}
-		$req = get_option( 'require_name_email' );
+		$req      = get_option( 'require_name_email' );
 		$aria_req = ( $req ? " aria-required='true'" : '' );
-		$args = array(
-			'class_form' => 'form',
-			'class_submit' => 'btn btn-primary pull-right',
-			'title_reply_before' => '<h3 class="title text-center">',
-			'title_reply_after' => '</h3> <span class="pull-left author"> <div class="avatar">' . $current_user . '</div> </span> <div class="media-body">',
-			'must_log_in' => '<p class="must-log-in">' .
-							 /* translators: %s is Link to login */
-							 sprintf( wp_kses( __( 'You must be <a href="%s">logged in</a> to post a comment.', 'hestia' ),  array(
-								 'a' => array(
-								 'href' => array(),
-								 ),
-							 ) ), esc_url( wp_login_url( apply_filters( 'the_permalink', get_permalink() ) ) ) ) . '</p> </div>',
-			'fields' => apply_filters( 'comment_form_default_fields', array(
+		$args     = array(
+			'class_form'         => 'form',
+			'class_submit'       => 'btn btn-primary pull-right',
+			'title_reply_before' => '<h3 class="hestia-title text-center">',
+			'title_reply_after'  => '</h3> <span class="pull-left author"> <div class="avatar">' . $current_user . '</div> </span> <div class="media-body">',
+			'must_log_in'        => '<p class="must-log-in">' .
+			                        /* translators: %s is Link to login */
+			                        sprintf( wp_kses( __( 'You must be <a href="%s">logged in</a> to post a comment.', 'hestia' ), array(
+				                        'a' => array(
+					                        'href' => array(),
+				                        ),
+			                        ) ), esc_url( wp_login_url( apply_filters( 'the_permalink', get_permalink() ) ) ) ) . '</p> </div>',
+			'fields'             => apply_filters( 'comment_form_default_fields', array(
 				'author' => '<div class="row"> <div class="col-md-4"> <div class="form-group label-floating is-empty"> <label class="control-label">' . esc_html__( 'Name', 'hestia' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label><input id="author" name="author" class="form-control" type="text"' . $aria_req . ' /> <span class="hestia-input"></span> </div> </div>',
-				'email' => '<div class="col-md-4"> <div class="form-group label-floating is-empty"> <label class="control-label">' . esc_html__( 'Email', 'hestia' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label><input id="email" name="email" class="form-control" type="email"' . $aria_req . ' /> <span class="hestia-input"></span> </div> </div>',
-				'url' => '<div class="col-md-4"> <div class="form-group label-floating is-empty"> <label class="control-label">' . esc_html__( 'Website', 'hestia' ) . '</label><input id="url" name="url" class="form-control" type="url"' . $aria_req . ' /> <span class="hestia-input"></span> </div> </div> </div>',
+				'email'  => '<div class="col-md-4"> <div class="form-group label-floating is-empty"> <label class="control-label">' . esc_html__( 'Email', 'hestia' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label><input id="email" name="email" class="form-control" type="email"' . $aria_req . ' /> <span class="hestia-input"></span> </div> </div>',
+				'url'    => '<div class="col-md-4"> <div class="form-group label-floating is-empty"> <label class="control-label">' . esc_html__( 'Website', 'hestia' ) . '</label><input id="url" name="url" class="form-control" type="url"' . $aria_req . ' /> <span class="hestia-input"></span> </div> </div> </div>',
 			) ),
-			'comment_field' => '<div class="form-group label-floating is-empty"> <label class="control-label">' . esc_html__( 'What\'s on your mind?', 'hestia' ) . '</label><textarea id="comment" name="comment" class="form-control" rows="6" aria-required="true"></textarea><span class="hestia-input"></span> </div> </div>',
+			'comment_field'      => '<div class="form-group label-floating is-empty"> <label class="control-label">' . esc_html__( 'What\'s on your mind?', 'hestia' ) . '</label><textarea id="comment" name="comment" class="form-control" rows="6" aria-required="true"></textarea><span class="hestia-input"></span> </div> </div>',
 		);
+
 		return $args;
 	}
 endif;
@@ -328,11 +366,11 @@ if ( ! function_exists( 'hestia_related_posts' ) ) :
 			'fields' => 'ids',
 		) );
 		$args = array(
-			'posts_per_page' => 3,
-			'cat' => $cats,
-			'orderby' => 'date',
+			'posts_per_page'      => 3,
+			'cat'                 => $cats,
+			'orderby'             => 'date',
 			'ignore_sticky_posts' => true,
-			'post__not_in' => array( $post->ID ),
+			'post__not_in'        => array( $post->ID ),
 		);
 		$loop = new WP_Query( $args );
 		if ( $loop->have_posts() ) :
@@ -341,14 +379,15 @@ if ( ! function_exists( 'hestia_related_posts' ) ) :
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-							<h2 class="title text-center"><?php esc_html_e( 'Related Posts', 'hestia' ); ?></h2>
+							<h2 class="hestia-title text-center"><?php esc_html_e( 'Related Posts', 'hestia' ); ?></h2>
 							<div class="row">
 								<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 									<div class="col-md-4">
 										<div class="card card-blog">
 											<?php if ( has_post_thumbnail() ) : ?>
 												<div class="card-image">
-													<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+													<a href="<?php the_permalink(); ?>"
+													   title="<?php the_title_attribute(); ?>">
 														<?php the_post_thumbnail( 'hestia-blog' ); ?>
 													</a>
 												</div>
@@ -383,9 +422,20 @@ if ( ! function_exists( 'hestia_social_icons' ) ) :
 	function hestia_social_icons() {
 		?>
 		<div class="entry-social">
-			<a target="_blank" rel="tooltip" data-original-title="<?php esc_attr_e( 'Share on Facebook', 'hestia' ); ?>" class="btn btn-just-icon btn-round btn-facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>"><i class="fa fa-facebook"></i></a>
-			<a target="_blank" rel="tooltip" data-original-title="<?php esc_attr_e( 'Share on Twitter', 'hestia' ); ?>" class="btn btn-just-icon btn-round btn-twitter" href="https://twitter.com/home?status=<?php echo wp_strip_all_tags( get_the_title() ); ?> - <?php the_permalink(); ?>"><i class="fa fa-twitter"></i></a>
-			<a target="_blank" rel="tooltip" data-original-title="<?php esc_attr_e( 'Share on Google+', 'hestia' ); ?>" class="btn btn-just-icon btn-round btn-google" href="https://plus.google.com/share?url=<?php the_permalink(); ?>"><i class="fa fa-google"></i></a>
+			<a target="_blank" rel="tooltip"
+			   data-original-title="<?php esc_attr_e( 'Share on Facebook', 'hestia' ); ?>"
+			   class="btn btn-just-icon btn-round btn-facebook"
+			   href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>"><i
+						class="fa fa-facebook"></i></a>
+			<a target="_blank" rel="tooltip"
+			   data-original-title="<?php esc_attr_e( 'Share on Twitter', 'hestia' ); ?>"
+			   class="btn btn-just-icon btn-round btn-twitter"
+			   href="https://twitter.com/home?status=<?php echo wp_strip_all_tags( get_the_title() ); ?> - <?php the_permalink(); ?>"><i
+						class="fa fa-twitter"></i></a>
+			<a target="_blank" rel="tooltip"
+			   data-original-title="<?php esc_attr_e( 'Share on Google+', 'hestia' ); ?>"
+			   class="btn btn-just-icon btn-round btn-google"
+			   href="https://plus.google.com/share?url=<?php the_permalink(); ?>"><i class="fa fa-google"></i></a>
 		</div>
 		<?php
 	}
@@ -408,7 +458,7 @@ if ( ! function_exists( 'hestia_get_image_sizes' ) ) :
 		$links = array();
 
 		/* Get the intermediate image sizes and add the full size to the array. */
-		$sizes = get_intermediate_image_sizes();
+		$sizes   = get_intermediate_image_sizes();
 		$sizes[] = 'full';
 
 		/* Loop through each of the image sizes. */
@@ -424,6 +474,7 @@ if ( ! function_exists( 'hestia_get_image_sizes' ) ) :
 		}
 
 		/* Join the links in a string and return. */
+
 		return join( ' <span class="sep">|</span> ', $links );
 	}
 endif;
@@ -460,6 +511,7 @@ function hestia_contact_get_old_content( $theme_mod ) {
 			}
 		}
 	}
+
 	return $output;
 }
 
@@ -470,7 +522,57 @@ function hestia_contact_get_old_content( $theme_mod ) {
  * @access public
  */
 function hestia_the_footer_content() {
-	$hestia_general_credits = get_theme_mod( 'hestia_general_credits',
+	$footer_has_widgets = is_active_sidebar( 'footer-one-widgets' ) || is_active_sidebar( 'footer-two-widgets' ) || is_active_sidebar( 'footer-three-widgets' ); ?>
+	<footer class="footer footer-black footer-big">
+		<div class="container">
+			<?php
+			if ( $footer_has_widgets ) { ?>
+				<div class="content">
+					<div class="row">
+						<?php if ( is_active_sidebar( 'footer-one-widgets' ) ) : ?>
+							<div class="col-md-4">
+								<?php dynamic_sidebar( 'footer-one-widgets' ); ?>
+							</div>
+						<?php endif; ?>
+						<?php if ( is_active_sidebar( 'footer-two-widgets' ) ) : ?>
+							<div class="col-md-4">
+								<?php dynamic_sidebar( 'footer-two-widgets' ); ?>
+							</div>
+						<?php endif; ?>
+						<?php if ( is_active_sidebar( 'footer-three-widgets' ) ) : ?>
+							<div class="col-md-4">
+								<?php dynamic_sidebar( 'footer-three-widgets' ); ?>
+							</div>
+						<?php endif; ?>
+					</div>
+				</div>
+				<hr/>
+				<?php
+			} ?>
+
+			<div class="hestia-bottom-footer-content">
+				<?php
+				hesta_bottom_footer_content(); ?>
+			</div>
+
+		</div>
+	</footer>
+	<?php
+}
+
+add_action( 'hestia_do_footer', 'hestia_the_footer_content' );
+
+/**
+ * Function to display footer copyright and footer menu.
+ *
+ * @param bool $is_callback Callback flag.
+ */
+function hesta_bottom_footer_content( $is_callback = false ) {
+	if ( ! $is_callback ) { ?>
+		<div class="hestia-bottom-footer-content">
+		<?php
+	}
+	$hestia_general_credits     = get_theme_mod( 'hestia_general_credits',
 		/* translators: %1$s is Theme Name, %2$s is WordPress */
 		sprintf( esc_html__( '%1$s | Powered by %2$s', 'hestia' ),
 			/* translators: %s is Theme name */
@@ -484,52 +586,35 @@ function hestia_the_footer_content() {
 			)
 		)
 	);
-
-	$footer_has_widgets = is_active_sidebar( 'footer-one-widgets' ) || is_active_sidebar( 'footer-two-widgets' ) || is_active_sidebar( 'footer-three-widgets' ); ?>
-	<footer class="footer footer-black footer-big">
-		<div class="container">
-			<?php
-			if ( $footer_has_widgets ) { ?>
-				<div class="content">
-					<div class="row">
-						<div class="col-md-12">
-							<?php if ( is_active_sidebar( 'footer-one-widgets' ) ) : ?>
-								<div class="col-md-4">
-									<?php dynamic_sidebar( 'footer-one-widgets' ); ?>
-								</div>
-							<?php endif; ?>
-							<?php if ( is_active_sidebar( 'footer-two-widgets' ) ) : ?>
-								<div class="col-md-4">
-									<?php dynamic_sidebar( 'footer-two-widgets' ); ?>
-								</div>
-							<?php endif; ?>
-							<?php if ( is_active_sidebar( 'footer-three-widgets' ) ) : ?>
-								<div class="col-md-4">
-									<?php dynamic_sidebar( 'footer-three-widgets' ); ?>
-								</div>
-							<?php endif; ?>
-						</div>
-					</div>
-				</div>
-				<hr/>
-				<?php
-			}
-			wp_nav_menu( array(
-				'theme_location'    => 'footer',
-				'depth'             => 1,
-				'container'         => 'ul',
-				'menu_class'   => 'footer-menu pull-left',
-			) ); ?>
-			<?php if ( ! empty( $hestia_general_credits ) || is_customize_preview() ) : ?>
-				<div class="copyright pull-right">
-					<?php echo wp_kses_post( $hestia_general_credits ); ?>
-				</div>
-			<?php endif; ?>
+	$hestia_copyright_alignment = get_theme_mod( 'hestia_copyright_alignment', 'right' );
+	$menu_class                 = 'pull-left';
+	$copyright_class            = 'pull-right';
+	switch ( $hestia_copyright_alignment ) {
+		case 'left':
+			$menu_class      = 'pull-right';
+			$copyright_class = 'pull-left';
+			break;
+		case 'center':
+			$menu_class      = 'hestia-center';
+			$copyright_class = 'hestia-center';
+	}
+	wp_nav_menu( array(
+		'theme_location' => 'footer',
+		'depth'          => 1,
+		'container'      => 'ul',
+		'menu_class'     => 'footer-menu ' . esc_attr( $menu_class ),
+	) ); ?>
+	<?php if ( ! empty( $hestia_general_credits ) || is_customize_preview() ) : ?>
+		<div class="copyright <?php echo esc_attr( $copyright_class ); ?>">
+			<?php echo wp_kses_post( $hestia_general_credits ); ?>
 		</div>
-	</footer>
+	<?php endif; ?>
 	<?php
+	if ( ! $is_callback ) { ?>
+		</div>
+		<?php
+	}
 }
-add_action( 'hestia_do_footer','hestia_the_footer_content' );
 
 /**
  * Function to display header content.
@@ -555,38 +640,41 @@ function hestia_the_header_content() {
 					<span class="icon-bar"></span>
 				</button>
 				<div class="title-logo-wrapper">
-					<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>"><?php echo hestia_logo(); ?></a>
+					<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"
+					   title="<?php bloginfo( 'name' ); ?>"><?php echo hestia_logo(); ?></a>
 				</div>
 			</div>
 			<?php
 			wp_nav_menu( array(
-				'theme_location'    => 'primary',
-				'depth'             => 2,
-				'container'         => 'div',
-				'container_class'   => 'collapse navbar-collapse',
-				'container_id'      => 'main-navigation',
-				'menu_class'        => 'nav navbar-nav navbar-right',
-				'fallback_cb'       => 'hestia_bootstrap_navwalker::fallback',
-				'walker'            => new hestia_bootstrap_navwalker(),
+				'theme_location'  => 'primary',
+				'container'       => 'div',
+				'container_class' => 'collapse navbar-collapse',
+				'container_id'    => 'main-navigation',
+				'menu_class'      => 'nav navbar-nav navbar-right',
+				'fallback_cb'     => 'hestia_bootstrap_navwalker::fallback',
+				'walker'          => new hestia_bootstrap_navwalker(),
 			) );
 			?>
 		</div>
 	</nav>
 	<?php
 }
-add_action( 'hestia_do_header','hestia_the_header_content' );
+
+add_action( 'hestia_do_header', 'hestia_the_header_content' );
 
 /**
  * Display sidebar placeholder.
  *
  * @param string $class_to_add Classes to add on container.
+ * @param string $sidebar_id Id of the sidebar used as a class to differentiate hestia-widget-placeholder for blog and shop pages.
+ *
  * @access public
  * @since 1.1.24
  */
-function hestia_sidebar_placeholder( $class_to_add ) {
+function hestia_sidebar_placeholder( $class_to_add, $sidebar_id ) {
 	$content = apply_filters( 'hestia_sidebar_placeholder_content', esc_html__( 'This sidebar is active but empty. In order to use this layout, please add widgets in the sidebar', 'hestia' ) ); ?>
 	<aside id="secondary" class="col-md-3 blog-sidebar <?php echo esc_attr( $class_to_add ); ?>" role="complementary">
-		<div class="hestia-widget-placeholder">
+		<div class="hestia-widget-placeholder <?php if ( ! empty( $sidebar_id ) ) { echo esc_attr( $sidebar_id ); } ?>">
 			<?php
 			the_widget( 'WP_Widget_Text', 'text=' . $content ); ?>
 		</div>
@@ -608,6 +696,7 @@ function hestia_sidebar_placeholder( $class_to_add ) {
  * @param string $layout Control on page layout.
  * @param string $sidebar_name Sidebar id.
  * @param array  $args Arguments.
+ *
  * @return string
  */
 function hestia_get_content_classes( $layout, $sidebar_name, $args ) {
@@ -615,7 +704,7 @@ function hestia_get_content_classes( $layout, $sidebar_name, $args ) {
 		return 'col-md-12';
 	}
 	$class_to_add = ! empty( $args['full-width'] ) ? $args['full-width'] : 'col-md-12';
-	$is_shop = ! empty( $args['is_shop'] ) ? $args['is_shop'] : false;
+	$is_shop      = ! empty( $args['is_shop'] ) ? $args['is_shop'] : false;
 	if ( is_active_sidebar( $sidebar_name ) && ! empty( $layout ) || is_customize_preview() ) {
 		switch ( $layout ) {
 			case 'sidebar-right':
@@ -632,5 +721,20 @@ function hestia_get_content_classes( $layout, $sidebar_name, $args ) {
 				break;
 		}
 	}
+
 	return $class_to_add;
+}
+
+/**
+ * Function to display the proper sidebar depending on the page ( WooCommerce sidebar or normal sidebar )
+ */
+function hestia_get_sidebar() {
+	if ( class_exists( 'WooCommerce' ) && ( is_cart() || is_checkout() || is_account_page() ) ) {
+		return;
+	}
+	if ( class_exists( 'WooCommerce' ) && is_shop() ) {
+		get_sidebar( 'woocommerce' );
+	} else {
+		get_sidebar();
+	}
 }

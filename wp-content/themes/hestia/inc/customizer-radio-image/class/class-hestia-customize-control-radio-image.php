@@ -99,9 +99,13 @@ class Hestia_Customize_Control_Radio_Image extends WP_Customize_Control {
 	?>
 
 		<style type="text/css" id="hybrid-customize-radio-image-css">
+			.customize-control-radio-image .ui-buttonset {
+				text-align: center;
+			}
+
 			.customize-control-radio-image label {
 				display: inline-block;
-				max-width: 30%;
+				max-width: 33.3%;
 				padding: 3px;
 				font-size: inherit;
 				line-height: inherit;
@@ -120,6 +124,13 @@ class Hestia_Customize_Control_Radio_Image extends WP_Customize_Control {
 				-webkit-box-shadow: none;
 				box-shadow: none;
 				vertical-align: inherit;
+			}
+
+			.customize-control-radio-image label:first-of-type {
+				float: left;
+			}
+			.customize-control-radio-image label:nth-of-type(n + 3){
+				float: right;
 			}
 
 			.customize-control-radio-image label:hover {

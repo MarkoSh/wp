@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Hestia Pro 1.1.32\n"
+"Project-Id-Version: Hestia Pro 1.1.36\n"
 "Report-Msgid-Bugs-To: https://github.com/Codeinwp/hestia-pro/issues\n"
-"POT-Creation-Date: 2017-06-20 11:07:44+00:00\n"
+"POT-Creation-Date: 2017-06-30 14:55:27+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,17 +25,17 @@ msgstr ""
 "X-Textdomain-Support: yes\n"
 
 #: inc/features/feature-pricing-section.php:84
-#: inc/sections/hestia-pricing-section.php:25
+#: inc/sections/hestia-pricing-section.php:27
 msgid "1"
 msgstr ""
 
 #: inc/features/feature-pricing-section.php:87
-#: inc/sections/hestia-pricing-section.php:28
+#: inc/sections/hestia-pricing-section.php:30
 msgid "2"
 msgstr ""
 
 #: inc/features/feature-pricing-section.php:150
-#: inc/sections/hestia-pricing-section.php:39
+#: inc/sections/hestia-pricing-section.php:41
 msgid "5"
 msgstr ""
 
@@ -50,64 +50,64 @@ msgstr ""
 msgid "Size: %s"
 msgstr ""
 
-#: comments.php:58
+#: comments.php:59
 msgid "Comments are closed."
 msgstr ""
 
-#: functions.php:107 functions.php:600
+#: functions.php:109 functions.php:593
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:108
+#: functions.php:110
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:152
+#: functions.php:156
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:161 inc/features/feature-blog-settings.php:184
+#: functions.php:165 inc/features/feature-blog-settings.php:184
 msgid "Subscribe Section"
 msgstr ""
 
-#: functions.php:170
+#: functions.php:174
 msgid "Blog Subscribe Section"
 msgstr ""
 
-#: functions.php:179
+#: functions.php:183
 msgid "Footer One"
 msgstr ""
 
-#: functions.php:188
+#: functions.php:192
 msgid "Footer Two"
 msgstr ""
 
-#: functions.php:197
+#: functions.php:201
 msgid "Footer Three"
 msgstr ""
 
-#: functions.php:206
+#: functions.php:210
 msgid "WooCommerce Sidebar"
 msgstr ""
 
-#: functions.php:288
+#: functions.php:292
 msgid "View cart"
 msgstr ""
 
-#: functions.php:340
+#: functions.php:344
 msgid "Read more&hellip;"
 msgstr ""
 
-#: functions.php:519
+#: functions.php:515
 msgid "Button Text"
 msgstr ""
 
-#: functions.php:576 inc/features/feature-about-page.php:20
+#: functions.php:569 inc/features/feature-about-page.php:20
 #: inc/features/feature-about-page.php:22
 msgid "About Hestia"
 msgstr ""
 
-#: functions.php:576 inc/features/feature-about-page.php:56
+#: functions.php:569 inc/features/feature-about-page.php:56
 #: inc/features/feature-about-page.php:112
 #: inc/features/feature-pro-manager.php:115
 msgid ""
@@ -115,7 +115,7 @@ msgid ""
 "information on how to use Hestia."
 msgstr ""
 
-#: inc/companion/customizer.php:18 inc/sections/hestia-features-section.php:26
+#: inc/companion/customizer.php:18 inc/sections/hestia-features-section.php:25
 msgid "Why our product is the best"
 msgstr ""
 
@@ -123,29 +123,31 @@ msgstr ""
 #: inc/companion/customizer.php:51 inc/features/feature-blog-settings.php:202
 #: inc/features/feature-portfolio-section.php:54
 #: inc/features/feature-pricing-section.php:49
-#: inc/sections/hestia-features-section.php:27
-#: inc/sections/hestia-features-section.php:146
-#: inc/sections/hestia-features-section.php:153
-#: inc/sections/hestia-features-section.php:160
-#: inc/sections/hestia-portfolio-section.php:25
-#: inc/sections/hestia-pricing-section.php:21
+#: inc/sections/hestia-features-section.php:26
+#: inc/sections/hestia-features-section.php:144
+#: inc/sections/hestia-features-section.php:151
+#: inc/sections/hestia-features-section.php:158
+#: inc/sections/hestia-portfolio-section.php:26
+#: inc/sections/hestia-pricing-section.php:22
 #: inc/sections/hestia-slider-section.php:100
 #: inc/sections/hestia-slider-section.php:108
 #: inc/sections/hestia-slider-section.php:116
 #: inc/sections/hestia-subscribe-blog-section.php:17
-#: inc/sections/hestia-team-section.php:24
-#: inc/sections/hestia-testimonials-section.php:22
+#: inc/sections/hestia-team-section.php:25
+#: inc/sections/hestia-testimonials-section.php:23
+#: inc/wpml-pll/functions.php:78 inc/wpml-pll/functions.php:85
+#: inc/wpml-pll/functions.php:92
 msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
 "tempor incididunt ut labore et dolore magna aliqua."
 msgstr ""
 
-#: inc/companion/customizer.php:34 inc/sections/hestia-team-section.php:23
+#: inc/companion/customizer.php:34 inc/sections/hestia-team-section.php:24
 msgid "Meet our team"
 msgstr ""
 
 #: inc/companion/customizer.php:47
-#: inc/sections/hestia-testimonials-section.php:21
+#: inc/sections/hestia-testimonials-section.php:22
 msgid "What clients say"
 msgstr ""
 
@@ -325,7 +327,7 @@ msgid "PRO"
 msgstr ""
 
 #: inc/customizer-theme-info/class-hestia-customizer-theme-info.php:89
-#: inc/features/feature-general-credits.php:22 inc/template-tags.php:478
+#: inc/features/feature-general-credits.php:30 inc/template-tags.php:580
 #. translators: %s is Theme name
 msgid "Hestia"
 msgstr ""
@@ -339,13 +341,13 @@ msgid "Documentation"
 msgstr ""
 
 #: inc/customizer-theme-info/class-hestia-customizer-theme-info.php:104
-#: inc/features/feature-about-page.php:180
+#: inc/features/feature-about-page.php:186
 #: inc/features/feature-theme-info-section.php:45
 msgid "Jetpack Portfolio"
 msgstr ""
 
 #: inc/customizer-theme-info/class-hestia-customizer-theme-info.php:105
-#: inc/features/feature-about-page.php:186
+#: inc/features/feature-about-page.php:192
 #: inc/features/feature-theme-info-section.php:46
 msgid "Pricing Plans Section"
 msgstr ""
@@ -362,13 +364,13 @@ msgid "Get the PRO version!"
 msgstr ""
 
 #: inc/customizer-theme-info/class-hestia-customizer-theme-info.php:112
-#: inc/features/feature-about-page.php:181
+#: inc/features/feature-about-page.php:187
 #: inc/features/feature-theme-info-section.php:53
 msgid "Portfolio section with two possible layouts."
 msgstr ""
 
 #: inc/customizer-theme-info/class-hestia-customizer-theme-info.php:113
-#: inc/features/feature-about-page.php:187
+#: inc/features/feature-about-page.php:193
 #: inc/features/feature-theme-info-section.php:54
 msgid "A fully customizable pricing plans section."
 msgstr ""
@@ -377,19 +379,19 @@ msgstr ""
 msgid "The ability to reorganize your Frontpage sections more easily and quickly."
 msgstr ""
 
-#: inc/customizer.php:84
+#: inc/customizer.php:87
 msgid "Appearance Settings"
 msgstr ""
 
-#: inc/customizer.php:89 inc/features/feature-about-page.php:150
+#: inc/customizer.php:92 inc/features/feature-about-page.php:150
 msgid "Frontpage Sections"
 msgstr ""
 
-#: inc/customizer.php:90
+#: inc/customizer.php:93
 msgid "Drag and drop panels to change the order of sections."
 msgstr ""
 
-#: inc/customizer.php:95
+#: inc/customizer.php:98
 msgid "Blog Settings"
 msgstr ""
 
@@ -417,7 +419,7 @@ msgid "Getting Started"
 msgstr ""
 
 #: inc/features/feature-about-page.php:36
-#: inc/features/feature-about-page.php:267
+#: inc/features/feature-about-page.php:273
 #: inc/features/feature-pro-manager.php:96
 msgid "Recommended Actions"
 msgstr ""
@@ -429,7 +431,7 @@ msgstr ""
 
 #: inc/features/feature-about-page.php:38
 #: inc/features/feature-pro-manager.php:98
-#: inc/sections/hestia-features-section.php:159
+#: inc/sections/hestia-features-section.php:157 inc/wpml-pll/functions.php:91
 msgid "Support"
 msgstr ""
 
@@ -589,93 +591,103 @@ msgid "The ability to reorganize your Frontpage Sections more easily and quickly
 msgstr ""
 
 #: inc/features/feature-about-page.php:168
+msgid "Shortcodes for each section"
+msgstr ""
+
+#: inc/features/feature-about-page.php:169
+msgid ""
+"Display a frontpage section wherever you like by adding its shortcode in "
+"page or post content."
+msgstr ""
+
+#: inc/features/feature-about-page.php:174
 #: inc/features/feature-theme-info-section.php:43
 msgid "Header Slider"
 msgstr ""
 
-#: inc/features/feature-about-page.php:169
+#: inc/features/feature-about-page.php:175
 #: inc/features/feature-theme-info-section.php:51
 msgid ""
 "You will be able to add more content to your site header with an awesome "
 "slider."
 msgstr ""
 
-#: inc/features/feature-about-page.php:174
+#: inc/features/feature-about-page.php:180
 #: inc/features/feature-theme-info-section.php:44
 msgid "Fully Customizable Colors"
 msgstr ""
 
-#: inc/features/feature-about-page.php:175
+#: inc/features/feature-about-page.php:181
 #: inc/features/feature-theme-info-section.php:52
 msgid "Change colors for the header overlay, header text and navbar."
 msgstr ""
 
-#: inc/features/feature-about-page.php:192
+#: inc/features/feature-about-page.php:198
 #: inc/features/feature-theme-info-section.php:48
 msgid "Quality Support"
 msgstr ""
 
-#: inc/features/feature-about-page.php:193
+#: inc/features/feature-about-page.php:199
 #: inc/features/feature-theme-info-section.php:56
 msgid "24/7 HelpDesk Professional Support"
 msgstr ""
 
-#: inc/features/feature-about-page.php:201
+#: inc/features/feature-about-page.php:207
 #: inc/features/feature-pro-manager.php:190
 msgid "Already activated"
 msgstr ""
 
-#: inc/features/feature-about-page.php:202
+#: inc/features/feature-about-page.php:208
 #: inc/features/feature-pro-manager.php:191
 msgid "Version: "
 msgstr ""
 
-#: inc/features/feature-about-page.php:203
-#: inc/features/feature-about-page.php:229
-#: inc/features/feature-about-page.php:269
+#: inc/features/feature-about-page.php:209
+#: inc/features/feature-about-page.php:235
+#: inc/features/feature-about-page.php:275
 #: inc/features/feature-pro-manager.php:192
 #: inc/features/feature-pro-manager.php:218
 msgid "Install and Activate"
 msgstr ""
 
-#: inc/features/feature-about-page.php:204
-#: inc/features/feature-about-page.php:230
-#: inc/features/feature-about-page.php:270
+#: inc/features/feature-about-page.php:210
+#: inc/features/feature-about-page.php:236
+#: inc/features/feature-about-page.php:276
 #: inc/features/feature-pro-manager.php:193
 #: inc/features/feature-pro-manager.php:219
 #: inc/plugin-install/class-hestia-plugin-install-helper.php:78
 msgid "Activate"
 msgstr ""
 
-#: inc/features/feature-about-page.php:205
-#: inc/features/feature-about-page.php:231
-#: inc/features/feature-about-page.php:271
+#: inc/features/feature-about-page.php:211
+#: inc/features/feature-about-page.php:237
+#: inc/features/feature-about-page.php:277
 #: inc/features/feature-pro-manager.php:194
 #: inc/features/feature-pro-manager.php:220
 msgid "Deactivate"
 msgstr ""
 
-#: inc/features/feature-about-page.php:235
+#: inc/features/feature-about-page.php:241
 msgid ""
 "It is highly recommended that you install the companion plugin to have "
 "access to the Frontpage features, Team and Testimonials sections."
 msgstr ""
 
-#: inc/features/feature-about-page.php:242
+#: inc/features/feature-about-page.php:248
 #: inc/features/feature-pro-manager.php:224
 msgid ""
 "Makes your Contact section more engaging by creating a good-looking contact "
 "form. Interaction with your visitors has never been easier."
 msgstr ""
 
-#: inc/features/feature-about-page.php:263
+#: inc/features/feature-about-page.php:269
 #. translators: s - ThemeIsle Companion
 msgid ""
 "If you want to take full advantage of the options this theme has to offer, "
 "please install and activate %s."
 msgstr ""
 
-#: inc/features/feature-about-page.php:268
+#: inc/features/feature-about-page.php:274
 msgid "Recommended Plugins"
 msgstr ""
 
@@ -760,7 +772,7 @@ msgstr ""
 
 #: inc/features/feature-blog-section.php:19
 #: inc/features/feature-blog-section.php:37
-#: inc/sections/hestia-blog-section.php:27
+#: inc/sections/hestia-blog-section.php:28
 msgid "Blog"
 msgstr ""
 
@@ -955,19 +967,53 @@ msgstr ""
 msgid "Feature"
 msgstr ""
 
-#: inc/features/feature-general-credits.php:19 inc/template-tags.php:475
+#: inc/features/feature-general-credits.php:20
+msgid "Footer Options"
+msgstr ""
+
+#: inc/features/feature-general-credits.php:27 inc/template-tags.php:577
 #. translators: %1$s is Theme name wrapped in <a> tag, %2$s is WordPress link
 #. translators: %1$s is Theme Name, %2$s is WordPress
 msgid "%1$s | Powered by %2$s"
 msgstr ""
 
-#: inc/features/feature-general-credits.php:25 inc/template-tags.php:483
+#: inc/features/feature-general-credits.php:33 inc/template-tags.php:585
 #. translators: %s is WordPress
 msgid "WordPress"
 msgstr ""
 
-#: inc/features/feature-general-credits.php:32
+#: inc/features/feature-general-credits.php:40
 msgid "Footer Credits"
+msgstr ""
+
+#: inc/features/feature-general-credits.php:56
+msgid "Left"
+msgstr ""
+
+#: inc/features/feature-general-credits.php:57
+msgid "Center"
+msgstr ""
+
+#: inc/features/feature-general-credits.php:58
+msgid "Right"
+msgstr ""
+
+#: inc/features/feature-general-credits.php:64
+#: inc/features/feature-general-settings.php:67
+#: inc/features/feature-general-settings.php:93
+msgid "Left Sidebar"
+msgstr ""
+
+#: inc/features/feature-general-credits.php:68
+#: inc/features/feature-general-settings.php:63
+#: inc/features/feature-general-settings.php:89
+msgid "Full Width"
+msgstr ""
+
+#: inc/features/feature-general-credits.php:72
+#: inc/features/feature-general-settings.php:71
+#: inc/features/feature-general-settings.php:97
+msgid "Right Sidebar"
 msgstr ""
 
 #: inc/features/feature-general-settings.php:29
@@ -986,21 +1032,6 @@ msgstr ""
 msgid "Page Sidebar Layout"
 msgstr ""
 
-#: inc/features/feature-general-settings.php:63
-#: inc/features/feature-general-settings.php:89
-msgid "Full Width"
-msgstr ""
-
-#: inc/features/feature-general-settings.php:67
-#: inc/features/feature-general-settings.php:93
-msgid "Left Sidebar"
-msgstr ""
-
-#: inc/features/feature-general-settings.php:71
-#: inc/features/feature-general-settings.php:97
-msgid "Right Sidebar"
-msgstr ""
-
 #: inc/features/feature-general-settings.php:83
 msgid "Blog Sidebar Layout"
 msgstr ""
@@ -1011,7 +1042,7 @@ msgstr ""
 
 #: inc/features/feature-portfolio-section.php:24
 #: inc/features/feature-portfolio-section.php:42
-#: inc/sections/hestia-portfolio-section.php:24
+#: inc/sections/hestia-portfolio-section.php:25
 msgid "Portfolio"
 msgstr ""
 
@@ -1030,12 +1061,12 @@ msgid "Pricing"
 msgstr ""
 
 #: inc/features/feature-pricing-section.php:37
-#: inc/sections/hestia-pricing-section.php:20
+#: inc/sections/hestia-pricing-section.php:21
 msgid "Choose a plan for your next project"
 msgstr ""
 
 #: inc/features/feature-pricing-section.php:61
-#: inc/sections/hestia-pricing-section.php:22
+#: inc/sections/hestia-pricing-section.php:24
 msgid "Basic Package"
 msgstr ""
 
@@ -1049,39 +1080,39 @@ msgstr ""
 
 #: inc/features/feature-pricing-section.php:84
 #: inc/features/feature-pricing-section.php:150
-#: inc/sections/hestia-pricing-section.php:25
-#: inc/sections/hestia-pricing-section.php:39
+#: inc/sections/hestia-pricing-section.php:27
+#: inc/sections/hestia-pricing-section.php:41
 msgid "Domain"
 msgstr ""
 
 #: inc/features/feature-pricing-section.php:85
-#: inc/sections/hestia-pricing-section.php:26
+#: inc/sections/hestia-pricing-section.php:28
 msgid "1GB"
 msgstr ""
 
 #: inc/features/feature-pricing-section.php:85
 #: inc/features/feature-pricing-section.php:151
-#: inc/sections/hestia-pricing-section.php:26
-#: inc/sections/hestia-pricing-section.php:40
+#: inc/sections/hestia-pricing-section.php:28
+#: inc/sections/hestia-pricing-section.php:42
 msgid "Storage"
 msgstr ""
 
 #: inc/features/feature-pricing-section.php:86
-#: inc/sections/hestia-pricing-section.php:27
+#: inc/sections/hestia-pricing-section.php:29
 msgid "100GB"
 msgstr ""
 
 #: inc/features/feature-pricing-section.php:86
 #: inc/features/feature-pricing-section.php:152
-#: inc/sections/hestia-pricing-section.php:27
-#: inc/sections/hestia-pricing-section.php:41
+#: inc/sections/hestia-pricing-section.php:29
+#: inc/sections/hestia-pricing-section.php:43
 msgid "Bandwidth"
 msgstr ""
 
 #: inc/features/feature-pricing-section.php:87
 #: inc/features/feature-pricing-section.php:153
-#: inc/sections/hestia-pricing-section.php:28
-#: inc/sections/hestia-pricing-section.php:42
+#: inc/sections/hestia-pricing-section.php:30
+#: inc/sections/hestia-pricing-section.php:44
 msgid "Databases"
 msgstr ""
 
@@ -1101,7 +1132,7 @@ msgid "Pricing Table One: Link"
 msgstr ""
 
 #: inc/features/feature-pricing-section.php:115
-#: inc/sections/hestia-pricing-section.php:35
+#: inc/sections/hestia-pricing-section.php:37
 msgid "Free Download"
 msgstr ""
 
@@ -1110,7 +1141,7 @@ msgid "Pricing Table One: Text"
 msgstr ""
 
 #: inc/features/feature-pricing-section.php:127
-#: inc/sections/hestia-pricing-section.php:36
+#: inc/sections/hestia-pricing-section.php:38
 msgid "Premium Package"
 msgstr ""
 
@@ -1125,9 +1156,9 @@ msgstr ""
 #: inc/features/feature-pricing-section.php:151
 #: inc/features/feature-pricing-section.php:152
 #: inc/features/feature-pricing-section.php:153
-#: inc/sections/hestia-pricing-section.php:40
-#: inc/sections/hestia-pricing-section.php:41
 #: inc/sections/hestia-pricing-section.php:42
+#: inc/sections/hestia-pricing-section.php:43
+#: inc/sections/hestia-pricing-section.php:44
 msgid "Unlimited"
 msgstr ""
 
@@ -1140,7 +1171,7 @@ msgid "Pricing Table Two: Link"
 msgstr ""
 
 #: inc/features/feature-pricing-section.php:181
-#: inc/sections/hestia-pricing-section.php:48
+#: inc/sections/hestia-pricing-section.php:50
 msgid "Order Now"
 msgstr ""
 
@@ -1264,68 +1295,68 @@ msgid "Activating "
 msgstr ""
 
 #: inc/sections/hestia-authors-blog-section.php:20
-#: inc/sections/hestia-team-section.php:179
+#: inc/sections/hestia-team-section.php:180 inc/wpml-pll/functions.php:143
 msgid "Desmond Purpleson"
 msgstr ""
 
 #: inc/sections/hestia-authors-blog-section.php:21
-#: inc/sections/hestia-team-section.php:180
+#: inc/sections/hestia-team-section.php:181 inc/wpml-pll/functions.php:144
 msgid "CEO"
 msgstr ""
 
 #: inc/sections/hestia-authors-blog-section.php:22
-#: inc/sections/hestia-team-section.php:181
+#: inc/sections/hestia-team-section.php:182 inc/wpml-pll/functions.php:145
 msgid ""
 "Locavore pinterest chambray affogato art party, forage coloring book "
 "typewriter. Bitters cold selfies, retro celiac sartorial mustache."
 msgstr ""
 
 #: inc/sections/hestia-authors-blog-section.php:49
-#: inc/sections/hestia-team-section.php:208
+#: inc/sections/hestia-team-section.php:209 inc/wpml-pll/functions.php:172
 msgid "Parsley Pepperspray"
 msgstr ""
 
 #: inc/sections/hestia-authors-blog-section.php:50
-#: inc/sections/hestia-team-section.php:209
+#: inc/sections/hestia-team-section.php:210 inc/wpml-pll/functions.php:173
 msgid "Marketing Specialist"
 msgstr ""
 
 #: inc/sections/hestia-authors-blog-section.php:51
-#: inc/sections/hestia-team-section.php:210
+#: inc/sections/hestia-team-section.php:211 inc/wpml-pll/functions.php:174
 msgid ""
 "Craft beer salvia celiac mlkshk. Pinterest celiac tumblr, portland salvia "
 "skateboard cliche thundercats. Tattooed chia austin hell."
 msgstr ""
 
 #: inc/sections/hestia-authors-blog-section.php:78
-#: inc/sections/hestia-team-section.php:237
+#: inc/sections/hestia-team-section.php:238 inc/wpml-pll/functions.php:201
 msgid "Desmond Eagle"
 msgstr ""
 
 #: inc/sections/hestia-authors-blog-section.php:79
-#: inc/sections/hestia-team-section.php:238
+#: inc/sections/hestia-team-section.php:239 inc/wpml-pll/functions.php:202
 msgid "Graphic Designer"
 msgstr ""
 
 #: inc/sections/hestia-authors-blog-section.php:80
-#: inc/sections/hestia-team-section.php:239
+#: inc/sections/hestia-team-section.php:240 inc/wpml-pll/functions.php:203
 msgid ""
 "Pok pok direct trade godard street art, poutine fam typewriter food truck "
 "narwhal kombucha wolf cardigan butcher whatever pickled you."
 msgstr ""
 
 #: inc/sections/hestia-authors-blog-section.php:107
-#: inc/sections/hestia-team-section.php:266
+#: inc/sections/hestia-team-section.php:267 inc/wpml-pll/functions.php:230
 msgid "Ruby Von Rails"
 msgstr ""
 
 #: inc/sections/hestia-authors-blog-section.php:108
-#: inc/sections/hestia-team-section.php:267
+#: inc/sections/hestia-team-section.php:268 inc/wpml-pll/functions.php:231
 msgid "Lead Developer"
 msgstr ""
 
 #: inc/sections/hestia-authors-blog-section.php:109
-#: inc/sections/hestia-team-section.php:268
+#: inc/sections/hestia-team-section.php:269 inc/wpml-pll/functions.php:232
 msgid ""
 "Small batch vexillologist 90's blue bottle stumptown bespoke. Pok pok tilde "
 "fixie chartreuse, VHS gluten-free selfies wolf hot."
@@ -1342,26 +1373,26 @@ msgid "Customizer"
 msgstr ""
 
 #: inc/sections/hestia-big-title-section.php:26
-#: inc/sections/hestia-blog-section.php:23
+#: inc/sections/hestia-blog-section.php:24
 #: inc/sections/hestia-contact-section.php:23
-#: inc/sections/hestia-shop-section.php:24
+#: inc/sections/hestia-shop-section.php:25
 #: inc/sections/hestia-subscribe-section.php:23
 #. translators: 1 - link to customizer setting. 2 - 'customizer'
 msgid "Change this subtitle in %s."
 msgstr ""
 
-#: inc/sections/hestia-blog-section.php:23
+#: inc/sections/hestia-blog-section.php:24
 #: inc/sections/hestia-contact-section.php:23
-#: inc/sections/hestia-shop-section.php:24
+#: inc/sections/hestia-shop-section.php:25
 #: inc/sections/hestia-subscribe-section.php:23
 msgid "customizer"
 msgstr ""
 
-#: inc/sections/hestia-features-section.php:145
+#: inc/sections/hestia-features-section.php:143 inc/wpml-pll/functions.php:77
 msgid "Responsive"
 msgstr ""
 
-#: inc/sections/hestia-features-section.php:152
+#: inc/sections/hestia-features-section.php:150 inc/wpml-pll/functions.php:84
 msgid "Quality"
 msgstr ""
 
@@ -1377,130 +1408,139 @@ msgstr ""
 msgid "Button"
 msgstr ""
 
-#: inc/sections/hestia-testimonials-section.php:132
+#: inc/sections/hestia-testimonials-section.php:145
+#: inc/wpml-pll/functions.php:110
 msgid "Inverness McKenzie"
 msgstr ""
 
-#: inc/sections/hestia-testimonials-section.php:133
+#: inc/sections/hestia-testimonials-section.php:146
+#: inc/wpml-pll/functions.php:111
 msgid "Business Owner"
 msgstr ""
 
-#: inc/sections/hestia-testimonials-section.php:134
+#: inc/sections/hestia-testimonials-section.php:147
+#: inc/wpml-pll/functions.php:112
 msgid ""
 "\"We have no regrets! After using your product my business skyrocketed! I "
 "made back the purchase price in just 48 hours! I couldn't have asked for "
 "more than this.\""
 msgstr ""
 
-#: inc/sections/hestia-testimonials-section.php:139
+#: inc/sections/hestia-testimonials-section.php:152
+#: inc/wpml-pll/functions.php:117
 msgid "Hanson Deck"
 msgstr ""
 
-#: inc/sections/hestia-testimonials-section.php:140
+#: inc/sections/hestia-testimonials-section.php:153
+#: inc/wpml-pll/functions.php:118
 msgid "Independent Artist"
 msgstr ""
 
-#: inc/sections/hestia-testimonials-section.php:141
+#: inc/sections/hestia-testimonials-section.php:154
+#: inc/wpml-pll/functions.php:119
 msgid ""
 "\"Your company is truly upstanding and is behind its product 100 percent. "
 "Hestia is worth much more than I paid. I like Hestia more each day because "
 "it makes easier.\""
 msgstr ""
 
-#: inc/sections/hestia-testimonials-section.php:146
+#: inc/sections/hestia-testimonials-section.php:159
+#: inc/wpml-pll/functions.php:124
 msgid "Natalya Undergrowth"
 msgstr ""
 
-#: inc/sections/hestia-testimonials-section.php:147
+#: inc/sections/hestia-testimonials-section.php:160
+#: inc/wpml-pll/functions.php:125
 msgid "Freelancer"
 msgstr ""
 
-#: inc/sections/hestia-testimonials-section.php:148
+#: inc/sections/hestia-testimonials-section.php:161
+#: inc/wpml-pll/functions.php:126
 msgid ""
 "\"Thank you for making it painless, pleasant and most of all hassle free! I "
 "am so pleased with this product. Dude, your stuff is great! I will refer "
 "everyone I know.\""
 msgstr ""
 
-#: inc/template-tags.php:66
+#: inc/template-tags.php:81
 #. translators: %s is Category name
 msgid "View all posts in %s"
 msgstr ""
 
-#: inc/template-tags.php:138
+#: inc/template-tags.php:172
 msgid "Next page"
 msgstr ""
 
-#: inc/template-tags.php:139
+#: inc/template-tags.php:173
 msgid "Previous page"
 msgstr ""
 
-#: inc/template-tags.php:234
+#: inc/template-tags.php:271
 #. translators: %1$s is Date, %2$s is Time
 msgid "&#183; %1$s at %2$s"
 msgstr ""
 
-#: inc/template-tags.php:238
+#: inc/template-tags.php:275
 msgid "(Edit)"
 msgstr ""
 
-#: inc/template-tags.php:249
+#: inc/template-tags.php:286
 msgid "Reply"
 msgstr ""
 
-#: inc/template-tags.php:282
+#: inc/template-tags.php:319
 #. translators: %s is Link to login
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
 
-#: inc/template-tags.php:288
+#: inc/template-tags.php:325
 msgid "Name"
 msgstr ""
 
-#: inc/template-tags.php:289
+#: inc/template-tags.php:326
 msgid "Email"
 msgstr ""
 
-#: inc/template-tags.php:290
+#: inc/template-tags.php:327
 msgid "Website"
 msgstr ""
 
-#: inc/template-tags.php:292
+#: inc/template-tags.php:329
 msgid "What's on your mind?"
 msgstr ""
 
-#: inc/template-tags.php:344
+#: inc/template-tags.php:382
 msgid "Related Posts"
 msgstr ""
 
-#: inc/template-tags.php:386
+#: inc/template-tags.php:426
 msgid "Share on Facebook"
 msgstr ""
 
-#: inc/template-tags.php:387
+#: inc/template-tags.php:431
 msgid "Share on Twitter"
 msgstr ""
 
-#: inc/template-tags.php:388
+#: inc/template-tags.php:436
 msgid "Share on Google+"
 msgstr ""
 
-#: inc/template-tags.php:482
+#: inc/template-tags.php:584
 #. translators: %s is WordPress
 msgid "http://wordpress.org"
 msgstr ""
 
-#: inc/template-tags.php:552
+#: inc/template-tags.php:637
 msgid "Toggle Navigation"
 msgstr ""
 
-#: inc/template-tags.php:587
+#: inc/template-tags.php:675
 msgid ""
 "This sidebar is active but empty. In order to use this layout, please add "
 "widgets in the sidebar"
 msgstr ""
 
-#: inc/woocommerce/functions.php:59 inc/woocommerce/functions.php:92
+#: inc/woocommerce/functions.php:59 inc/woocommerce/functions.php:102
 msgid "View your shopping cart"
 msgstr ""
 
@@ -1585,21 +1625,21 @@ msgstr ""
 msgid "Page Builder Full Width"
 msgstr ""
 
-#: comments.php:31
+#: comments.php:32
 #. translators: %s: post title
 msgctxt "comments title"
-msgid "One thought on &ldquo;%s&rdquo;"
+msgid "One comment"
 msgstr ""
 
-#: comments.php:35
+#: comments.php:36
 #. translators: 1: number of comments, 2: post title
 msgctxt "comments title"
-msgid "%1$s thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgid "%1$s Comment"
+msgid_plural "%1$s Comments"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:230
+#: functions.php:234
 #. Translators: If there are characters in your language that are not supported
 #. by Roboto or Roboto Slab, translate this to 'off'. Do not translate into
 #. your own language.
@@ -1607,7 +1647,7 @@ msgctxt "Roboto font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:231
+#: functions.php:235
 msgctxt "Roboto Slab font: on or off"
 msgid "on"
 msgstr ""

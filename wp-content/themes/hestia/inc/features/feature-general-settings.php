@@ -109,7 +109,7 @@ function hestia_general_customize_register( $wp_customize ) {
 		) );
 
 		$wp_customize->add_control( new Hestia_Customizer_Range_Value_Control( $wp_customize, 'hestia_sidebar_width', array(
-			'label'    => __( 'Sidebar width (%)', 'hestia' ),
+			'label'    => esc_html__( 'Sidebar width (%)', 'hestia' ),
 			'section'  => 'hestia_general',
 			'type'     => 'range-value',
 			'input_attrs' => array(

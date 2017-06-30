@@ -67,13 +67,13 @@ class Hestia_Page_Editor extends WP_Customize_Control {
 	 * @updated Changed wp_enqueue_scripts order and dependencies.
 	 */
 	public function enqueue() {
-		wp_enqueue_style( 'hestia_text_editor_css', get_template_directory_uri() . '/inc/customizer-page-editor/css/hestia-page-editor.css', array(), '1.0.0' );
+		wp_enqueue_style( 'hestia_text_editor_css', get_template_directory_uri() . '/inc/customizer-page-editor/css/hestia-page-editor.css', array(), HESTIA_VERSION );
 		wp_enqueue_script( 'hestia_text_editor', get_template_directory_uri() . '/inc/customizer-page-editor/js/hestia-text-editor.js', array(
 			'jquery',
 			'hestia_controls_script',
-		), false, true );
+		), HESTIA_VERSION, true );
 		if ( $this->needsync === true ) {
-			wp_enqueue_script( 'hestia_controls_script', get_template_directory_uri() . '/inc/customizer-page-editor/js/hestia-update-controls.js', array( 'jquery' ), false, true );
+			wp_enqueue_script( 'hestia_controls_script', get_template_directory_uri() . '/inc/customizer-page-editor/js/hestia-update-controls.js', array( 'jquery' ), HESTIA_VERSION, true );
 			wp_localize_script( 'hestia_controls_script', 'requestpost', array(
 				'ajaxurl'           => admin_url( 'admin-ajax.php' ),
 				'thumbnail_control' => 'hestia_feature_thumbnail', // name of image control that needs sync

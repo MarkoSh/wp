@@ -76,21 +76,30 @@ function hestia_woocommerce_header_add_to_cart_fragment( $fragments ) {
  */
 function hestia_woocommerce_before_main_content() {
 
+	global $post;
+	$terms = get_the_terms( $post->ID, 'product_cat' );
 	$hestia_page_sidebar_layout = get_theme_mod( 'hestia_page_sidebar_layout', 'full-width' );
 
 	$args = array(
 		'sidebar-right' => 'content-sidebar-right col-md-9',
 		'sidebar-left' => 'content-sidebar-left col-md-9',
-		'full-width' => 'col-md-12',
+		'full-width' => 'content-full col-md-12',
 		'is_shop'   => true,
 	);
-	$class_to_add = hestia_get_content_classes( $hestia_page_sidebar_layout, 'sidebar-woocommerce', $args ); ?>
-	<div id="primary" class="page-header header-filter" data-parallax="active" style="background-image: url('<?php echo hestia_featured_header(); ?>');">
+	$class_to_add = hestia_get_content_classes( $hestia_page_sidebar_layout, 'sidebar-woocommerce', $args );
+
+	?>
+	<div id="primary" class="<?php echo hestia_boxed_layout_header(); ?> page-header header-filter header-small" data-parallax="active" style="background-image: url('<?php echo hestia_featured_header(); ?>');">
 		<div class="container">
-			<div class="row title-row">
-				<div class="col-md-4 col-md-offset-8">
-					<a class="cart-contents btn btn-white pull-right" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'hestia' ); ?>"><i class="fa fa-shopping-cart"></i> </a>
+			<div class="row text-center">
+
+				<?php if ( is_archive() ) { ?>
+				<div class="col-md-10 col-md-offset-1">
+						<h1 class="hestia-title"><?php woocommerce_page_title(); ?></h1>
 				</div>
+				<?php } ?>
+
+				<div class="cart-contents-content"><a class="cart-contents btn btn-white pull-right" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'hestia' ); ?>"><i class="fa fa-shopping-cart"></i></a></div>
 			</div>
 		</div>
 	</div>
@@ -98,6 +107,18 @@ function hestia_woocommerce_before_main_content() {
 	<div class="<?php echo hestia_layout(); ?>">
 		<div class="blog-post">
 			<div class="container">
+			    <?php if ( is_shop() || is_product_category() ) { ?>
+			    <div class="before-shop-main">
+					<div class="row">
+						<div class="col-sm-12 col-md-9">
+							<?php do_action( 'hestia_woocommerce_custom_reposition_left_shop_elements' ); ?>
+						</div>
+						<div class="col-sm-12 col-md-3">
+							<?php do_action( 'hestia_woocommerce_custom_reposition_right_shop_elements' ); ?>
+						</div>
+					</div>
+				</div>
+				<?php } ?>
 				<article id="post-<?php the_ID(); ?>" class="section section-text">
 					<div class="row">
 						<?php
@@ -260,7 +281,7 @@ function hestia_shop_sidebar() {
 		</div>
 		<?php
 	} elseif ( is_customize_preview() && ! is_singular( 'product' ) ) {
-		hestia_sidebar_placeholder( $class_to_add );
+		hestia_sidebar_placeholder( $class_to_add, 'sidebar-woocommerce' );
 	}
 }
 
@@ -273,4 +294,37 @@ function hestia_shop_sidebar() {
  */
 function hestia_shop_loop_columns() {
 	return apply_filters( 'hestia_shop_loop_columns', 3 ); // 3 products per row
+}
+
+/**
+ * Remove title on shop main
+ *
+ * @return bool
+ */
+function hestia_woocommerce_hide_page_title() {
+	return false;
+}
+
+/**
+ * Reposition breadcrumb, sorting and results count - removing
+ */
+function hestia_woocommerce_remove_shop_elements() {
+	remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+	remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
+	remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+}
+
+/**
+ * Reposition breadcrumb and results count - adding
+ */
+function hestia_woocommerce_reposition_left_shop_elements() {
+	woocommerce_breadcrumb();
+	woocommerce_result_count();
+}
+
+/**
+ * Reposition ordering - adding
+ */
+function hestia_woocommerce_reposition_right_shop_elements() {
+	woocommerce_catalog_ordering();
 }
