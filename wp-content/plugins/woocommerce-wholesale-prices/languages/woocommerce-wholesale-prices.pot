@@ -1,0 +1,100 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Wholesale Prices\n"
+"POT-Creation-Date: 2016-05-03 14:49+0800\n"
+"PO-Revision-Date: 2016-05-02 11:49+0800\n"
+"Language-Team: Rymera Web Co. <support@wholesalesuiteplugin.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;_n;_x\n"
+"Last-Translator: \n"
+"Language: en\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: .hg\n"
+"X-Poedit-SearchPathExcluded-1: .idea\n"
+
+#: includes/class-wwp-custom-fields.php:39
+#, php-format
+msgid "Set wholesale prices (%1$s)"
+msgstr ""
+
+#: includes/class-wwp-custom-fields.php:105
+#: includes/class-wwp-custom-fields.php:166
+#: includes/class-wwp-custom-fields.php:218
+#: includes/class-wwp-custom-fields.php:297 includes/class-wwp-settings.php:21
+msgid "Wholesale Prices"
+msgstr ""
+
+#: includes/class-wwp-custom-fields.php:106
+#: includes/class-wwp-custom-fields.php:219
+msgid "Wholesale prices are set per role and currency.<br/><br/><b>Note:</b> Wholesale price must be set for the base currency to enable wholesale pricing for that role. The base currency will be used for conversion to other currencies that have no wholesale price explicitly set (Auto)."
+msgstr ""
+
+#: includes/class-wwp-custom-fields.php:135
+#: includes/class-wwp-custom-fields.php:150
+#: includes/class-wwp-custom-fields.php:254
+#: includes/class-wwp-custom-fields.php:273
+#, php-format
+msgid "Only applies to users with the role of %1$s for %2$s currency"
+msgstr ""
+
+#: includes/class-wwp-custom-fields.php:167
+#: includes/class-wwp-custom-fields.php:298
+msgid "Wholesale Price for this product"
+msgstr ""
+
+#: includes/class-wwp-custom-fields.php:179
+#: includes/class-wwp-custom-fields.php:314
+#, php-format
+msgid "Only applies to users with the role of %1$s"
+msgstr ""
+
+#: includes/class-wwp-custom-fields.php:979
+msgid "Wholesale Price"
+msgstr ""
+
+#: includes/class-wwp-custom-fields.php:1025
+#, php-format
+msgid "%1$s Price (%2$s)"
+msgstr ""
+
+#: includes/class-wwp-settings.php:137
+msgid "WooCommerce Wholesale Suite"
+msgstr ""
+
+#: includes/class-wwp-settings.php:138
+msgid "WooCommerce Wholesale Prices Premium"
+msgstr ""
+
+#: includes/class-wwp-wholesale-prices.php:185
+#: includes/class-wwp-wholesale-prices.php:438
+#: woocommerce-wholesale-prices.plugin.php:261
+msgid "Wholesale Price:"
+msgstr ""
+
+#: woocommerce-wholesale-prices.plugin.php:108
+#: woocommerce-wholesale-prices.plugin.php:110
+msgid "Wholesale Customer"
+msgstr ""
+
+#: woocommerce-wholesale-prices.plugin.php:112
+msgid "This is the main wholesale user role."
+msgstr ""
+
+#: woocommerce-wholesale-prices.plugin.php:196
+msgid "Enter a value (leave blank to remove pricing)"
+msgstr ""
+
+#: woocommerce-wholesale-prices.plugin.php:396
+msgid "Wholesale Prices Settings"
+msgstr ""
+
+#: woocommerce-wholesale-prices.plugin.php:610
+msgid "Plugin Settings"
+msgstr ""

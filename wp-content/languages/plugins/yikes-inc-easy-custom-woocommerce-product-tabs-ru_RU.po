@@ -1,0 +1,92 @@
+# Translation of Stable (latest release) in Russian
+# This file is distributed under the same license as the Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-02-28 08:11:13+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: GlotPress/1.0-alpha-1100\n"
+"Project-Id-Version: Stable (latest release)\n"
+
+#: yikes-inc-easy-custom-woocommerce-product-tabs.php:333
+msgid "Add Another Tab"
+msgstr "Добавить еще вкладку"
+
+#. #-#-#-#-#  tmp-yikes-inc-easy-custom-woocommerce-product-tabs.pot (YIKES
+#. Custom Product Tabs for WooCommerce 1.4.2)  #-#-#-#-#
+#. Plugin URI of the plugin/theme
+#. #-#-#-#-#  tmp-yikes-inc-easy-custom-woocommerce-product-tabs.pot (YIKES
+#. Custom Product Tabs for WooCommerce 1.4.2)  #-#-#-#-#
+#. Author URI of the plugin/theme
+msgid "http://www.yikesinc.com"
+msgstr "http://www.yikesinc.com"
+
+#. Plugin Name of the plugin/theme
+msgid "YIKES Custom Product Tabs for WooCommerce"
+msgstr "YIKES Собственные вкладки товара для WooCommerce"
+
+#. Author of the plugin/theme
+msgid "YIKES Inc"
+msgstr "YIKES Inc"
+
+#. Description of the plugin/theme
+msgid "Extend WooCommerce to add and manage custom product tabs. Create as many product tabs as needed per product."
+msgstr "Расширение для WooCommerce позволяет добавлять и управлять собственными вкладками товаров. Создавайте столько вкладок для каждого товара, сколько нужно."
+
+#: yikes-inc-easy-custom-woocommerce-product-tabs.php:303
+#: yikes-inc-easy-custom-woocommerce-product-tabs.php:321
+msgid "HTML and text to display."
+msgstr "HTML и текст который будет отображаться."
+
+#: yikes-inc-easy-custom-woocommerce-product-tabs.php:299
+#: yikes-inc-easy-custom-woocommerce-product-tabs.php:320
+msgid "Tab Title"
+msgstr "Название закладки"
+
+#: yikes-inc-easy-custom-woocommerce-product-tabs.php:277
+msgid "To generate tabs, click 'Add Another Tab' at the bottom of this container."
+msgstr "Чтобы создать вкладки нажмите \"Добавить еще вкладку\" внизу этого блока."
+
+#: yikes-inc-easy-custom-woocommerce-product-tabs.php:277
+msgid "To delete tabs, click 'Remove Tab' to the right of the title field."
+msgstr "Чтобы удалить вкладку нажмите \"Удалить вкладку\" справа от названия."
+
+#: yikes-inc-easy-custom-woocommerce-product-tabs.php:285
+#: yikes-inc-easy-custom-woocommerce-product-tabs.php:317
+msgid "Remove Tab"
+msgstr "Удалить вкладку"
+
+#: yikes-inc-easy-custom-woocommerce-product-tabs.php:278
+msgid "Help Me!"
+msgstr "Помогите!"
+
+#: yikes-inc-easy-custom-woocommerce-product-tabs.php:52
+msgid "YIKES YIKES Custom Product Tabs for WooCommerce could not be activated because WooCommerce is not installed and active."
+msgstr "Плагин YIKES Собственные вкладки товара для WooCommerce не удалось активировать потому что не установлен и не активирован WooCommerce."
+
+#: yikes-inc-easy-custom-woocommerce-product-tabs.php:53
+msgid "Please install and activate "
+msgstr "Пожалуйста установите и активируйте"
+
+#: yikes-inc-easy-custom-woocommerce-product-tabs.php:53
+msgid " before activating the plugin."
+msgstr "перед тем как активировать плагин."
+
+#: yikes-inc-easy-custom-woocommerce-product-tabs.php:245
+msgid "Custom Tabs"
+msgstr "Собственные Вкладки"
+
+#: yikes-inc-easy-custom-woocommerce-product-tabs.php:277
+msgid "Note : Re-save the product to initialize the WordPress content editor on newly created tab content."
+msgstr "Примечание: Еще раз сохраните товар чтобы инициализировать редактор содержания WordPress в созданной вкладке."
+
+#: yikes-inc-easy-custom-woocommerce-product-tabs.php:277
+msgid "How To"
+msgstr "Инструкция"
+
+#: yikes-inc-easy-custom-woocommerce-product-tabs.php:302
+#: yikes-inc-easy-custom-woocommerce-product-tabs.php:321
+msgid "Content"
+msgstr "Содержание вкладки"

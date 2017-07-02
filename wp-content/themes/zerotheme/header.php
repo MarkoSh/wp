@@ -27,4 +27,8 @@
 
 <body <?php body_class(); ?>>
 
-<?php woocommerce_breadcrumb(); ?>
+<div class="container-fluid">
+    <div class="container">
+    <?php woocommerce_breadcrumb(); ?>
+    </div>
+</div>

@@ -1,0 +1,173 @@
+.clearfix{
+	clear: both;
+	display:block;
+}
+
+#nmcontact-form-meta{
+	width: 100%;
+}
+
+#container-1 {
+	width: 40%;
+	border: 1px solid #E6E6E6;
+}
+
+.s-font {
+	font-size: 11px;
+	color: #AFAFAF;
+	margin: 0px;
+}
+.headings {
+	vertical-align: top;
+	padding-top: 5px;
+	font-weight: bold;
+	width: 20%;
+}
+
+#form-meta-bttons{
+	width: 20%;
+	border: 1px solid;
+	padding: 7px;
+	float: left;
+}
+
+#form-meta-bttons table{
+	display:none;
+}
+
+#form-meta-bttons > p{border: none; text-align: justify}
+
+#form-meta-bttons .top-heading-text{ float:left;padding:8px 0 0 5px;cursor: move;display: block;width: 90%;}
+#form-meta-bttons .top-heading-icons{ float:right;}
+
+#form-meta-setting .top-heading-text{ float:left;padding:0;cursor: move;display: block;width: 90%;}
+#form-meta-setting .top-heading-icons{ float:right;}
+
+
+#form-meta-setting{
+	float: right;
+	width: 75%;
+	/* border: 1px solid #d3d3d3; */
+	min-height: 350px;
+}
+
+#form-meta-setting table{
+display: table-cell;
+}
+
+#form-meta-setting table tr{line-height: 15px}
+
+#form-meta-setting h3{
+padding: 15px;
+font-weight: bold;
+cursor: pointer;
+background-color: #ccc;
+}
+
+#form-meta-setting h3:first{
+background-color: none;
+}
+
+#form-meta-setting ul{
+min-height: 300px;
+padding-bottom: 100px;
+}
+
+.input-type-item{
+text-align: center;
+border: 1px solid;
+line-height: 0px;
+cursor: move;
+}
+
+#form-meta-setting .input-item-heading{
+	cursor: move;
+	border-bottom-color: #dfdfdf;
+text-shadow: #fff 0 1px 0;
+-webkit-box-shadow: 0 1px 0 #fff;
+box-shadow: 0 1px 0 #fff;
+background: #f1f1f1;
+background-image: -webkit-gradient(linear,left bottom,left top,from(#ececec),to(#f9f9f9));
+background-image: -webkit-linear-gradient(bottom,#ececec,#f9f9f9);
+background-image: -moz-linear-gradient(bottom,#ececec,#f9f9f9);
+background-image: -o-linear-gradient(bottom,#ececec,#f9f9f9);
+background-image: linear-gradient(to top,#ececec,#f9f9f9);
+}
+
+.nm-export{
+	margin-left: 30px;
+}
+
+
+.table-column-title{width: 20%}
+.table-column-input{width: 25%}
+.table-column-desc{font-size: 11px;color: #AFAFAF;}
+
+table#form-main-settings td{padding: 10px 0}
+
+
+#form-meta-bttons span.pro-feature{ color: red}
+
+/*
+** existing-meta.php styles
+*/
+#wpcontent {
+	background-color: #ffffff;
+}
+.wrapper {
+	margin: 20px 0;
+}
+.col {
+	float: left;
+}
+.col-4 {
+	width: 33.33333333%;
+}
+.col-3 {
+	width: 25%;
+}
+.col-5{
+	width: 41.66666667%;
+}
+.clear {
+	clear: both;
+}
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-decoration: none;
+}
+.btn:hover {
+	color: #ffffff;
+}
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
